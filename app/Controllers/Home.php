@@ -10,5 +10,4 @@ class Home extends BaseController
         echo view("HeaderMain");
         echo view("Footer");
     }
-    }
 }

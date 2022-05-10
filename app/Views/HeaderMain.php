@@ -18,12 +18,29 @@
         </form>
         <button onclick="fLogin();"> 로그인 </button>
         <button onclick="fJoin();"> 회원가입 </button>
-        <button onclick="fFindPassword();"> 비밀번호를 잊으셨나요? </button>
+        <a href="fFindPassword();"> 비밀번호를 잊으셨나요? </a>
     </div>
 </section>
 
 <script type="text/javascript">
-    function fLogin() {
+    async function fLogin() {
+        let url = "http://localhost:8082/account/login";
+        let obj = {
+            user_id: "id",
+            password: "password"
+        };
+        let json = JSON.stringify(obj);
+
+        console.log(json);
+
+        let response = await fetch(url, {
+            mode: "no-cors",
+            method: "post",
+            headers: {"Content-Type": "application/json;charset=utf-8"},
+            body: json
+        });
+        console.log(response);
+        let result = await response.json();
 
     }
 
