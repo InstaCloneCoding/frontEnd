@@ -13,8 +13,12 @@
 <section class="sectionComponent">
     <div class="BoxComponent">
         <form method="post" id="form" name="form">
-            <input type="text" id="user_id" name="user_id" value="" />
-            <input type="text" id="user_password" name="user_password" value="" />
+            <label for="user_id">
+                <input type="text" id="user_id" name="user_id" value="" />
+            </label>
+            <label for="user_password">
+                <input type="text" id="user_password" name="user_password" value="" />
+            </label>
         </form>
         <button onclick="fLogin();"> 로그인 </button>
         <button onclick="fJoin();"> 회원가입 </button>
@@ -23,25 +27,22 @@
 </section>
 
 <script type="text/javascript">
-    async function fLogin() {
-        let url = "http://localhost:8082/account/login";
-        let obj = {
-            user_id: "id",
-            password: "password"
+    function fLogin() {
+        const userData = document.querySelector("#form");
+
+        let userBody = {
+            userId : userData[0].value,
+            password : userData[1].value
         };
-        let json = JSON.stringify(obj);
 
-        console.log(json);
-
-        let response = await fetch(url, {
-            mode: "no-cors",
+        fetch("/account/login", {
             method: "post",
-            headers: {"Content-Type": "application/json;charset=utf-8"},
-            body: json
-        });
-        console.log(response);
-        let result = await response.json();
+            headers: { "Content-Type" : "application/x-www-form-urlencoded" },
+            body: JSON.stringify(userBody)
+        }).then(response => {
 
+            return response.json();
+        });
     }
 
     function fJoin() {
