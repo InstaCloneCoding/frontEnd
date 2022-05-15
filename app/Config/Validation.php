@@ -40,4 +40,10 @@ class Validation
     //--------------------------------------------------------------------
     // Rules
     //--------------------------------------------------------------------
+    public $signup = [
+        'userId' => 'required',
+        'originName' => 'required',
+        'userName' => 'required',
+        'password' => 'required|min_length[8]'
+    ];
 }

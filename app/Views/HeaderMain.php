@@ -10,14 +10,14 @@
 </head>
 <body>
 
-<section class="sectionComponent">
+<section class="MainComponent">
     <div class="BoxComponent">
         <form method="post" id="form" name="form">
             <label for="user_id">
                 <input type="text" id="user_id" name="user_id" value="" />
             </label>
             <label for="user_password">
-                <input type="text" id="user_password" name="user_password" value="" />
+                <input type="password" id="user_password" name="user_password" value="" />
             </label>
         </form>
         <button onclick="fLogin();"> 로그인 </button>
@@ -35,18 +35,18 @@
             password : userData[1].value
         };
 
-        fetch("/account/login", {
+        fetch("/accounts/login", {
             method: "post",
             headers: { "Content-Type" : "application/x-www-form-urlencoded" },
             body: JSON.stringify(userBody)
         }).then(response => {
-
+            console.log(response);
             return response.json();
         });
     }
 
     function fJoin() {
-
+        window.location = "/accounts/emailsignup";
     }
 
     function fFindPassword() {
