@@ -10,7 +10,7 @@
         </form>
         <button onclick="fLogin();"> 로그인 </button>
         <button onclick="fJoin();"> 회원가입 </button>
-        <a href="fFindPassword();"> 비밀번호를 잊으셨나요? </a>
+        <a onclick="fFindPassword();"> 비밀번호를 잊으셨나요? </a>
     </div>
 </section>
 <script type="text/javascript" src="/script/common.js"></script>

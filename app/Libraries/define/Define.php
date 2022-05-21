@@ -6,8 +6,7 @@ class Define
 {
     public $API_SERVER;
 
-    public function __construct()
-    {
+    public function __construct() {
     }
 
     public static function setAPIServer() {

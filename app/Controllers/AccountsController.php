@@ -37,7 +37,7 @@ class AccountsController extends BaseController
     public function emailsignup() {
         $post = $this->request->getJSON();
 
-        $post->password = password_hash($post->password, PASSWORD_BCRYPT);
+        $post->userPassword = password_hash($post->userPassword, PASSWORD_BCRYPT);
 
         return Curl::curlPost(Define::setAPIServer()."/accounts/emailsignup", $post);
     }
