@@ -36,7 +36,7 @@ $routes->get('/', 'Home::index');
 $routes->post('/accounts', 'AccountsController::index');
 $routes->post('/accounts/login', 'AccountsController::login');
 
-$routes->get('/accounts/emailsignup', 'AccountsController::loadEmailSignUp');
+$routes->get('/accounts/emailsignup', 'AccountsController::getEmailSignUp');
 $routes->post('/accounts/emailsignup', 'AccountsController::emailsignup');
 
 /*

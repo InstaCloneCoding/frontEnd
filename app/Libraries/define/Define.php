@@ -2,13 +2,17 @@
 
 namespace App\Libraries\define;
 
-class Define
+class Server
 {
-    public $API_SERVER = "http://localhost:8082";
-    // public $API_SERVER = "http://52.79.54.87";
+    public $API_SERVER;
 
     public function __construct()
     {
-        define("API_SERVER", "http://localhost:8082");
     }
+
+    public static function setAPIServer() {
+        $API_SERVER = "http://localhost:8082";
+        // $API_SERVER = "http://52.79.54.87";
+    }
+
 }

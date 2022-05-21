@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Libraries\curl\Curl;
-use App\Libraries\define\Define;
+use App\Libraries\define\Server;
 use CodeIgniter\API\ResponseTrait;
 use Config\Services;
 
@@ -15,27 +15,20 @@ class AccountsController extends BaseController
 
     }
 
-    public function index() {
-
-    }
-
     public function login() {
         $post = $this->request->getJSON();
 
-
-        $define = new Define();
-        $response = Curl::curlPost($define->API_SERVER."/accounts/login", $post);
-
-        return $response;
+        return Curl::curlPost(Server::setAPIServer()."/accounts/login", $post);
     }
 
     /* @author geol2
      * @see 회원가입 페이지
      */
-    public function loadEmailSignUp() {
+    public function getEmailSignUp() {
 
-        echo view('/main/loginHeader');
+        echo view('/header/loginHeader');
         echo view('/accounts/emailsignup');
+        echo view('footer');
     }
 
     /* @author geol2
@@ -46,9 +39,6 @@ class AccountsController extends BaseController
 
         $post->password = password_hash($post->password, PASSWORD_BCRYPT);
 
-        $define = new Define();
-        $response = Curl::curlPost($define->API_SERVER."/accounts/emailsignup", $post);
-
-        return $response;
+        return Curl::curlPost(Server::setAPIServer()."/accounts/emailsignup", $post);
     }
 }
