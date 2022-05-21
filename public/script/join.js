@@ -8,7 +8,7 @@ function fJoinProc() {
         "password": form[3].value
     };
 
-    postData("/accounts/emailsignup", userBody)
+    postData("/accounts/emailsignup", "x-www-form", userBody)
         .then(data => {
             if (data.code === "200") {
                 alert("회원가입 성공");
