@@ -19,29 +19,6 @@
 
     <div class="TextComponent">
     </div>
-
 </section>
-
-<script type="text/javascript">
-    function fJoinProc() {
-        let form = document.getElementById("form");
-
-        let userBody = {
-            "userId" : form[0].value,
-            "originName" : form[1].value,
-            "userName" : form[2].value,
-            "password" : form[3].value
-        };
-
-        fetch("/accounts/emailsignup", {
-            method: "post",
-            headers: { "Content-Type" : "application/x-www-form-urlencoded" },
-            body: JSON.stringify(userBody)
-        }).then(response => {
-
-            console.log(response);
-
-        })
-
-    }
-</script>
+<script type="text/javascript" src="/script/common.js"></script>
+<script type="text/javascript" src="/script/join.js"></script>

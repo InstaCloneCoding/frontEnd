@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Libraries\curl\Curl;
-use App\Libraries\define\Server;
+use App\Libraries\define\Define as Define;
 use CodeIgniter\API\ResponseTrait;
 use Config\Services;
 
@@ -18,7 +18,7 @@ class AccountsController extends BaseController
     public function login() {
         $post = $this->request->getJSON();
 
-        return Curl::curlPost(Server::setAPIServer()."/accounts/login", $post);
+        return Curl::curlPost(Define::setAPIServer()."/accounts/login", $post);
     }
 
     /* @author geol2
@@ -39,6 +39,6 @@ class AccountsController extends BaseController
 
         $post->password = password_hash($post->password, PASSWORD_BCRYPT);
 
-        return Curl::curlPost(Server::setAPIServer()."/accounts/emailsignup", $post);
+        return Curl::curlPost(Define::setAPIServer()."/accounts/emailsignup", $post);
     }
 }
