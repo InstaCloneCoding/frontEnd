@@ -19,7 +19,3 @@ function fLogin() {
 function fJoin() {
     window.location = "/accounts/emailsignup";
 }
-
-function fFindPassword() {
-
-}
