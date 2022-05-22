@@ -3,13 +3,14 @@ function fLogin() {
 
     let userBody = {
         userId : userData[0].value,
-        password : userData[1].value
+        userPassword : userData[1].value
     };
 
-    postData("/accounts/login", "x-www-form", userBody)
+    postData("/accounts/login", "json", userBody)
         .then(data => {
-            if (data.code === "200") {
+            if (data.code === 200) {
                 alert("로그인 성공");
+                window.location = '/';
             } else {
                 alert("로그인 실패");
             }

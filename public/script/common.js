@@ -1,6 +1,8 @@
 function headers(gbn) {
     if(gbn === 'x-www-form') {
         return {"Content-Type": "application/x-www-form-urlencoded"};
+    } else if( gbn === 'json') {
+        return {"Content-Type": "application/json"};
     }
 }
 

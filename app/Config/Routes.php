@@ -46,6 +46,7 @@ $routes->post('/accounts/emailsignup', 'AccountsController::emailsignup');
 // 패스워드
 $routes->get('/accounts/password/(:segment)', 'AccountsController::password');
 
+$routes->get('/accounts/logout', 'AccountsController::logout');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

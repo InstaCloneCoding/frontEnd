@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Libraries\curl\Curl;
 use App\Libraries\define\Define as Define;
+use App\Models\UserModel;
 use CodeIgniter\API\ResponseTrait;
 use Config\Services;
 
@@ -15,10 +16,40 @@ class AccountsController extends BaseController
 
     }
 
+    public function index() {
+    }
+
+    public function sessionProc($user) {
+
+        $_SESSION['userId'] = $user->user_id;
+    }
+
     public function login() {
         $post = $this->request->getJSON();
 
-        return Curl::curlPost(Define::setAPIServer()."/accounts/login", $post);
+        $user = model(UserModel::class, false);
+
+        $userRow = $user
+            ->where('user_id', $post->userId)
+            ->get()->getResultArray();
+        if( count($userRow) != 1) {
+            return $this->fail("입력값을 다시 확인해주세요.", "401");
+        }
+
+        $getUser = $user->where('user_id', $post->userId)
+            ->get()
+            ->getFirstRow();
+
+        if( password_verify($post->userPassword, $getUser->user_password) ) {
+            $this->sessionProc($getUser);
+            $data = [
+                "code" => 200,
+                "msg" => "Ok"
+            ];
+            return $this->respond($data, 200);
+        }
+
+        return $this->fail("알 수 없는 요청입니다.");
     }
 
     /* @author geol2
@@ -37,6 +68,15 @@ class AccountsController extends BaseController
     public function emailsignup() {
         $post = $this->request->getJSON();
 
+        $user = model(UserModel::class);
+        $userRow = $user->where('user_id', $post->userId)
+            ->get()
+            ->getResultArray();
+
+        if(count($userRow) >= 1) {
+            return $this->fail("이미 있는 회원입니다.", "400");
+        }
+
         $post->userPassword = password_hash($post->userPassword, PASSWORD_BCRYPT);
 
         return Curl::curlPost(Define::setAPIServer()."/accounts/emailsignup", $post);
@@ -50,5 +90,12 @@ class AccountsController extends BaseController
         echo view('header/findHeader');
         echo view('accounts/password/reset');
         echo view('Footer');
+
+    }
+
+    public function logout(): \CodeIgniter\HTTP\RedirectResponse
+    {
+        unset($_SESSION['userId']);
+        return redirect()->to('/');
     }
 }

@@ -1,11 +1,11 @@
 <section class="MainComponent">
     <div class="BoxComponent">
         <form method="post" id="form" name="form">
-            <label for="user_id">
-                <input type="text" id="user_id" name="user_id" value="" />
+            <label for="userId">
+                <input type="text" id="userId" name="userId" value="" />
             </label>
-            <label for="user_password">
-                <input type="password" id="user_password" name="user_password" value="" />
+            <label for="userPassword">
+                <input type="password" id="userPassword" name="userPassword" value="" />
             </label>
         </form>
         <button onclick="fLogin();"> 로그인 </button>

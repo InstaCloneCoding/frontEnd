@@ -7,6 +7,7 @@ use CodeIgniter\HTTP\CLIRequest;
 use CodeIgniter\HTTP\IncomingRequest;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
+use Config\Services;
 use Psr\Log\LoggerInterface;
 
 /**
@@ -46,7 +47,7 @@ class BaseController extends Controller
         parent::initController($request, $response, $logger);
 
         // Preload any models, libraries, etc, here.
-
+        $session = Services::session();
         // E.g.: $this->session = \Config\Services::session();
     }
 }

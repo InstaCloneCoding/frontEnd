@@ -12,6 +12,7 @@ function fJoinProc() {
         .then(data => {
             if (data.code === "200") {
                 alert("회원가입 성공");
+                window.location = '/';
             } else if( data.code === "401" ) {
                 alert("유효하지 않는 아이디입니다.");
             } else {
