@@ -3,6 +3,8 @@
 namespace Config;
 
 // Create a new instance of our RouteCollection class.
+use App\Controllers\AccountsController;
+
 $routes = Services::routes();
 
 // Load the system's routing file first, so that the app and ENVIRONMENT
@@ -33,11 +35,16 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+// 로그인
 $routes->post('/accounts', 'AccountsController::index');
 $routes->post('/accounts/login', 'AccountsController::login');
 
+// 회원가입
 $routes->get('/accounts/emailsignup', 'AccountsController::getEmailSignUp');
 $routes->post('/accounts/emailsignup', 'AccountsController::emailsignup');
+
+// 패스워드
+$routes->get('/accounts/password/(:segment)', 'AccountsController::password');
 
 /*
  * --------------------------------------------------------------------

@@ -41,4 +41,14 @@ class AccountsController extends BaseController
 
         return Curl::curlPost(Define::setAPIServer()."/accounts/emailsignup", $post);
     }
+
+    /* @author geol2
+     * @see 로그인 패스워드 리셋
+     */
+    public function password($path = 'reset') {
+
+        echo view('header/findHeader');
+        echo view('accounts/password/reset');
+        echo view('Footer');
+    }
 }

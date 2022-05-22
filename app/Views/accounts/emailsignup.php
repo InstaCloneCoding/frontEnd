@@ -1,4 +1,5 @@
 <section class="EmailSignUpComponent">
+    instagram
     <form id="form" method="post">
         <label>
             <input name="emailOrPhone" placeholder="휴대폰 번호 또는 이메일 주소"><br>
