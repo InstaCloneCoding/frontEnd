@@ -1,30 +1,29 @@
-<!--<link rel="stylesheet" href="/style/common.css">-->
-
-<section class="MainComponent">
-        <div class="BoxComponent">
-            
-            <div style="padding-bottom:30px;">
-                <img src="/images/login-logo.png" alt="">
-            </div>
-            
-            <form method="post" id="form" name="form">
-                <label for="userId">
-                    <input type="text" id="userId" name="userId" value="" style="height:36px;width:100%;" />
-                </label>
-                <label for="userPassword">
-                    <input type="password" id="userPassword" class="mt10" name="userPassword" value="" />
-                </label>
-            </form>
-            <button onclick="fLogin();" class="loginBtn btnM btnBlue w100 mt10"> 로그인 </button>
-            
-            <div style="padding:20px 0;">
-                <a href="/accounts/password/reset" style="color:#00376b;font-size:12px;"> 비밀번호를 잊으셨나요? </a>
-            </div>
-            <div>
-                <span style="font-size:14px;">계정이 없으신가요?</span>
-                <button onclick="fJoin();" style="font-size:14px;color:#0095f6;background:none;border:none;">가입하기</button>
-            </div>
+<section class="login-box">
+    <div class="login-inner-box">
+        <!-- 로그인 로고 -->
+        <div class="login-logo-box pb30">
+            <img src="/images/login-logo.png" alt="">
         </div>
+        <!-- // 로그인 로고 -->
+        <!-- ID / PW -->
+        <form method="post" id="form" name="form">
+            <label for="userId"><input type="text" id="userId" name="userId" placeholder="전화번호, 사용자 이름 또는 이메일" value=""/></label>
+            <label for="userPassword"><input type="password" id="userPassword" class="mt10" name="userPassword" placeholder="비밀번호" value="" /></label>
+        </form>
+        <!-- // ID / PW -->
+        <button onclick="fLogin();" class="login-btn btnM btnBlue w100 mt10"> 로그인 </button>
+        <!-- 비밀번호를 잊으셨나요? -->
+        <div class="pw-find-box">
+            <a href="/accounts/password/reset"s> 비밀번호를 잊으셨나요? </a>
+        </div>
+        <!-- // 비밀번호를 잊으셨나요? -->
+        <!-- 계정이 없으신가요? -->
+        <div class="join-btn-box">
+            <span style="font-size:14px;">계정이 없으신가요?</span>
+            <button onclick="fJoin();" class="join-btn">가입하기</button>
+        </div>
+        <!-- // 계정이 없으신가요? -->
+    </div>
 </section>
 
 <script type="text/javascript" src="/script/common.js"></script>

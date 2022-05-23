@@ -15,8 +15,9 @@
                 </select>
             </li>
         </ul>
+        <div class="copyright">
+            <p>clone instagram</p>
+        </div> 
     </div>
-    <div class="copyright">
-        <p>clone instagram</p>
-    </div> 
+
 </footer>
