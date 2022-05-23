@@ -1,19 +1,23 @@
 </body>
-
-<footer>
-
-    <p>소개</p>
-    <p>블로그</p>
-    <p>API</p>
-    <p>개인정보처리방침</p>
-    <p>약관</p>
-    <p>해시태그</p>
-    <p>위치</p>
-    <label>
-        <select>
-            <option>한국어</option>
-        </select>
-    </label>
-    <p>clone instagram</p>
+<footer id="footer">
+    <div class="menu">
+        <ul style="overflow:hidden;">
+            <li>소개</li>
+            <li>블로그</li>
+            <li>API</li>
+            <li>개인정보처리방침</li>
+            <li>약관</li>
+            <li>해시태그</li>
+            <li>위치</li>
+            <li>
+                <select>
+                    <option>한국어</option>
+                </select>
+            </li>
+        </ul>
+        <div class="copyright">
+            <p>clone instagram</p>
+        </div> 
+    </div>
 
 </footer>

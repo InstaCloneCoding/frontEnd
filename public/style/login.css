@@ -1,0 +1,30 @@
+.login-box {
+    position:relative;
+    min-height:762px;
+}
+.login-inner-box {
+    position: absolute;
+    width:70%;
+    padding:50px 30px;
+    background:#fff;
+    border:1px solid #d8d8d8;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align:center
+}    
+.pw-find-box {
+    padding:20px 0px 30px;
+}
+.pw-find-box a {
+    color:#00376b;
+    font-size:12px;
+}
+.join-btn-box {
+
+}
+.join-btn-box button {
+    font-size:14px;color:#0095f6;
+    background:none;
+    border:none;
+}
