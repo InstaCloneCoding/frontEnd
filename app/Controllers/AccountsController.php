@@ -57,7 +57,7 @@ class AccountsController extends BaseController
      */
     public function getEmailSignUp() {
 
-        echo view('/header/loginHeader');
+        echo view('/header/header');
         echo view('/accounts/emailsignup');
         echo view('footer');
     }
@@ -87,7 +87,7 @@ class AccountsController extends BaseController
      */
     public function password($path = 'reset') {
 
-        echo view('header/findHeader');
+        echo view('/header/header');
         echo view('accounts/password/reset');
         echo view('Footer');
 

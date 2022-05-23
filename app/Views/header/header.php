@@ -12,6 +12,3 @@
     <link rel="stylesheet" href="/style/footer.css">
 </head>
 <body>
-    <header>
-        Instagram
-    </header>

@@ -6,14 +6,12 @@ class Home extends BaseController
 {
     public function index()
     {
+        echo view("header/header");
         if( empty($_SESSION['userId']) ) {
-            echo view("header/loginHeader");
             echo view("main");
             return view("footer");
         }
-
-        echo view('header/header');
         echo view("fid/fid");
-        echo view("footer");
+        return view("footer");
     }
 }
