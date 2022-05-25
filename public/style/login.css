@@ -1,30 +1,82 @@
 .login-box {
-    position:relative;
-    min-height:762px;
+    max-width:935px;
 }
 .login-inner-box {
-    position: absolute;
-    width:70%;
-    padding:50px 30px;
-    background:#fff;
+    width:320px;
     border:1px solid #d8d8d8;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    text-align:center
+    text-align:center;
+    background:#fff;
 }    
-.pw-find-box {
-    padding:20px 0px 30px;
-}
 .pw-find-box a {
-    color:#00376b;
-    font-size:12px;
-}
-.join-btn-box {
-
+    color:var(--skyBlue);
 }
 .join-btn-box button {
-    font-size:14px;color:#0095f6;
+    color:var(--skyBlue);
     background:none;
     border:none;
+}
+.login-left-test {
+    display:inline-block;
+}
+
+/* screen max-width:880px */
+@media screen and (max-width:880px) {
+     /* 로그인 좌측 이미지 */
+    .login-left-test {
+        display:none;
+    }
+}
+
+/* screen min-width:481px */
+@media screen and (min-width:481px) {
+    /* 로그인 화면 메뉴 */
+    .login-box {
+        margin:100px auto;
+    }
+    .login-inner-box {
+        padding:50px 30px;
+        margin-top:35px;
+        margin-bottom:10px;
+    }    
+    /* 계정이 없으신가요? */
+    .pw-find-box {
+        padding:20px 0px 30px;
+    }
+    .pw-find-box a {
+        font-size:12px;
+    }
+    /* 가입하기 버튼 */
+    .join-btn-box button {
+        font-size:12px;
+    }
+    .join-btn-box span {
+        font-size:12px;
+    }
+}
+
+/* screen max-width:480px */
+@media screen and (max-width:480px) {
+    /* 로그인 화면 메뉴 */
+    .login-box {
+        margin:100px auto;
+    }
+    .login-inner-box {
+        padding:50px 30px;
+        margin-top:35px;
+        margin-bottom:10px;
+    }    
+    /* 계정이 없으신가요? */
+    .pw-find-box {
+        padding:20px 0px 30px;
+    }
+    .pw-find-box a {
+        font-size:11px;
+    }
+    /* 가입하기 버튼 */
+    .join-btn-box button {
+        font-size:11px;
+    }
+    .join-btn-box span {
+        font-size:11px;
+    }
 }
