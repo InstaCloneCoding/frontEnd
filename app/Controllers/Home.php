@@ -12,6 +12,6 @@ class Home extends BaseController
         } else {
             echo view("fid/fid");
         }
-        return view("footer");
+        echo view("footer");
     }
 }
