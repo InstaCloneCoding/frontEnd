@@ -13,6 +13,6 @@
 </head>
 <body>
 
-<div id="loading">
-    <img class="spinner" src="/images/spinner_2.gif">
-</div>
+<!--<div id="loading">-->
+<!--    <img class="spinner" src="/images/spinner_2.gif">-->
+<!--</div>-->
