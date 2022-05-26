@@ -8,6 +8,7 @@ function fLogin() {
 
     postData("/accounts/login", "json", userBody)
         .then(data => {
+            console.log(data);
             hideLoading();
             if (data.code === 200) {
                 window.location = '/';

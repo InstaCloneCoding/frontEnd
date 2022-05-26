@@ -24,7 +24,7 @@ class AccountsController extends BaseController
         $_SESSION['userId'] = $user->user_id;
     }
 
-    public function login() {
+    public function login(){
         $post = $this->request->getJSON();
 
         $user = model(UserModel::class, false);
