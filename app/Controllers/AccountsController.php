@@ -89,7 +89,7 @@ class AccountsController extends BaseController
 
         echo view('/header/header');
         echo view('accounts/password/reset');
-        echo view('Footer');
+        echo view('footer');
 
     }
 
