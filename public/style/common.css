@@ -28,3 +28,11 @@ input {
 .pb30 {
     padding-bottom:30px;
 }
+
+#loading {
+    display: none;
+    position: absolute;
+
+    left: 50%;
+    transform: translate(-50%, 0);
+}

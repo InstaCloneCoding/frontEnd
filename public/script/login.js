@@ -8,11 +8,10 @@ function fLogin() {
 
     postData("/accounts/login", "json", userBody)
         .then(data => {
+            hideLoading();
             if (data.code === 200) {
-                alert("로그인 성공");
                 window.location = '/';
             } else {
-                alert("로그인 실패");
             }
         });
 }

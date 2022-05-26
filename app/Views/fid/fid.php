@@ -13,10 +13,15 @@
             <a href="#"> 계정전환 </a>
             <a href="/accounts/logout"> 로그아웃 </a>
         </div>
+
+        <div>
+            <input type="text" name="searching" placeholder="검색" value="" />
+        </div>
+
     </div>
 </section>
 
 <section style="display:none;">
-
+    게시글
 </section>
 <?php
