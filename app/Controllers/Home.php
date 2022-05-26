@@ -9,9 +9,9 @@ class Home extends BaseController
         echo view("header/header");
         if( empty($_SESSION['userId']) ) {
             echo view("main");
-            return view("footer");
+        } else {
+            echo view("fid/fid");
         }
-        echo view("fid/fid");
         return view("footer");
     }
 }
