@@ -87,7 +87,8 @@ class AccountsController extends BaseController
      */
     public function password($path = 'reset') {
 
-        echo view('/header/header');
+        echo view('header/header');
+        echo view('top');
         echo view('accounts/password/reset');
         echo view('footer');
 

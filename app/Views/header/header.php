@@ -11,5 +11,6 @@
     <link rel="stylesheet" href="/style/login.css">
     <link rel="stylesheet" href="/style/footer.css">
     <link rel="stylesheet" href="/style/signup.css">
+    <link rel="stylesheet" href="/style/top.css">
 </head>
 <body>
