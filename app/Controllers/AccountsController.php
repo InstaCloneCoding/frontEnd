@@ -94,6 +94,12 @@ class AccountsController extends BaseController
 
     }
 
+    public function sendPassword() {
+        $post = $this->request->getJSON();
+
+        return Curl::curlPost(Define::setAPIServer()."/accounts/password/reset", $post);
+    }
+
     public function logout(): \CodeIgniter\HTTP\RedirectResponse
     {
         unset($_SESSION['userId']);

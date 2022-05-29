@@ -23,6 +23,6 @@ function getData(url = null, header = null, data = null) {
     });
 }
 
-function fmain() {
+function goToMain() {
     window.location = "/";
 }
