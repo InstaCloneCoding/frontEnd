@@ -1,34 +1,22 @@
 function showNewPostPopup() {
-    const getPopUp = document.getElementById("newFid");
+    const getPopUp = document.getElementById("popupBackground");
     getPopUp.style.display = "block";
 }
 
 function HideNewPostPopup() {
-    const getPopUp = document.getElementById("newFid");
+    const getPopUp = document.getElementById("popupBackground");
     getPopUp.style.display = "none";
 }
 
-async function newPost() {
+function upload() {
+    const input = document.getElementById("file_1");
+    input.click();
+}
 
+async function newPost() {
     let body = {
         'user_id': '',
         'fid_content': ''
     };
-
-    await postData('/', null, body)
-        // .then(data => {
-        //     console.log(data);
-        // });
+    await postData('/', 'json', body);
 }
-
-async function getFidContents() {
-
-    await getData('/', 'json', null)
-        // .then(data => {
-        //     console.log(data);
-        // });
-}
-
-getFidContents().then(r => {
-    console.log(r);
-});

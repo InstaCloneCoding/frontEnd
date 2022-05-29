@@ -20,5 +20,5 @@ function getData(url = null, header = null, data = null) {
     return fetch(url, {
         method: "get",
         headers: headers(header)
-    }).then(response => response.json());
+    });
 }

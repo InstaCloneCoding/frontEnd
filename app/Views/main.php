@@ -19,7 +19,7 @@
         </button>
         <!-- 비밀번호를 잊으셨나요? -->
         <div class="pw-find-box">
-            <a href="/accounts/password/reset"s> 비밀번호를 잊으셨나요? </a>
+            <a href="/accounts/password/reset"> 비밀번호를 잊으셨나요? </a>
         </div>
         <!-- // 비밀번호를 잊으셨나요? -->
         <!-- 계정이 없으신가요? -->
@@ -32,4 +32,5 @@
 </section>
 
 <script type="text/javascript" src="/script/common.js"></script>
+<script type="text/javascript" src="/script/loading.js"></script>
 <script type="text/javascript" src="/script/login.js"></script>
