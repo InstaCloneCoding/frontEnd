@@ -26,10 +26,10 @@ class Curl
         return $response;
     }
 
-    public static function curlGet($path, $data) {
-        $define = new Define();
-
-        $path = $define->API_SERVER."?".http_build_query($data, '', );
+    public static function curlGet(String $path, $data = null) {
+        if( is_array($data) ) {
+            $path = $path . "?" . http_build_query($data, '',);
+        }
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $path);

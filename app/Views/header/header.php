@@ -12,3 +12,7 @@
     <link rel="stylesheet" href="/style/footer.css">
 </head>
 <body>
+
+<!--<div id="loading">-->
+<!--    <img class="spinner" src="/images/spinner_2.gif">-->
+<!--</div>-->

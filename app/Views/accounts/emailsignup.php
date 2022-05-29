@@ -12,7 +12,12 @@
             <input type="password" name="userPassword" placeholder="비밀번호"><br>
         </label>
     </form>
-    <button type="button" onclick="fJoinProc()">회원가입</button>
+    <button type="button" onclick="fJoinProc()">
+        <span id="loading">
+            <img class="spinner" src="/images/spinner_2.gif" style="width: 30px; height: 30px;">
+        </span>
+        회원가입
+    </button>
 
     <div class="BoxComponent">
         계정이 있으신가요? <a href="/" >로그인</a>

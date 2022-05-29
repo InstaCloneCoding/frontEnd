@@ -7,9 +7,18 @@ function headers(gbn) {
 }
 
 function postData(url = null, header = null,data = null) {
+    displayLoading();
     return fetch(url, {
         method: "post",
         headers: headers(header),
         body: JSON.stringify(data)
     }).then(response => response.json());
+}
+
+function getData(url = null, header = null, data = null) {
+    displayLoading();
+    return fetch(url, {
+        method: "get",
+        headers: headers(header)
+    });
 }
