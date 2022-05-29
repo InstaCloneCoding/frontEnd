@@ -24,7 +24,10 @@
     </div>
 
     <div>
-        <button class="btnNormal w100 h60"
-        ">로그인으로 돌아가기</button>
+        <button class="btnNormal w100 h60" onclick="fmain()">
+            로그인으로 돌아가기
+        </button>
     </div>
 </section>
+
+<script type="text/javascript" src="/script/common.js"></script>

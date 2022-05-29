@@ -22,3 +22,7 @@ function getData(url = null, header = null, data = null) {
         headers: headers(header)
     });
 }
+
+function fmain() {
+    window.location = "/";
+}
