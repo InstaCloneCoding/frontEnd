@@ -11,15 +11,18 @@
             <!-- // 로그인 로고 -->
             <!-- ID / PW -->
             <form method="post" id="form" name="form">
-                <label for="userId"><input type="text" id="userId" name="userId" placeholder="전화번호, 사용자 이름 또는 이메일" value=""/></label>
-                <label for="userPassword"><input type="password" id="userPassword" class="mt10" name="userPassword" placeholder="비밀번호" value="" /></label>
+                <label for="userId">
+                    <input type="text" id="userId" name="userId" placeholder="전화번호, 사용자 이름 또는 이메일" value=""/>
+                </label>
+                <label for="userPassword">
+                    <input type="password" id="userPassword" class="mt10" name="userPassword" placeholder="비밀번호" value="" />
+                </label>
             </form>
             <!-- // ID / PW -->
             <button onclick="fLogin();" class="login-btn btnM btnBlue w100 mt10">
                 <span id="loading">
-                    <img class="spinner" src="/images/spinner_2.gif" style="width: 30px; height: 30px;">
-                </span>
-                로그인
+                    <img class="spinner" src="/images/spinner_2.gif" style="width:30px;height:30px;">
+                </span>로그인
             </button>
             <!-- 비밀번호를 잊으셨나요? -->
             <div class="pw-find-box">
@@ -33,13 +36,15 @@
             </div>
             <!-- // 계정이 없으신가요? -->
         </div>
-        <div style="margin:10px 20px 10px 20px;">
-            <span class="dis-flex just-c">앱을 다운로드하세요.</span>
-            <div class="dis-flex just-c"style="margin:10px 0;">
-                <img src="/images/apple-btn-img.png" alt="" style="width:135px;height:40px;margin-right:10px;">
-                <img src="/images/google-btn-img.png" alt="" style="width:135px;height:40px;">
+        <!-- 앱을 다운로드하세요 -->
+        <div class="app-down-wrap">
+            <p class="dis-flex just-c" style="margin:20px 0;">앱을 다운로드하세요.</p>
+            <div class="app-down-btn dis-flex just-c">  
+                <img src="/images/apple-btn-img.png" alt="" class="btnM mr10">
+                <img src="/images/google-btn-img.png" alt="" class="btnM">
             </div>
         </div>
+        <!-- // 앱을 다운로드하세요 -->
     </div>
 </section>
 

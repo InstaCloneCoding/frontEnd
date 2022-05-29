@@ -1,0 +1,16 @@
+* {
+    box-sizing:border-box;
+}
+
+*, header, body, footer {
+    margin: 0;
+}
+
+ul,li {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+body,html {
+    background:#fafafa;
+}
