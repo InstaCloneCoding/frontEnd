@@ -1,5 +1,3 @@
-const loading = document.getElementById('loading');
-
 function headers(gbn) {
     if(gbn === 'x-www-form') {
         return {"Content-Type": "application/x-www-form-urlencoded"};
@@ -17,10 +15,10 @@ function postData(url = null, header = null,data = null) {
     }).then(response => response.json());
 }
 
-function displayLoading() {
-    loading.style.display = 'block';
-}
-
-function hideLoading() {
-    loading.style.display = 'none';
+function getData(url = null, header = null, data = null) {
+    displayLoading();
+    return fetch(url, {
+        method: "get",
+        headers: headers(header)
+    }).then(response => response.json());
 }
