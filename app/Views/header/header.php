@@ -10,9 +10,6 @@
     <link rel="stylesheet" href="/style/reset.css">
     <link rel="stylesheet" href="/style/login.css">
     <link rel="stylesheet" href="/style/footer.css">
+    <link rel="stylesheet" href="/style/signup.css">
 </head>
 <body>
-
-<!--<div id="loading">-->
-<!--    <img class="spinner" src="/images/spinner_2.gif">-->
-<!--</div>-->
