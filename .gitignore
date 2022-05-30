@@ -125,5 +125,6 @@ nb-configuration.xml
 /phpunit*.xml
 /.phpunit.*.cache
 
+app/Config/App.php
 app/Config/Database.php
 app/Libraries/define/Define.php
