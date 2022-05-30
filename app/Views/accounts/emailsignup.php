@@ -16,7 +16,7 @@
         <form id="form" method="post">
             <div>
                 <label>
-                    <input class="mt10" name="emailOrPhone" placeholder="휴대폰 번호 또는 이메일 주소">
+                    <input class="mt10" name="joinCode" placeholder="휴대폰 번호 또는 이메일 주소">
                 </label>
                 <label>
                     <input class="mt10" name="originName" placeholder="성명">
@@ -64,4 +64,5 @@
 </section>
 
 <script type="text/javascript" src="/script/common.js"></script>
+<script type="text/javascript" src="/script/loading.js"></script>
 <script type="text/javascript" src="/script/join.js"></script>

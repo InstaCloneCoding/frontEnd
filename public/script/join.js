@@ -2,7 +2,7 @@ function fJoinProc() {
     let form = document.getElementById("form");
 
     let userBody = {
-        "emailOrPhone": form[0].value,
+        "joinCode": form[0].value,
         "originName": form[1].value,
         "userId": form[2].value,
         "userPassword": form[3].value
