@@ -1,6 +1,15 @@
+/* 로그인 화면 메뉴 */
 .loginWrap {
-    max-width:735px;
+    max-width:975px;
 } 
+.loginInner {
+    width:320px;
+    border:1px solid #d8d8d8;
+    padding:50px 30px;
+    margin:35px 0 10px;
+    background:#fff;
+}    
+
 .pwFind a {
     color:var(--skyBlue);
 }
@@ -26,15 +35,15 @@
 
 /* screen min-width:481px */
 @media screen and (min-width:481px) {
+
     /* 로그인 화면 메뉴 */
     .loginWrap {
         margin:100px auto;
     }
     .loginInner {
-        width:320px;
-        border:1px solid #d8d8d8;
         padding:50px 30px;
         margin:35px 0 10px;
+
     }    
     /* 계정이 없으신가요? */
     .pwFind {
@@ -43,6 +52,7 @@
     .pwFind a {
         font-size:12px;
     }
+
     /* 가입하기 버튼 */
     .joinBtnWrap button {
         font-size:12px;
@@ -50,10 +60,12 @@
     .joinBtnWrap span {
         font-size:12px;
     }
+
 }
 
 /* screen max-width:480px */
 @media screen and (max-width:480px) {
+
     /* 로그인 화면 메뉴 */
     .loginWrap {
         margin:100px auto;
@@ -64,6 +76,7 @@
         background:none;
         border:none;
     }    
+
     /* 계정이 없으신가요? */
     .pwFind {
         padding:20px 0px 30px;
@@ -71,6 +84,7 @@
     .pwFind a {
         font-size:11px;
     }
+
     /* 가입하기 버튼 */
     .joinBtnWrap button {
         font-size:11px;
@@ -78,4 +92,5 @@
     .joinBtnWrap span {
         font-size:11px;
     }
+    
 }

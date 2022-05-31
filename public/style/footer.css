@@ -1,6 +1,6 @@
 /* footer */
 #footer {
-    margin-top:50px;
+    padding:50px 20px 0;
 }
 #footer .menu  {
     max-width:765px;
@@ -28,9 +28,6 @@
 
 /* screen min-width:481px */
 @media screen and (min-width:481px) {
-    #footer {
-        padding:0 20px;
-    }
     #footer .menu ul li {
         width:25%;
         padding-bottom:15px;
@@ -45,7 +42,7 @@
 @media screen and (max-width:480px) {
     /* 푸터 하단 메뉴 */
     #footer {
-        padding:0 10px;
+        padding:30px 10px 0;
     }
     #footer .menu ul li {
         width:33.3%;

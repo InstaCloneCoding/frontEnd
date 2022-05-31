@@ -1,6 +1,6 @@
-<section class="commonWrap disFlex justCenter m20">
-    <div class="innerBox">
-        <div>
+<section class="commonWrap resetWrap disFlex justCenter m20">
+    <div class="innerWrap test">
+        <div class="textCenter">
             <img src="/images/reset-img.png" alt="">
         </div>
         <!-- -->
@@ -24,22 +24,23 @@
         <div class="">
             <button class="btnM btnBlue w100" onclick="SendLoginLink()" style="font-weight:400;font-size:14px;">
                 <span id="loading">
-                    <img class="spinner" src="/images/spinner_2.gif" style="width: 30px; height: 30px;">
+                    <img class="spinner" src="/images/spinner_2.gif" style="width:30px;height:30px;">
                 </span>로그인 링크 보내기 
             </button>
         </div>
         <!-- // -->
         <!-- -->
-        <div style="margin:30px 0 0;">
+        <div class="textCenter" style="margin:50px 0;">
             <a href="/accounts/emailsignup"> 새 계정 만들기 </a>
         </div>
         <!-- // -->
-    </div>
-
-    <div>
-        <button class="btnNormal w100 btnL" onclick="goToMain()" style="border:1px solid #dbdbdb">
-            로그인으로 돌아가기
-        </button>
+        <!-- -->
+        <div>
+            <button class="btnNormal w100 btnL" onclick="goToMain()" style="border:1px solid #dbdbdb">
+                로그인으로 돌아가기
+            </button>
+        </div>
+        <!-- // -->
     </div>
 </section>
 
