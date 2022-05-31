@@ -1,3 +1,5 @@
-<div class="top dis-flex align-c just-l p10">
-    <img src="/images/top-logo.png" class="h30">
+<div class="top p10">
+    <div class="topInner disFlex alignCenter">
+        <img src="/images/header-logo.png" alt="">
+    </div>
 </div>

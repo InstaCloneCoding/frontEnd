@@ -1,22 +1,14 @@
-.text-center .warning {
-    text-align:center;
-    line-height:16px;
+
+.signUpWrap > .innerBox > .signUpTxt {
+    margin:15px 0;
+}
+.signUpWrap > .innerBox > .signUpTxt p {
+    color:#8e8e8e;
     font-size:12px;
 }
 
-.app-down-btn-wrap {
-    margin:10px 20px;
-}
-.app-down-btn {
-    margin:10px 0;
-}
-.app-down-btn img {
-    width:135px;
-}
-
-
 @media screen and (min-width:480px) {
-     .inner-box {
+     .innerBox {
         max-width:460px;
         padding:50px 30px;
         border:1px solid #d8d8d8;
@@ -27,11 +19,7 @@
 
 @media screen and (max-width:480px) {
 
-    .inner-box {
-/*
-        margin-top:10px;
-        padding:25px;
-*/
+    .innerBox {
         padding:55px 40px 0;
     }
 }

@@ -1,54 +1,53 @@
-.login-box {
-    max-width:935px;
-}
-.login-inner-box {
-    text-align:center;
-}    
-.pw-find-box a {
+.loginWrap {
+    max-width:735px;
+} 
+.pwFind a {
     color:var(--skyBlue);
 }
-.join-btn-box button {
+.joinBtnWrap button {
     background:none;
     border:none;
     color:var(--skyBlue);
 }
-.login-left-test {
+.loginLeft {
     display:inline-block;
 }
 
 /* screen max-width:880px */
 @media screen and (max-width:880px) {
      /* 로그인 좌측 이미지 */
-    .login-left-test {
+    .loginLeft {
         display:none;
+    }
+    .loginRight {
+        margin:0 auto;
     }
 }
 
 /* screen min-width:481px */
 @media screen and (min-width:481px) {
     /* 로그인 화면 메뉴 */
-    .login-box {
+    .loginWrap {
         margin:100px auto;
     }
-    .login-inner-box {
+    .loginInner {
         width:320px;
         border:1px solid #d8d8d8;
         padding:50px 30px;
-        margin-top:35px;
-        margin-bottom:10px;
+        margin:35px 0 10px;
     }    
     /* 계정이 없으신가요? */
-    .pw-find-box {
+    .pwFind {
         padding:20px 0px 30px;
     }
-    .pw-find-box a {
+    .pwFind a {
         font-size:12px;
     }
     /* 가입하기 버튼 */
-    .join-btn-box button {
+    .joinBtnWrap button {
         font-size:12px;
     }
-    .join-btn-box span {
+    .joinBtnWrap span {
         font-size:12px;
     }
 }
@@ -56,28 +55,27 @@
 /* screen max-width:480px */
 @media screen and (max-width:480px) {
     /* 로그인 화면 메뉴 */
-    .login-box {
+    .loginWrap {
         margin:100px auto;
     }
-    .login-inner-box {
+    .loginInner {
         padding:50px 20px;
-        margin-top:35px;
-        margin-bottom:10px;
+        margin:35px 0 10px;
         background:none;
         border:none;
     }    
     /* 계정이 없으신가요? */
-    .pw-find-box {
+    .pwFind {
         padding:20px 0px 30px;
     }
-    .pw-find-box a {
+    .pwFind a {
         font-size:11px;
     }
     /* 가입하기 버튼 */
-    .join-btn-box button {
+    .joinBtnWrap button {
         font-size:11px;
     }
-    .join-btn-box span {
+    .joinBtnWrap span {
         font-size:11px;
     }
 }
