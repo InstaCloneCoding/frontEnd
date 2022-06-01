@@ -48,7 +48,7 @@
     <!-- 계정이 있으신가요? -->
     <div class="inner-box text-center mt10">
         <p style="font-size:14px;">
-            계정이 있으신가요?<a href="/">로그인</a>
+            계정이 있으신가요? <a href="/">로그인</a>
         </p>
     </div>
     <!-- //계정이 있으신가요? -->
