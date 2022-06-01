@@ -43,11 +43,11 @@ $routes->post('/accounts/login', 'AccountsController::login');
 $routes->get('/accounts/emailsignup', 'AccountsController::getEmailSignUp');
 $routes->post('/accounts/emailsignup', 'AccountsController::emailsignup');
 
-
-
 // 패스워드
 $routes->get('/accounts/password/(:segment)', 'AccountsController::password');
-$routes->post('/accounts/password/(:segment)', 'AccountsController::sendPassword');
+$routes->post('/accounts/password/email', 'AccountsController::sendEmail');
+$routes->post('/accounts/password/auth', 'AccountsController::authCode');
+$routes->post('/accounts/password/reset', 'AccountsController::resetPassword');
 
 $routes->get('/accounts/logout', 'AccountsController::logout');
 /*

@@ -52,6 +52,12 @@ class AccountsController extends BaseController
         return $this->fail("알 수 없는 요청입니다.");
     }
 
+    public function logout(): \CodeIgniter\HTTP\RedirectResponse
+    {
+        unset($_SESSION['userId']);
+        return redirect()->to('/');
+    }
+
     /* @author geol2
      * @see 회원가입 페이지
      */
@@ -94,15 +100,47 @@ class AccountsController extends BaseController
 
     }
 
-    public function sendPassword() {
+    public function sendEmail() {
         $post = $this->request->getJSON();
+        if( empty($post) ) { exit; }
 
-        return Curl::curlPost(Define::setAPIServer()."/accounts/password/reset", $post);
+        return Curl::curlPost(Define::setAPIServer()."/accounts/password/email", $post);
     }
 
-    public function logout(): \CodeIgniter\HTTP\RedirectResponse
-    {
-        unset($_SESSION['userId']);
-        return redirect()->to('/');
+    public function authCode() {
+        $post = $this->request->getJSON();
+        if( empty($post) ) { exit; }
+
+        return Curl::curlPost(Define::setAPIServer()."/accounts/password/auth", $post);
+    }
+
+    /**
+     * @throws \ReflectionException
+     */
+    public function resetPassword() {
+        $post = $this->request->getJSON();
+        $userModel = model(UserModel::class, false);
+
+        $newPassword = $post->newPassword;
+
+        if($post->newPassword != $post->rePassword) {
+            return $this->fail(["msg" => "X"], 400);
+        }
+
+        $user = $userModel
+            ->where('user_id', $post->userId)
+            ->get()->getFirstRow();
+
+        $id = (int)$user->idx;
+        $data = [
+            'user_password' => password_hash($newPassword, PASSWORD_DEFAULT)
+        ];
+
+        $updRes = $userModel->update($id, $data);
+        if( !$updRes ) {
+            return $this->fail(["msg" => "X"], 400);
+        }
+
+        return Curl::curlPost(Define::setAPIServer()."/accounts/password/reset", $post);
     }
 }
