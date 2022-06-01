@@ -1,13 +1,34 @@
 .top {
     background: #fff;
-    border:1px solid #d8d8d8;
+    border-bottom:1px solid #d8d8d8;
 }
 .topInner {
     max-width:935px;
-    height:60px;
     margin:0 auto;
 }
 
-.topInner img {
-    width:110px;height:30px;
+/* media screen min-width:481px */
+@media  screen and (min-width:481px) {
+    .topInner {
+        height:60px;
+        padding:0 30px;
+    }
+    .topInner img {
+        width:110px;
+        height:30px;
+    }
 }
+
+
+/* media screen max-width:480px */
+@media  screen and (max-width:480px) {
+    .topInner {
+        height:50px;
+        padding:0 20px;
+    }
+    .topInner img {
+        width:100px;
+        height:25px;
+    }
+}
+

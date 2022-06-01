@@ -5,8 +5,6 @@
 .loginInner {
     width:320px;
     border:1px solid #d8d8d8;
-    padding:50px 30px;
-    margin:35px 0 10px;
     background:#fff;
 }    
 
@@ -68,14 +66,24 @@
 
     /* 로그인 화면 메뉴 */
     .loginWrap {
-        margin:100px auto;
+        margin:50px auto;
     }
     .loginInner {
-        padding:50px 20px;
-        margin:35px 0 10px;
+        padding:25px 20px;
+        margin:15px 0 10px;
         background:none;
         border:none;
-    }    
+    }
+    .loginLogo.pb30 {
+        padding-bottom:15px;
+    }  
+    .loginLogo img {
+        width:125px;
+    }  
+    .loginBtn {
+        height:30px;
+        font-size:11px;
+    }
 
     /* 계정이 없으신가요? */
     .pwFind {
