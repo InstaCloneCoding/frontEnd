@@ -6,22 +6,24 @@ use CodeIgniter\Model;
 
 class UserModel extends Model
 {
-    protected $table = 'user as u';
+    protected $table = 'user';
     protected $primaryKey = 'idx';
 
     protected $useAutoIncrement = true;
 
     protected $returnType = 'array';
-    protected $useSoftDeletes = true;
+    protected $useSoftDeletes = false;
 
     protected $allowedFields = [
         'idx',
+        'user_id',
+        'user_password'
     ];
 
-    protected $useTimestamps = true;
-    protected $createdField  = 'created_at';
-    protected $updatedField  = 'updated_at';
-    protected $deletedField  = 'deleted_at';
+    protected $useTimestamps = false;
+    // protected $createdField  = 'created_at';
+    // protected $updatedField  = 'updated_at';
+    // protected $deletedField  = 'deleted_at';
 
     protected $validationRules    = [];
     protected $validationMessages = [];
