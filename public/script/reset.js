@@ -41,7 +41,6 @@ function resetPassword() {
     const userId = document.getElementById("userId");
     const newPassword = document.getElementById("newPassword");
     const rePassword = document.getElementById("rePassword");
-    debugger;
 
     let data = {
         'userId' : userId.value,
