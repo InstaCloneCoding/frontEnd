@@ -12,5 +12,7 @@
     <link rel="stylesheet" href="/style/footer.css">
     <link rel="stylesheet" href="/style/signup.css">
     <link rel="stylesheet" href="/style/top.css">
+    <link rel="stylesheet" href="/style/popup.css">
+    <link rel="stylesheet" href="/style/pwReset.css">
 </head>
 <body>
