@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Libraries\curl\Curl;
 use App\Libraries\define\Define as Define;
-use App\Models\UserModel;
+use App\Models\UserMemberModel;
 use CodeIgniter\API\ResponseTrait;
 use Config\Services;
 
@@ -24,10 +24,13 @@ class AccountsController extends BaseController
         $_SESSION['userId'] = $user->user_id;
     }
 
+    /**
+     * @throws \ReflectionException
+     */
     public function login(){
         $post = $this->request->getJSON();
 
-        $user = model(UserModel::class, false);
+        $user = model(UserMemberModel::class, false);
 
         $userRow = $user
             ->where('user_id', $post->userId)
@@ -40,16 +43,26 @@ class AccountsController extends BaseController
             ->get()
             ->getFirstRow();
 
-        if( password_verify($post->userPassword, $getUser->user_password) ) {
-            $this->sessionProc($getUser);
-            $data = [
-                "code" => 200,
-                "msg" => "Ok"
-            ];
-            return $this->respond($data, 200);
+        if( !password_verify($post->userPassword, $getUser->user_password) ) {
+            return $this->fail("유효하지 않습니다.", 400);
         }
 
-        return $this->fail("알 수 없는 요청입니다.");
+        $id = (int)$getUser->idx;
+        $data = [
+            'user_password' => password_hash($post->userPassword, PASSWORD_DEFAULT)
+        ];
+
+        $updRes = $user->update($id, $data);
+        if(!$updRes) {
+            return $this->fail("유효하지 않습니다.", 400);
+        }
+
+        $this->sessionProc($getUser);
+        $data = [
+            "code" => 200,
+            "msg" => "Ok"
+        ];
+        return $this->respond($data, 200);
     }
 
     public function logout(): \CodeIgniter\HTTP\RedirectResponse
@@ -74,7 +87,7 @@ class AccountsController extends BaseController
     public function emailsignup() {
         $post = $this->request->getJSON();
 
-        $user = model(UserModel::class);
+        $user = model(UserMemberModel::class);
         $userRow = $user->where('user_id', $post->userId)
             ->get()
             ->getResultArray();
@@ -119,7 +132,7 @@ class AccountsController extends BaseController
      */
     public function resetPassword() {
         $post = $this->request->getJSON();
-        $userModel = model(UserModel::class, false);
+        $userModel = model(UserMemberModel::class, false);
 
         $newPassword = $post->newPassword;
 
