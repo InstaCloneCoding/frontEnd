@@ -17,11 +17,12 @@ class Home extends BaseController
             echo view("main");
         } else {
             $fidResponse = Curl::curlGet(Define::setAPIServer()."/");
+            $result = json_decode($fidResponse);
 
             $data = [
-                'fid' => json_decode($fidResponse)
+                'feed' => $result->msg
             ];
-            echo view("fid/fid", $data);
+            echo view("feed/feed", $data);
         }
         echo view("footer");
     }

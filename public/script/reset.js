@@ -7,13 +7,14 @@ function SendLoginLink() {
 
     postData('/accounts/password/email', "x-www-form", data)
         .then(data => {
-           hideLoading();
-           if(data.code === '200') {
+            debugger;
+            hideLoading();
+            if(data.code === 200) {
                 alert("전송 되었습니다.");
                 showAuthCode();
-           } else {
+            } else {
                alert("전송실패 되었습니다.");
-           }
+            }
         });
 }
 
@@ -26,11 +27,12 @@ function confirmAuthCode() {
 
     postData('/accounts/password/auth', "x-www-form", data)
         .then(data => {
+            debugger;
             hideLoading();
-            if(data.code === '200') {
+            if(data.code === 200) {
                 showResetPassword();
                 const userId = document.getElementById("userId");
-                userId.value = data.msg;
+                userId.value = data.msg.userId;
             } else {
 
             }
@@ -51,7 +53,7 @@ function resetPassword() {
     postData('/accounts/password/reset', "x-www-form", data)
         .then(data => {
             hideLoading();
-            if(data.code === '200') {
+            if(data.code === 200) {
                 window.location = '/';
             } else {
 

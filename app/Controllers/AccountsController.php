@@ -36,7 +36,9 @@ class AccountsController extends BaseController
             ->where('user_id', $post->userId)
             ->get()->getResultArray();
         if( count($userRow) != 1) {
-            return $this->fail("입력값을 다시 확인해주세요.", "401");
+            return $this->fail([
+                "code" => 401,
+                "msg" => "입력값을 다시 확인해주세요."]);
         }
 
         $getUser = $user->where('user_id', $post->userId)
@@ -44,7 +46,9 @@ class AccountsController extends BaseController
             ->getFirstRow();
 
         if( !password_verify($post->userPassword, $getUser->user_password) ) {
-            return $this->fail("유효하지 않습니다.", 400);
+            return $this->fail([
+                    "code" => 401,
+                    "msg" => "유효하지 않습니다."]);
         }
 
         $id = (int)$getUser->idx;
@@ -93,7 +97,10 @@ class AccountsController extends BaseController
             ->getResultArray();
 
         if(count($userRow) >= 1) {
-            return $this->fail("이미 있는 회원입니다.", "400");
+            return $this->respond([
+                "code" => "400",
+                "msg" => "이미 있는 회원입니다."
+            ]);
         }
 
         $post->userPassword = password_hash($post->userPassword, PASSWORD_BCRYPT);
@@ -137,7 +144,10 @@ class AccountsController extends BaseController
         $newPassword = $post->newPassword;
 
         if($post->newPassword != $post->rePassword) {
-            return $this->fail(["msg" => "X"], 400);
+            return $this->fail([
+                "code" => 400,
+                "msg" => "입력값을 다시 확인해주세요."
+            ]);
         }
 
         $user = $userModel
@@ -151,7 +161,10 @@ class AccountsController extends BaseController
 
         $updRes = $userModel->update($id, $data);
         if( !$updRes ) {
-            return $this->fail(["msg" => "X"], 400);
+            return $this->fail([
+                "code" => 400,
+                "msg" => "수정할 수 없습니다."
+            ]);
         }
 
         return Curl::curlPost(Define::setAPIServer()."/accounts/password/reset", $post);
