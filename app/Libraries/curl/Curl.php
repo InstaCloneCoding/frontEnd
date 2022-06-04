@@ -8,7 +8,7 @@ class Curl
 {
 
     public static function curlPost(string $path, \stdClass $data) {
-        $headers = array( "content-type: application/json");
+        $headers = array("content-type: application/json");
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $path);
@@ -21,9 +21,15 @@ class Curl
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 
         $response = curl_exec($ch);
+        $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close ($ch);
 
-        return $response;
+        $data = [
+            "code" => $http_code,
+            "msg" => json_decode($response)
+        ];
+
+        return json_encode($data);
     }
 
     public static function curlGet(String $path, $data = null) {
@@ -38,8 +44,14 @@ class Curl
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
         $response = curl_exec($ch);
+        $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
 
-        return $response;
+        $data = [
+            "code" => $http_code,
+            "msg" => json_decode($response)
+        ];
+
+        return json_encode($data);
     }
 }

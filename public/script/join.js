@@ -10,13 +10,11 @@ function fJoinProc() {
 
     postData("/accounts/emailsignup", "x-www-form", userBody)
         .then(data => {
+            alert(data.msg);
             if (data.code === "200") {
-                alert("회원가입 성공");
                 window.location = '/';
-            } else if( data.code === "400" ) {
-                alert("유효하지 않는 아이디입니다.");
             } else {
-                alert("회원가입 실패");
+
             }
         });
 }
