@@ -157,6 +157,17 @@ input {
     color:#8e8e8e;
 }
 
+.compleMsg {
+    text-align:left;
+    font-size:12px;
+    color:var(--skyBlue);
+}
+.errorMsg {
+    text-align:left;
+    font-size:12px;
+    color:var(--red);
+}
+
 /* media screen min-width:481px */
 @media  screen and (min-width:481px) {
 
@@ -181,6 +192,7 @@ input {
     }
     .appDownWrap > p {
         margin:20px 0;
+        font-size:14px;
     }
     .appDownBtn {
         margin:10px 0;
