@@ -23,9 +23,12 @@
     <div id="loading"></div>
     <div>
         <p>게시글</p>
-        <?php foreach($feed as $key => $value) { ?>
-            <p> <?= $value->userId ?> </p>
-            <p> <?= $value->fidContent ?> </p>
+        <?php if( !empty($feed) ) { ?>
+            <?php foreach($feed as $key => $value) { ?>
+                <p> <?= $value->userId ?> </p>
+                <p> <?= $value->fidContent ?> </p>
+            <?php } ?>
+        <?php } else { ?>
         <?php } ?>
     </div>
 </section>
