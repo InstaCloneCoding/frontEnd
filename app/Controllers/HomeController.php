@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Libraries\curl\Curl;
 use App\Libraries\define\Define;
 
-class Home extends BaseController
+class HomeController extends BaseController
 {
     public function index()
     {
@@ -25,5 +25,20 @@ class Home extends BaseController
             echo view("feed/feed", $data);
         }
         echo view("footer");
+    }
+
+    public function myInstaGramPage($seg = null) {
+        if($seg === null) {
+            echo "잘못된 요청입니다.";
+            return;
+        }
+
+        $data = [
+            "userId" => $seg
+        ];
+
+        // Curl::curlGet(Define::setAPIServer()."/", $data);
+        $response = Curl::curlPost(Define::setAPIServer()."/".$seg, null);
+        return json_decode($response);
     }
 }
