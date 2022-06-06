@@ -7,7 +7,6 @@ function SendLoginLink() {
 
     postData('/accounts/password/email', "x-www-form", data)
         .then(data => {
-            debugger;
             hideLoading();
             if(data.code === 200) {
                 alert("전송 되었습니다.");
@@ -27,7 +26,6 @@ function confirmAuthCode() {
 
     postData('/accounts/password/auth', "x-www-form", data)
         .then(data => {
-            debugger;
             hideLoading();
             if(data.code === 200) {
                 showResetPassword();
