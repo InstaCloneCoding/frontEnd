@@ -19,7 +19,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('HomeController');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -33,11 +33,17 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', 'HomeController::index');
+
+// 내가 작성한 게시글과 간단한 프로필 정보
+$routes->get('/(:segment)', 'HomeController::myInstaGramPage/$1');
 
 // 로그인
 $routes->post('/accounts', 'AccountsController::index');
 $routes->post('/accounts/login', 'AccountsController::login');
+
+// 로그아웃
+$routes->get('/accounts/logout', 'AccountsController::logout');
 
 // 회원가입
 $routes->get('/accounts/emailsignup', 'AccountsController::getEmailSignUp');
@@ -49,7 +55,6 @@ $routes->post('/accounts/password/email', 'AccountsController::sendEmail');
 $routes->post('/accounts/password/auth', 'AccountsController::authCode');
 $routes->post('/accounts/password/reset', 'AccountsController::resetPassword');
 
-$routes->get('/accounts/logout', 'AccountsController::logout');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

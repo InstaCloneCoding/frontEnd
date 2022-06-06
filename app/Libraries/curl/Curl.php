@@ -7,7 +7,7 @@ use App\Libraries\define\Define;
 class Curl
 {
 
-    public static function curlPost(string $path, \stdClass $data) {
+    public static function curlPost(string $path, \stdClass $data = null) {
         $headers = array("content-type: application/json");
 
         $ch = curl_init();
