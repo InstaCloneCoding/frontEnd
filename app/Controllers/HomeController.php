@@ -22,6 +22,8 @@ class HomeController extends BaseController
             $data = [
                 'feed' => $result->msg
             ];
+            echo view("top");
+            echo view("popup/content");
             echo view("feed/feed", $data);
         }
         echo view("footer");
@@ -39,6 +41,14 @@ class HomeController extends BaseController
 
         // Curl::curlGet(Define::setAPIServer()."/", $data);
         $response = Curl::curlPost(Define::setAPIServer()."/".$seg, null);
-        return json_decode($response);
+        $jsonDecode = json_decode($response);
+
+        $data["profile"] = $jsonDecode;
+
+        echo view("header/header");
+        echo view("top");
+        echo view("popup/content");
+        echo view("userPage/userPage", $data);
+        echo view("footer");
     }
 }
