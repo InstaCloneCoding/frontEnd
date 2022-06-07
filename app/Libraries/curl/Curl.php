@@ -34,7 +34,7 @@ class Curl
 
     public static function curlGet(String $path, $data = null) {
         if( is_array($data) ) {
-            $path = $path . "?" . http_build_query($data, '',);
+            $path = $path . "?" . http_build_query($data, "");
         }
 
         $ch = curl_init();
