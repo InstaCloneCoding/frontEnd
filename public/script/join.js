@@ -10,8 +10,7 @@ function fJoinProc() {
 
     postData("/accounts/emailsignup", "x-www-form", userBody)
         .then(data => {
-            alert(data.msg);
-            if (data.code === "200") {
+            if (data.code === 200) {
                 window.location = '/';
             } else {
 
