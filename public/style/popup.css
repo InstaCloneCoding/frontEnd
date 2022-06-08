@@ -5,9 +5,9 @@
     left:50%;
     margin-top:-150px;
     margin-left:-10%;
-    border: 1px solid #d1d8dd;
-    box-shadow: 0 0 6px 1px rgb(0 0 0 / 30%);
-    background: white;
+    border:1px solid #d1d8dd;
+    box-shadow:0 0 6px 1px rgb(0 0 0 / 30%);
+    background:white;
     z-index:1000;
 }
 #popupBackground {

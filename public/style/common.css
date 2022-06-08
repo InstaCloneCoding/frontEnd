@@ -1,5 +1,5 @@
 :root {
-    /* COLOR */
+/* COLOR */
   --black: #262626;
   --gray: #DBDBDB;
   --lightGray: #EFEFEF;
@@ -49,21 +49,27 @@ input {
 .disFlex {
     display:flex;
 }
+.inlineB {
+    display:inline-block;
+}
 
 /* float */
-.floatLeft {
+.fLeft {
     float:left;
 }
 
 /* 정렬 */
-.alignCenter {
+.alignC {
     align-items:center;
 }
-.justCenter {
+.justifyC {
     justify-content:center;
 }
-.justLeft {
+.justifyL {
     justify-content:left;
+}
+.textC {
+    text-align:center;
 }
 
 /* width */
@@ -119,11 +125,6 @@ input {
     overflow:hidden;
 }
 
-/* text-algin:center */
-.textCenter {
-    text-align:center;
-}
-
 /* font-weight */
 .fw400 {
     font-weight:400;
@@ -132,11 +133,13 @@ input {
     font-weight:bold;
 }
 
-
 /* 공통박스 */
 .commonWrap {
     max-width:975px;
     flex-direction:column;
+}
+.commonTxt {
+    color:#8e8e8e;
 }
 
 /* 앱다운로드 */
@@ -152,25 +155,20 @@ input {
     transform:translate(-50%, 0);
 }
 
-.commonTxt p {
-    font-size:14px;
-    color:#8e8e8e;
-}
-
-.compleMsg {
+/* msg */
+.msg {
     text-align:left;
-    font-size:12px;
+}
+.compleMsg {
     color:var(--skyBlue);
 }
 .errorMsg {
-    text-align:left;
-    font-size:12px;
     color:var(--red);
 }
 
+
 /* media screen min-width:481px */
 @media  screen and (min-width:481px) {
-
     /* input */
     input {
         height:35px;
@@ -180,35 +178,37 @@ input {
     input::placeholder {
         font-size:12px;
     }
-
     /* 공통박스 */
     .commonWrap {
         margin:100px auto;
     }
-
+    .commonTxt {
+        font-size:14px;
+    }
     /* 앱 다운로드 */
     .appDownWrap {
         margin:10px 20px;
     }
     .appDownWrap > p {
-        margin:20px 0;
+        padding:20px 0;
         font-size:14px;
     }
     .appDownBtn {
         margin:10px 0;
     }
-    
+    /* 공통 msg */
+    .msg {
+        font-size:12px;
+    }
 }
 
 /* media screen max-width:480px */
 @media  screen and (max-width:480px) {
-
     /* button */
     .backBtn {
         height:40px;
         font-size:12px;
     }
-
     /* input */
     input {
         height:30px;
@@ -218,25 +218,26 @@ input {
     input::placeholder {
         font-size:12px;
     }
-
     /* 공통박스 */
     .commonWrap {
         margin:50px auto;
     }
-    .commonTxt p {
+    .commonTxt {
         font-size:12px;
     }
-
     /* 앱 다운로드 */
     .appDownWrap {
         padding:5px 20px;
     }
     .appDownWrap > p {
-        margin:10px 0;
+        padding:10px 0;
         font-size:12px;
     }
     .appDownBtn {
         margin:5px 0;
     }
-
+    /* 공통 msg */
+    .msg {
+        font-size:11px;
+    }
 }

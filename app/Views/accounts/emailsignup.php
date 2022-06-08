@@ -1,14 +1,14 @@
 <!-- 회원가입 -->
-<section class="commonWrap signUpWrap disFlex justCenter m20">
+<section class="signUpWrap commonWrap disFlex justifyC m20">
     <div class="innerWrap">
         <div class="inner inner01">
             <!-- 로그인로고이미지 -->
-            <div class="loginLogo textCenter">
+            <div class="loginLogo textC">
                 <img src="/images/logo.png" alt="로그인로고이미지">
             </div>
             <!-- // 로그인로고이미지 -->
             <!-- 친구들의 사진과 동영상을 보려면 가입하세요. -->
-            <div class="commonTxt signUpTxt signUpTxt01 textCenter">
+            <div class="commonTxt signUpTxt signUpTxt01 textC">
                 <p class="fwB">친구들의 사진과 동영상을 보려면 가입하세요.</p>
             </div>
             <!-- // 친구들의 사진과 동영상을 보려면 가입하세요. -->
@@ -16,7 +16,7 @@
             <form id="form" method="post">
                 <div>
                     <label for="userEmail">
-                        <input class="mt10" name="emailOrPhone" id="userEmail" placeholder="이메일 주소" onkeyup="emailCheckInput()">
+                        <input class="mt10" name="emailOrPhone" id="userEmail" placeholder="이메일 주소 또는 핸드폰번호" onkeyup="emailCheckInput()">
                     </label>
                     <div class="emailCompleMsg compleMsg"></div>
                     <div class="emailErrorMsg errorMsg"></div>
@@ -37,8 +37,8 @@
             </form>
             <!-- // 가입정보 -->
             <!-- 서비스를 이용하는 사람이 회원님의 연락처 정보를 Instagram에 업로드했을 수도 있습니다. -->
-            <div class="commonTxt signUpTxt signUpTxt02 textCenter">
-                <p>서비스를 이용하는 사람이 회원님의 연락처 정보를 Instagram에 업로드했을 수도 있습니다.</p>
+            <div class="commonTxt signUpTxt signUpTxt02 textC">
+                서비스를 이용하는 사람이 회원님의 연락처 정보를 Instagram에 업로드했을 수도 있습니다.
             </div>
             <!-- // 서비스를 이용하는 사람이 회원님의 연락처 정보를 Instagram에 업로드했을 수도 있습니다. -->
             <!-- 가입하기 버튼 -->
@@ -50,17 +50,15 @@
             <!-- // 가입하기 버튼 -->
         </div>
         <!-- 계정이 있으신가요? -->
-        <div class="accountBtnWrap inner inner02 textCenter">
-            <p>
-                <span>계정이 있으신가요?</span>
+        <div class="accountBtnWrap inner inner02 textC">
+                <p>계정이 있으신가요?</p>
                 <a href="/">로그인</a>
-            </p>
         </div>
         <!-- //계정이 있으신가요? -->
         <!-- 앱을 다운로드하세요 -->
         <div class="appDownWrap">
-            <p class="disFlex justCenter">앱을 다운로드하세요.</p>
-            <div class="appDownBtn disFlex justCenter">
+            <p class="disFlex justifyC">앱을 다운로드하세요.</p>
+            <div class="appDownBtn disFlex justifyC">
                 <img src="/images/apple-btn-img.png" alt="" class="btnM mr10">
                 <img src="/images/google-btn-img.png" alt="" class="btnM">
             </div>
