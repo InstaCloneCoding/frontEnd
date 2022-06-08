@@ -8,11 +8,6 @@
     background:#fff;
 }
 /* --- */
-.signUpWrap > .innerWrap .inner02 {
-    margin-top:20px;
-    padding:30px;
-}
-/* --- */
 .signUpWrap > .innerWrap .inner02 > p > a  {
     color:var(--skyBlue);
 }
@@ -22,12 +17,12 @@
     text-align:center;
 }
 /* --- */
-.signUpBtn:disabled {
+.signUpWrap .signUpBtn:disabled {
     background:#ddd;
     border:1px solid #ddd;
 }
 /* --- */
-.signUpBtn {
+.signUpWrap .signUpBtn {
     background:#0095f6;
     border:1px solid #0095f6;
     border-radius:5px;
@@ -41,10 +36,8 @@
         padding:50px 30px;
     }
     .signUpWrap > .innerWrap .inner02 {
+        margin-top:20px;
         padding:30px;
-    }
-    /* --- */
-    .signUpWrap > .innerWrap .inner02 > p {
         font-size:14px;
     }
     /* --- */
@@ -55,7 +48,6 @@
     .signUpWrap > .innerWrap .inner .accountBtnWrap {
         font-size:14px;
     }
-
 }
 
 /* screen max-width:480px */
@@ -69,10 +61,8 @@
         padding:25px 20px 0;
     }
     .signUpWrap > .innerWrap .inner02 {
+        margin-top:15px;
         padding:20px;
-    }
-    /* --- */
-    .signUpWrap > .innerWrap .inner02 > p {
         font-size:12px;
     }
     /* --- */
@@ -84,9 +74,8 @@
         font-size:12px;
     }
     /* --- */
-    .signUpBtn {
+    .signUpWrap .signUpBtn {
         height:30px;
         font-size:11px;
     }
-
 }

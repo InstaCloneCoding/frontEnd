@@ -21,11 +21,11 @@
                     <div class="emailCompleMsg compleMsg"></div>
                     <div class="emailErrorMsg errorMsg"></div>
                     <label for="userName">
-                        <input class="mt10" name="originName" id="userName" placeholder="성명" onkeyup="nameCheckInput()">
+                        <input class="mt10" name="originName" id="userName" placeholder="성명" maxlength="20" onkeyup="nameCheckInput()">
                     </label>
                     <div class="nameErrorMsg errorMsg"></div>
                     <label for="userId">
-                        <input class="mt10" name="userId" id="userId" placeholder="사용자 이름" onkeyup="idCheckInput()">
+                        <input class="mt10" name="userId" id="userId" placeholder="사용자 이름" maxlength="20" onkeyup="idCheckInput()">
                     </label>
                     <div class="idErrorMsg errorMsg"></div>
                     <label for="userPassword">
@@ -51,7 +51,7 @@
         </div>
         <!-- 계정이 있으신가요? -->
         <div class="accountBtnWrap inner inner02 textC">
-                <p>계정이 있으신가요?</p>
+                <p class="inlineB">계정이 있으신가요?</p>
                 <a href="/">로그인</a>
         </div>
         <!-- //계정이 있으신가요? -->
