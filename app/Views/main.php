@@ -18,13 +18,13 @@
                     <label for="userId">
                         <input type="text" id="userId" name="userId" placeholder="이메일" value="" onkeyup="emailCheckInput()" />
                     </label>
-                    <div class="idCompleMsg compleMsg"></div>
-                    <div class="idErrorMsg errorMsg"></div>
+                    <div class="idCompleMsg msg compleMsg"></div>
+                    <div class="idErrorMsg msg errorMsg"></div>
                     <label for="userPassword">
                         <input type="password" id="userPassword" class="mt10" name="userPassword" placeholder="비밀번호" value="" onkeyup="pwCheckInput()" />
                     </label>
-                    <div class="pwCompleMsg compleMsg"></div>
-                    <div class="pwErrorMsg errorMsg"></div>
+                    <div class="pwCompleMsg msg compleMsg"></div>
+                    <div class="pwErrorMsg msg errorMsg"></div>
                 </form>
                 <!-- // ID / PW -->
                 <div>

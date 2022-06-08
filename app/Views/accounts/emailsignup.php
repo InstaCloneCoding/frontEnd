@@ -18,8 +18,8 @@
                     <label for="userEmail">
                         <input class="mt10" name="emailOrPhone" id="userEmail" placeholder="이메일 주소 또는 핸드폰번호" onkeyup="emailCheckInput()">
                     </label>
-                    <div class="emailCompleMsg compleMsg"></div>
-                    <div class="emailErrorMsg errorMsg"></div>
+                    <div class="emailCompleMsg msg compleMsg"></div>
+                    <div class="emailErrorMsg msg errorMsg"></div>
                     <label for="userName">
                         <input class="mt10" name="originName" id="userName" placeholder="성명" maxlength="20" onkeyup="nameCheckInput()">
                     </label>
@@ -27,12 +27,12 @@
                     <label for="userId">
                         <input class="mt10" name="userId" id="userId" placeholder="사용자 이름" maxlength="20" onkeyup="idCheckInput()">
                     </label>
-                    <div class="idErrorMsg errorMsg"></div>
+                    <div class="idErrorMsg msg errorMsg"></div>
                     <label for="userPassword">
                         <input class="mt10" type="password" name="userPassword" id="userPassword" placeholder="비밀번호" onkeyup="pwCheckInput()">
                     </label>
-                    <div class="pwCompleMsg compleMsg"></div>
-                    <div class="pwErrorMsg errorMsg"></div>
+                    <div class="pwCompleMsg msg compleMsg"></div>
+                    <div class="pwErrorMsg msg errorMsg"></div>
                 </div>
             </form>
             <!-- // 가입정보 -->
@@ -146,11 +146,7 @@
                 pwError.innerHTML = ""
                 document.querySelector('.signUpBtn').disabled = false;
             }
-        }
-
-
-
-       
+        }   
 </script>
 <script type="text/javascript" src="/script/common.js"></script>
 <script type="text/javascript" src="/script/loading.js"></script>

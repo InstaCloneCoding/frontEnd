@@ -87,6 +87,9 @@ input {
 }
 
 /* margin-top */
+.mt5 {
+    margin-top:5px;
+}
 .mt10 {
     margin-top:10px;
 }
@@ -116,6 +119,9 @@ input {
 }
 
 /* padding-bottom */
+.pb15 {
+    padding-bottom:15px;
+}
 .pb30 {
     padding-bottom:30px;
 }

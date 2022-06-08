@@ -12,6 +12,42 @@
     margin:10px 0;
     color:#262626;
 }
+/* --- */
+.resetWrap .loginLinkBtn:disabled {
+    background:#ddd;
+    border:1px solid #ddd;
+}
+/* --- */
+.resetWrap .loginLinkBtn {
+    background:#0095f6;
+    border:1px solid #0095f6;
+    border-radius:5px;
+    color:var(--white);
+}
+/* --- */
+.resetWrap .authBtn:disabled {
+    background:#ddd;
+    border:1px solid #ddd;
+}
+/* --- */
+.resetWrap .authBtn {
+    background:#0095f6;
+    border:1px solid #0095f6;
+    border-radius:5px;
+    color:var(--white);
+}
+/* --- */
+.resetWrap .resetPwBtn:disabled {
+    background:#ddd;
+    border:1px solid #ddd;
+}
+/* --- */
+.resetWrap .resetPwBtn {
+    background:#0095f6;
+    border:1px solid #0095f6;
+    border-radius:5px;
+    color:var(--white);
+}
 
 /* screen min-width:481px */
 @media screen and (min-width:481px) {

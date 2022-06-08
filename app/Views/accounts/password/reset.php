@@ -17,15 +17,17 @@
             </div>
             <!-- // 이메일 주소를 입력하시면 계정에 다시 액세스할 수 있는 링크를 보내드립니다 -->
             <!-- 이메일 입력 -->
-            <div class="mb15">
+            <div class="pb15">
                 <label>
-                    <input type="text" id="userInfo" name="userInfo" value="" placeholder="이메일" class=""/>
+                    <input type="text" id="userInfo" name="userInfo" value="" placeholder="이메일" onkeyup="emailCheckInput()" />
                 </label>
+                <div class="emailCompleMsg msg compleMsg"></div>
+                <div class="emailErrorMsg msg errorMsg"></div>
             </div>
             <!--// 이메일 입력 -->
             <!-- 로그인 링크 보내기 -->
             <div>
-                <button class="loginLinkBtn btnM btnBlue w100 fw400 mb15" onclick="SendLoginLink()">
+                <button class="loginLinkBtn btnM w100 fw400 mb15" onclick="SendLoginLink()">
                     <span id="loading">
                         <img class="spinner" src="/images/spinner_2.gif" style="width:30px;height:30px;">
                     </span>
@@ -35,23 +37,33 @@
             <!-- // 로그인 링크 보내기 -->
             <!-- 인증하기 -->
             <div id="confirmAuthCode" class="authCode mb15" style="display:none">
-                <label>
-                    <input type="text" name="authCode" id="authCode" value="" class="mb10" placeholder="인증코드"/>
-                    <input type="hidden" name="userId" id="userId" value=""/>
-                </label>
-                <button class="btnM btnBlue w100" onclick="confirmAuthCode()" style="font-weight:400;font-size:14px;">인증하기</button>
+                <div class="pb15">
+                    <label>
+                        <input type="password" name="authCode" id="authCode" value="" maxlength="6" placeholder="인증코드" onkeyup="authCodeInput()" />
+                        <input type="hidden" name="userId" id="userId" value=""/>
+                    </label>
+                    <div class="authCompleMsg msg compleMsg"></div>
+                    <div class="authErrorMsg msg errorMsg"></div>
+                </div>
+                <div>
+                    <button class="authBtn btnM btnBlue w100 fw400" onclick="confirmAuthCode()">인증하기</button>
+                </div>
             </div>
             <!-- // 인증하기 -->
             <!-- 비밀번호 재설정 -->
             <div id="resetPassword" class="resetPassword mb15" style="display:none">
-                <label>
-                    <input type="password" name="newPassword" id="newPassword" value="" placeholder="새로운 비밀번호"/>
-                </label>
-                <label>
-                    <input type="password" name="rePassword" id="rePassword" class="mb10" value=""placeholder="새로운 비밀번호 재입력"/>
-                </label>
-                <div class="mb15">
-                    <button class="btnM btnBlue w100 fw400" onclick="resetPassword()" style="font-size:14px;">
+                <div class="pb15">
+                    <label>
+                        <input type="password" name="newPassword" id="newPassword" value="" placeholder="새로운 비밀번호" onkeyup="pwCheckInput()" />
+                    </label>
+                    <label>
+                        <input type="password" name="rePassword" id="rePassword"  class="mt10" value="" placeholder="새로운 비밀번호 재입력" onkeyup="pwCheckOkInput()" />
+                    </label>
+                    <div class="reCompleMsg msg compleMsg"></div>
+                    <div class="reErrorMsg msg errorMsg"></div>
+                </div>
+                <div>
+                    <button class="resetPwBtn btnM btnBlue w100 fw400" onclick="resetPassword()" style="font-size:14px;">
                         <span id="loading"><img class="spinner" src="/images/spinner_2.gif" style="width:30px;height:30px;"></span>
                         <span>비밀번호 재설정</span>
                     </button>
