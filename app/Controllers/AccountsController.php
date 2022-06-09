@@ -19,9 +19,22 @@ class AccountsController extends BaseController
     public function index() {
     }
 
-    public function sessionProc($user) {
+    public function sessionProc($userId, $email) {
+        $data['user'] = [];
+        $user = model(UserMemberModel::class);
+        if(!empty($email)) {
+            $data['user']['email'] = $email['email'];
+            $user = $user
+                ->where('email', $email['email'])
+                ->first();
 
-        $_SESSION['userId'] = $user->user_id;
+            $data['user']['userId'] = $user['user_id'];
+        }
+        if(!empty($userId)) {
+            $data['user']['userId'] = $userId['user_id'];
+        }
+
+        $this->session->set($data);
     }
 
     /**
@@ -32,46 +45,75 @@ class AccountsController extends BaseController
 
         $user = model(UserMemberModel::class, false);
 
-        $userRow = $user
+        $userId = $user
             ->where('user_id', $post->userId)
-            ->get()->getResultArray();
-        if( count($userRow) != 1) {
+            ->first();
+
+        $email = $user
+            ->where('email', $post->userId)
+            ->first();
+        if( empty($userId) && empty($email) ) {
             return $this->fail([
                 "code" => 401,
                 "msg" => "입력값을 다시 확인해주세요."]);
         }
 
-        $getUser = $user->where('user_id', $post->userId)
-            ->get()
-            ->getFirstRow();
-
-        if( !password_verify($post->userPassword, $getUser->user_password) ) {
+        $getUserByUserId = $user->where('user_id', $post->userId)
+            ->first();
+        $getUserByEmail = $user->where('email', $post->userId)
+            ->first();
+        if( empty($getUserByUserId) && empty($getUserByEmail)) {
+            return $this->fail([
+                "code" => 401,
+                "msg" => "유효하지 않습니다."]);
+        }
+        if( !empty($getUserByUserId) && !password_verify($post->userPassword, $getUserByUserId['user_password']) ) {
             return $this->fail([
                     "code" => 401,
                     "msg" => "유효하지 않습니다."]);
         }
-
-        $id = (int)$getUser->idx;
-        $data = [
-            'user_password' => password_hash($post->userPassword, PASSWORD_DEFAULT)
-        ];
-
-        $updRes = $user->update($id, $data);
-        if(!$updRes) {
-            return $this->fail("유효하지 않습니다.", 400);
+        if( !empty($getUserByEmail) && !password_verify($post->userPassword, $getUserByEmail['user_password']) ) {
+            return $this->fail([
+                "code" => 401,
+                "msg" => "유효하지 않습니다."]);
         }
 
-        $this->sessionProc($getUser);
+        if($getUserByUserId) {
+            $id = (int)$getUserByUserId['idx'];
+            $data = [
+                'user_password' => password_hash($post->userPassword, PASSWORD_DEFAULT)
+            ];
+
+            $updRes = $user->update($id, $data);
+            if (!$updRes) {
+                return $this->fail("유효하지 않습니다.", 400);
+            }
+        }
+
+        if($getUserByEmail) {
+            $id = (int)$getUserByEmail['idx'];
+            $data = [
+                'user_password' => password_hash($post->userPassword, PASSWORD_DEFAULT)
+            ];
+
+            $updRes = $user->update($id, $data);
+            if (!$updRes) {
+                return $this->fail("유효하지 않습니다.", 400);
+            }
+        }
+
+        $this->sessionProc($getUserByUserId, $getUserByEmail);
         $data = [
             "code" => 200,
-            "msg" => "Ok"
+            "msg" => "로그인 되었습니다."
         ];
         return $this->respond($data, 200);
     }
 
     public function logout(): \CodeIgniter\HTTP\RedirectResponse
     {
-        unset($_SESSION['userId']);
+        //unset($_SESSION);
+        $this->session->remove(['user']);
         return redirect()->to('/');
     }
 

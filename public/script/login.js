@@ -12,11 +12,12 @@ function fLogin() {
         .then(data => {
             console.log(data);
             hideLoading();
-            alert(data.messages.msg);
+
             if (data.code === 200) {
+                alert(data.msg);
                 window.location = '/';
             } else {
-
+                alert(data.messages.msg);
             }
         });
 }
