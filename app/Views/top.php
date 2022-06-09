@@ -1,7 +1,7 @@
 <div class="top">
     <div class="topInner disFlex alignC">
         <a href="/"> <img src="/images/header-logo.png" alt="load img failed"> </a>&nbsp;&nbsp;
-        <?php if (!empty($_SESSION['userId'])) { ?>
+        <?php if ( $_SESSION['user'] ) { ?>
             <div>
                 <label>
                     <input type="text" name="searching" placeholder="돋보기 (검색)" value=""/>
@@ -13,7 +13,7 @@
             <a href="#"> 하트 </a>&nbsp;
                     
             <!-- 드랍다운 메뉴 필요 -->
-            <a href="/<?= $_SESSION['userId'] ?>"> 프로필</a>&nbsp;
+            <a href="/<?=  $_SESSION['user']['userId'] ?>"> 프로필</a>&nbsp;
             <a href="#"> 저장됨 </a&nbsp;
             <a href="#">설정</a>&nbsp;
             <a href="#"> 계정전환 </a>&nbsp;

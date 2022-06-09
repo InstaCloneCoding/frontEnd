@@ -11,9 +11,8 @@ class HomeController extends BaseController
     {
         $data = [];
         // 세번 호출됨.
-
         echo view("header/header");
-        if( empty($_SESSION['userId']) ) {
+        if( empty($this->session->user) ) {
             echo view("main");
         } else {
             $fidResponse = Curl::curlGet(Define::setAPIServer()."/");
