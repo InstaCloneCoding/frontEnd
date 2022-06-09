@@ -6,15 +6,10 @@
     max-width:765px;
     margin:0 auto;
 }
-#footer .menu ul li {
-    text-align:center;
-}
 #footer .copyright {
-    text-align:center;
-}
-#footer .copyright p {
     max-width:765px;
     margin:0 auto;
+    text-align:center;
 }
 
 /* screen min-width:880px */
@@ -37,6 +32,7 @@
         font-size:12px;
     }
 }
+
 /* screen max-width:480px */
 @media screen and (max-width:480px) {
     /* 푸터 하단 메뉴 */

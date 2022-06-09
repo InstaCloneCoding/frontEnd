@@ -1,5 +1,5 @@
 
-/* --- */
+/* .resetWrap .innerWrap .inner */
 .resetWrap > .innerWrap .inner {
     max-width:460px;
     margin:0 auto;
@@ -7,30 +7,62 @@
     text-align:center;
     background:#fff;
 }
-
-/* --- */
-.resetTxt > p {
+/* resetTxt */
+.resetTxt {
+    margin:10px 0;
     color:#262626;
+}
+/* --- */
+.resetWrap .loginLinkBtn:disabled {
+    background:#ddd;
+    border:1px solid #ddd;
+}
+/* --- */
+.resetWrap .loginLinkBtn {
+    background:#0095f6;
+    border:1px solid #0095f6;
+    border-radius:5px;
+    color:var(--white);
+}
+/* --- */
+.resetWrap .authBtn:disabled {
+    background:#ddd;
+    border:1px solid #ddd;
+}
+/* --- */
+.resetWrap .authBtn {
+    background:#0095f6;
+    border:1px solid #0095f6;
+    border-radius:5px;
+    color:var(--white);
+}
+/* --- */
+.resetWrap .resetPwBtn:disabled {
+    background:#ddd;
+    border:1px solid #ddd;
+}
+/* --- */
+.resetWrap .resetPwBtn {
+    background:#0095f6;
+    border:1px solid #0095f6;
+    border-radius:5px;
+    color:var(--white);
 }
 
 /* screen min-width:481px */
 @media screen and (min-width:481px) {
-
     /* --- */
     .resetWrap > .innerWrap .inner01 {
         padding:50px 30px;
     }
-
     /* --- */
-    .resetTxt > p {
+    .resetTxt {
         font-size:16px;
     }
-
     /* --- */
     .loginLinkBtn {
         font-size:14px;
     }
-
     /* --- */
     .newAccountWrap {
         margin:50px 0;
@@ -38,12 +70,10 @@
     .newAccountWrap a {
         font-size:14px;
     }
-
 }
 
 /* screen max-width:480px */
 @media screen and (max-width:480px) {
-
     /* --- */
     .resetWrap > .innerWrap .inner {
         background:none;
@@ -52,18 +82,15 @@
     .resetWrap > .innerWrap .inner01 {
         padding:25px 20px 0;
     }
-
     /* --- */
-      .resetTxt > p {
+      .resetTxt {
         font-size:14px;
     }
-
     /* --- */
     .loginLinkBtn {
         height:30px;
         font-size:12px;
     }
-
     /* --- */
     .newAccountWrap {
         margin:25px 0;

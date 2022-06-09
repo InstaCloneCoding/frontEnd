@@ -1,5 +1,5 @@
 <div class="top">
-    <div class="topInner disFlex alignCenter">
+    <div class="topInner disFlex alignC">
         <a href="/"> <img src="/images/header-logo.png" alt="load img failed"> </a>&nbsp;&nbsp;
         <?php if (!empty($_SESSION['userId'])) { ?>
             <div>
