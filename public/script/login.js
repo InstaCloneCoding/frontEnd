@@ -12,17 +12,13 @@ function fLogin() {
         .then(data => {
             console.log(data);
             hideLoading();
+            alert(data.messages.msg);
             if (data.code === 200) {
                 window.location = '/';
             } else {
-                if (!pwComple) {
-                    alert('ddd');
-                }
+
             }
         });
-
-   
-
 }
 
 function fJoin() {
