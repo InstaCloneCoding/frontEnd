@@ -16,17 +16,13 @@
                 <!-- ID / PW -->
                 <form method="post" id="form" name="form">
                     <label for="userId">
-                        <input type="text" id="userId" name="userId" placeholder="이메일" value=""
-                               onkeyup="emailCheckInput()"/>
+                        <input type="text" id="userId" name="userId" placeholder="이메일" value="" onkeyup="emailCheckInput()" />
                     </label>
-                    <div class="idCompleMsg msg compleMsg"></div>
-                    <div class="idErrorMsg msg errorMsg"></div>
+                    <div class="msg" id="idMsg"></div>
                     <label for="userPassword">
-                        <input type="password" id="userPassword" class="mt10" name="userPassword" placeholder="비밀번호"
-                               value="" onkeyup="pwCheckInput()"/>
-                    </label>
-                    <div class="pwCompleMsg msg compleMsg"></div>
-                    <div class="pwErrorMsg msg errorMsg"></div>
+                        <input type="password" id="userPassword" class="mt10" name="userPassword" placeholder="비밀번호" value="" onkeyup="pwCheckInput()" />
+                    </label>  
+                    <div class="msg" id="pwMsg"></div>
                 </form>
                 <!-- // ID / PW -->
                 <div>
@@ -61,49 +57,7 @@
     </div>
 </section>
 <!-- // 로그인박스 -->
-
-<script type="text/javascript">
-    let logError = document.querySelector(".idErrorMsg"); // 이메일 오류 텍스트
-    let logComple = document.querySelector(".idCompleMsg"); // 이메일 정상 텍스트
-    let pwComple = document.querySelector(".pwCompleMsg"); // 비밀번호 오류 텍스트
-    let pwError = document.querySelector(".pwErrorMsg"); // 비밀번호 정상 텍스트
-    document.querySelector('.loginBtn').disabled = true;
-
-    function emailCheckInput() { // 이메일 체크
-        let email = document.getElementById('userId').value; // 이메일
-
-        if (email === "") {
-            logError.innerHTML = ""
-        } else if (!emailCheck(email)) {
-            logComple.innerHTML = ""
-            logError.innerHTML = "이메일 정확하게 입력해주세요."
-            document.getElementById("userId").focus();
-        } else {
-            logComple.innerHTML = "이메일 정확하게 입력했습니다."
-            logError.innerHTML = ""
-        }
-    }
-
-    function pwCheckInput() { // 비밀번호 체크
-        let email = document.getElementById('userId').value; // 이메일
-        let password = document.getElementById('userPassword').value; // 비밀번호
-
-        if (email === "") {
-            logError.innerHTML = "이메일 입력하세요"
-            document.getElementById("userPassword").value = "";
-            document.getElementById("userId").focus();
-            return false;
-        } else if (!pwCheck(password)) {
-            pwComple.innerHTML = ""
-            pwError.innerHTML = "비밀번호 정확하게 입력해주세요."
-        } else {
-            pwComple.innerHTML = "비밀번호 정확하게 입력했습니다."
-            pwError.innerHTML = ""
-            document.querySelector('.loginBtn').disabled = false;
-        }
-    }
-</script>
-
 <script type="text/javascript" src="/script/common.js"></script>
 <script type="text/javascript" src="/script/loading.js"></script>
+<script type="text/javascript" src="/script/const.js"></script>
 <script type="text/javascript" src="/script/login.js"></script>
