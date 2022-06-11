@@ -19,10 +19,9 @@
             <!-- 이메일 입력 -->
             <div class="pb15">
                 <label>
-                    <input type="text" id="userInfo" name="userInfo" value="" placeholder="이메일" onkeyup="emailCheckInput()" />
+                    <input type="text" id="userInfo" name="userInfo" value="" placeholder="이메일" onkeyup="userInfoCheck()" />
                 </label>
-                <div class="emailCompleMsg msg compleMsg"></div>
-                <div class="emailErrorMsg msg errorMsg"></div>
+                <div class="msg" id="userInfoMsg"></div>
             </div>
             <!--// 이메일 입력 -->
             <!-- 로그인 링크 보내기 -->
@@ -39,11 +38,10 @@
             <div id="confirmAuthCode" class="authCode mb15" style="display:none">
                 <div class="pb15">
                     <label>
-                        <input type="password" name="authCode" id="authCode" value="" maxlength="6" placeholder="인증코드" onkeyup="authCodeInput()" />
+                        <input type="password" name="authCode" id="authCode" value="" maxlength="6" placeholder="인증코드" onkeyup="authCodeCheck()" />
                         <input type="hidden" name="userId" id="userId" value=""/>
                     </label>
-                    <div class="authCompleMsg msg compleMsg"></div>
-                    <div class="authErrorMsg msg errorMsg"></div>
+                    <div class="msg" id="authMsg"></div>
                 </div>
                 <div>
                     <button class="authBtn btnM btnBlue w100 fw400" onclick="confirmAuthCode()">인증하기</button>
@@ -54,13 +52,13 @@
             <div id="resetPassword" class="resetPassword mb15" style="display:none">
                 <div class="pb15">
                     <label>
-                        <input type="password" name="newPassword" id="newPassword" value="" placeholder="새로운 비밀번호" onkeyup="pwCheckInput()" />
+                        <input type="password" name="newPassword" id="newPassword" value="" placeholder="새로운 비밀번호" onkeyup="newPwCheck()" />
                     </label>
+                    <div class="msg" id="rePwMsg"></div>
                     <label>
-                        <input type="password" name="rePassword" id="rePassword"  class="mt10" value="" placeholder="새로운 비밀번호 재입력" onkeyup="pwCheckOkInput()" />
+                        <input type="password" name="rePassword" id="rePassword"  class="mt10" value="" placeholder="새로운 비밀번호 재입력" onkeyup="newPwOkCheck()" />
                     </label>
-                    <div class="reCompleMsg msg compleMsg"></div>
-                    <div class="reErrorMsg msg errorMsg"></div>
+                    <div class="msg" id="rePwOkMsg"></div>
                 </div>
                 <div>
                     <button class="resetPwBtn btnM btnBlue w100 fw400" onclick="resetPassword()" style="font-size:14px;">
@@ -86,4 +84,5 @@
 
 <script type="text/javascript" src="/script/common.js"></script>
 <script type="text/javascript" src="/script/loading.js"></script>
+<script type="text/javascript" src="/script/const.js"></script>
 <script type="text/javascript" src="/script/reset.js"></script>
