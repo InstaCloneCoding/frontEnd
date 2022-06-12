@@ -4,15 +4,14 @@ document.querySelector('.signUpBtn').disabled = true;
 
 function joinEmailCheck () {
     const email  = document.getElementById('userEmail').value; 
-
     if (email == "") {
         joinEmailMsg.innerHTML = ""
     }
     else if (!emailCheck(email)) {
-        joinEmailMsg.innerHTML = "<p class='errorMsg' id='emailError'>이메일 정확하게 입력해주세요</p>";
+        joinEmailMsg.innerHTML = "<p class='errorMsg'>이메일 정확하게 입력해주세요</p>";
         document.getElementById("userEmail").focus();
         document.querySelector('.signUpBtn').disabled = true;
-    }
+    } 
     else {
         joinEmailMsg.innerHTML = "<p class='compleMsg'>이메일 정확하게 입력했습니다</p>";
     }
@@ -20,34 +19,38 @@ function joinEmailCheck () {
 
 function joinNameCheck () {
     const email  = document.getElementById('userEmail').value; 
-    const error =  document.getElementById('emailError');
-
-    if (email === "") {
+    if (email == "") {
         joinEmailMsg.innerHTML = "<p class='errorMsg'>이메일 입력하세요</p>"
+        document.getElementById("userName").value = "";
+        document.getElementById("userEmail").focus();
+    } 
+    else if (joinEmailMsg == "") {
         document.getElementById("userName").value = "";
         document.getElementById("userEmail").focus();
     }
     else {
         joinNameMsg.innerHTML = ""
     }
-    
-    if (error.innerHTML === "이메일 정확하게 입력해주세요"){
-         document.getElementById("userName").value = "";
-         document.getElementById("userEmail").focus();
-     } else {
-        
-     }
 }
 
 function joinIdCheck () {
+    const email  = document.getElementById('userEmail').value; 
     const name = document.getElementById('userName').value;
-
+    // if (email == "") {
+    //     joinEmailMsg.innerHTML = "<p class='errorMsg'>이메일 입력하세요</p>"
+    //     document.getElementById("userId").value = "";
+    //     document.getElementById("userEmail").focus();
+    // }
+    // else if (joinEmailMsg.innerHTML == "이메일 정확하게 입력해주세요") {
+    //     document.getElementById("userName").value = "";
+    //     document.getElementById("userEmail").focus();
+    // }
     if (name == "") {
         joinNameMsg.innerHTML = "<p class='errorMsg'>성명을 입력하세요</p>"
         document.getElementById("userId").value = "";
         document.getElementById("userName").focus();
         return false;
-    }
+    } 
     else {
         joinIdMsg.innerHTML = ""
     }
@@ -56,7 +59,6 @@ function joinIdCheck () {
 function joinPwCheck () {
     const userId = document.getElementById('userId').value;
     const password  = document.getElementById('userPassword').value; // 비밀번호
-
     if (userId == "") {
         joinIdMsg.innerHTML = "<p class='errorMsg'>사용자 이름을 입력해주세요</p>"
         document.getElementById("userPassword").value = "";
