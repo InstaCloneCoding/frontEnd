@@ -6,6 +6,7 @@ document.querySelector('.resetPwBtn').disabled = true;
 
 function userInfoCheck() {
     const email  = document.getElementById('userInfo').value; 
+
     if (email == "") {
         userInfoMsg.innerHTML = ""
     }
@@ -19,37 +20,55 @@ function userInfoCheck() {
 
 function authCodeCheck() {
     const authCode  = document.getElementById('authCode').value; 
-    if (authCode.length != 6) {
-        authMsg.innerHTML = "<p class='errorMsg'>인증번호 형식이 틀립니다</p>"
-    } else {
-        authMsg.innerHTML = "<p class='compleMsg'>인증번호 형식이 맞습니다</p>"
+
+    if (authCode.length == 6) {
+        authMsg.innerHTML = "<p class='compleMsg' id='test'>인증번호 형식이 맞습니다</p>"
         document.querySelector('.authBtn').disabled = false;
+    }
+     else {
+        authMsg.innerHTML = "<p class='errorMsg'>인증번호 형식이 틀립니다</p>"
+        document.querySelector('.authBtn').disabled = true;
     }
 }
 
-function newPwCheck () {
+function newPwCheck() {
     const password  = document.getElementById('newPassword').value; // 비밀번호
-    if (!pwCheck(password)) {
-        rePwMsg.innerHTML = "<p class='errorMsg'>비밀번호 정확하게 입력해주세요</p>";
-    } else {
+    const rePassword  = document.getElementById('rePassword').value; // 비밀번호
+
+    if (password == "") {
+        rePwMsg.innerHTML = ""
+    }
+    else if (pwCheck(password)) {
         rePwMsg.innerHTML = "<p class='compleMsg'>비밀번호 통과</p>";
+    }
+    else {
+        rePwMsg.innerHTML = "<p class='errorMsg'>비밀번호 정확하게 입력해주세요</p>";
+        document.querySelector('.resetPwBtn').disabled = true;
+    }
+
+    // 비밀번호 비밀번호 재입력 일치 시
+    if (password === rePassword) {
+        document.querySelector('.resetPwBtn').disabled = false;
     }
 } 
 
-function newPwOkCheck () {
+function newPwOkCheck() {
     const password  = document.getElementById('newPassword').value; // 비밀번호
     const rePassword  = document.getElementById('rePassword').value; // 비밀번호
+
     if (password == "") {
         rePwMsg.innerHTML = "<p class='errorMsg'>비밀번호를 입력해주세요.</p>"
         document.getElementById("rePassword").value = "";
         document.getElementById("newPassword").focus();
         return false;
     }
-    else if (!pwCheck(rePassword)) {
-        rePwOkMsg.innerHTML = "<p class='errorMsg'>비밀번호 틀립니다.</p>"
-    } else {
+     else if (pwCheck(rePassword) && password === rePassword) {
         rePwOkMsg.innerHTML = "<p class='compleMsg'>비밀번호 정확하게 입력했습니다.</p>"
         document.querySelector('.resetPwBtn').disabled = false;
+    }
+    else {
+        rePwOkMsg.innerHTML = "<p class='errorMsg'>비밀번호 정확하게 입력해주세요.</p>"
+        document.querySelector('.resetPwBtn').disabled = true;
     }
 } 
 
