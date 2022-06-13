@@ -7,7 +7,9 @@
 
         <input id="file_1" type="file" style="display: none;" />
 
-        <div class="dragDrop">
+        <div class="dragDropBox"
+             ondrop="dropHandler(event);" ondragover="dragOverHandler(event);"
+             style="height: 250px; width:250px;">
             사진과 동영상을 여기에 끌어다 놓으세요
         </div>
 
