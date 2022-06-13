@@ -3,6 +3,7 @@ document.querySelector('.loginBtn').disabled = true;
 
 function emailCheckInput() { //이메일체크
     const email = document.getElementById('userId').value;
+
     if (email === "") {
         idMsg.innerHTML = ""
     } 
@@ -19,6 +20,7 @@ function emailCheckInput() { //이메일체크
 function pwCheckInput() { // 비밀번호체크
     const email = document.getElementById('userId').value;
     const password = document.getElementById('userPassword').value;
+
     if (email === "") {
         idMsg.innerHTML = "<p class='errorMsg'>이메일 입력하세요.</p>";
         document.getElementById("userPassword").value = "";
@@ -51,7 +53,9 @@ function fLogin() {
                 alert(data.msg);
                 window.location = '/';
             } else {
-                alert(data.messages.msg);
+                loginErrorMsg.innerHTML = "<p class='errorMsg'>로그인이 유효하지 않습니다.</p>"
+                // alert(data.messages.msg);
+                
             }
         });
 }

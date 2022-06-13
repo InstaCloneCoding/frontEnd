@@ -14,3 +14,6 @@ const userInfoMsg = document.getElementById("userInfoMsg");
 const authMsg = document.getElementById("authMsg");
 const rePwMsg = document.getElementById("rePwMsg");
 const rePwOkMsg = document.getElementById("rePwOkMsg");
+
+/* */
+const loginErrorMsg = document.getElementById("loginMsg");

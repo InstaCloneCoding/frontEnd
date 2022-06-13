@@ -31,6 +31,7 @@
                             <img class="spinner" src="/images/spinner_2.gif" style="width:30px;height:30px;">
                         </span>로그인
                     </button>
+                    <div class="msg" id="loginMsg" style="text-align:center"></div>
                 </div>
                 <!-- 비밀번호를 잊으셨나요? -->
                 <div class="pwFind textC">
