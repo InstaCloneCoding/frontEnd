@@ -29,7 +29,8 @@ function pwCheckInput() { // 비밀번호체크
     } 
     else if (!pwCheck(password)) {
         pwMsg.innerHTML = "<p class='errorMsg'>비밀번호 정확하게 입력해주세요.</p>";
-    } 
+        document.querySelector('.loginBtn').disabled = true;
+    }
     else {
         pwMsg.innerHTML = "<p class='compleMsg'>비밀번호 정확하게 입력했습니다.</p>";
         document.querySelector('.loginBtn').disabled = false;
