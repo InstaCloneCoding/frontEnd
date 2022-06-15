@@ -1,37 +1,39 @@
 
-document.querySelector('.loginBtn').disabled = true;
+document.querySelector('.loginBtn').disabled = true; // 로그인버튼 disabled
 
-function emailCheckInput() { //이메일체크
-    const email = document.getElementById('userId').value;
+ // 로그인 이메일 체크
+function emailCheckInput() {
+    const email = document.getElementById('userId').value; // 이메일
 
-    if (email === "") {
+    if (email === "") { // 이메일 값 없는 경우
         idMsg.innerHTML = ""
     } 
-    else if (!emailCheck(email)) {
+    else if (!emailCheck(email)) { // 이메일 정규식 체크
         idMsg.innerHTML = "<p class='errorMsg'>이메일 정확하게 입력해주세요</p>";
         document.getElementById("userId").focus();
         document.querySelector('.loginBtn').disabled = true;
     } 
-    else {
+    else { // 이외의 조건
         idMsg.innerHTML = "<p class='compleMsg'>이메일 정확하게 입력했습니다.</p>";
     }
 }
 
-function pwCheckInput() { // 비밀번호체크
-    const email = document.getElementById('userId').value;
-    const password = document.getElementById('userPassword').value;
+// 로그인 비밀번호 체크
+function pwCheckInput() { 
+    const email = document.getElementById('userId').value; // 이메일
+    const password = document.getElementById('userPassword').value; // 비밀번호
 
-    if (email === "") {
+    if (email === "") { // 이메일 값 없는 경우
         idMsg.innerHTML = "<p class='errorMsg'>이메일 입력하세요.</p>";
         document.getElementById("userPassword").value = "";
         document.getElementById("userId").focus();
         return false;
     } 
-    else if (!pwCheck(password)) {
+    else if (!pwCheck(password)) { // 비밀번호 정규식 체크
         pwMsg.innerHTML = "<p class='errorMsg'>비밀번호 정확하게 입력해주세요.</p>";
         document.querySelector('.loginBtn').disabled = true;
     }
-    else {
+    else { // 이외의 조건
         pwMsg.innerHTML = "<p class='compleMsg'>비밀번호 정확하게 입력했습니다.</p>";
         document.querySelector('.loginBtn').disabled = false;
     }

@@ -16,7 +16,7 @@
             <form id="form" method="post">
                 <div>
                     <label for="userEmail">
-                        <input class="mt10" name="emailOrPhone" id="userEmail" placeholder="이메일 주소 또는 핸드폰번호" onkeyup="joinEmailCheck()">
+                        <input class="mt10" name="emailOrPhone" id="userEmail" placeholder="이메일 주소" onkeyup="joinEmailCheck()">
                     </label>
                     <div class="msg" id="joinEmailMsg"></div>
                     <label for="userName">

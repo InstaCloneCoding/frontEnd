@@ -13,6 +13,17 @@ function authCheck(authCode) {
     let checkAuthCode = /^[0-9]+$/;
     return checkAuthCode.test(authCode);
 }
+// 회원가입 성명 정규식 (한글만)
+function nameCheck(name) { 
+    let checkUserName = /^[가-힣]+$/;
+    return checkUserName.test(name);
+}
+// 회원가입 사용자 이름 정규식 (영문,숫자)
+function userIdCheck(userId) { 
+    let checkUserId = /^[a-zA-Z0-9]+$/;
+    return checkUserId.test(userId);
+}
+
 
 function headers(gbn) {
     if(gbn === 'x-www-form') {

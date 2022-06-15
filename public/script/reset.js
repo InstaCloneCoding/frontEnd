@@ -1,13 +1,14 @@
 
 
-document.querySelector('.loginLinkBtn').disabled = true;
-document.querySelector('.authBtn').disabled = true;
-document.querySelector('.resetPwBtn').disabled = true;
+document.querySelector('.loginLinkBtn').disabled = true; // 로그인 링크 보내기 disabled
+document.querySelector('.authBtn').disabled = true; // 인증하기 disabled
+document.querySelector('.resetPwBtn').disabled = true; // 비밀번호 재설정 disabled
 
-function userInfoCheck() { // 이메일(로그인 링크 보내기) 체크
+// 이메일(로그인 링크 보내기) 체크
+function userInfoCheck() { 
     const email  = document.getElementById('userInfo').value; 
 
-    if (email == "") {  // 이메일 입력값 없을 경우
+    if (email == "") {  // 이메일 입력 값 없을 경우
         userInfoMsg.innerHTML = ""
     }
     else if (!emailCheck(email)) { // 이메일 정규식 체크 맞지 않는 경우
@@ -20,10 +21,11 @@ function userInfoCheck() { // 이메일(로그인 링크 보내기) 체크
     }
 }
 
-function authCodeCheck() { // 로그인링크 인증번호 체크
+ // 로그인링크 인증번호 체크
+function authCodeCheck() {
     const authCode  = document.getElementById('authCode').value; 
 
-    if (authCode == "") { // 로그인링크값 없을 경우
+    if (authCode == "") { // 로그인 링크 값 없을 경우
         authMsg.innerHTML = ""
     } 
     else if (authCheck(authCode) && authCode.length == 6) { // 로그인링크값 글자체크 및 정규식 체크
@@ -36,11 +38,12 @@ function authCodeCheck() { // 로그인링크 인증번호 체크
     }
 }
 
-function newPwCheck() { // 새로운 비밀번호 체크
+// 새로운 비밀번호 체크
+function newPwCheck() {
     const password  = document.getElementById('newPassword').value; // 비밀번호
     const rePassword  = document.getElementById('rePassword').value; // 비밀번호 재설정
 
-    if (password == "") { // 비밀번호값 없을 경우
+    if (password == "") { // 비밀번호 값 없을 경우
         rePwOkMsg.innerHTML = ""
     }
     else if (pwCheck(password) && password === rePassword) { // 비밀번호 정규식 체크
@@ -54,7 +57,8 @@ function newPwCheck() { // 새로운 비밀번호 체크
     }
 } 
 
-function newPwOkCheck() { // 새로운 비밀번호 재입력 비밀번호 체크
+// 새로운 비밀번호 재입력 비밀번호 체크
+function newPwOkCheck() {
     const password  = document.getElementById('newPassword').value; // 새로운 비밀번호
     const rePassword  = document.getElementById('rePassword').value; // 새로운 비밀번호 재입력 비밀번호
 
