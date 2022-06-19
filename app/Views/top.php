@@ -8,7 +8,7 @@
                 </label>
             </div>&nbsp;&nbsp;
             <a href="/"> 홈 </a>&nbsp;
-            <a onclick="showNewPostPopup()"> 새 게시글 </a>&nbsp;
+            <a onclick="createNewPostPopup()"> 새 게시글 </a>&nbsp;
             <a href="#"> 나침표 </a>&nbsp;
             <a href="#"> 하트 </a>&nbsp;
                     

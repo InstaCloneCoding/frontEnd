@@ -10,6 +10,7 @@
     background:white;
     z-index:1000;
 }
+
 #popupBackground {
     position:fixed;
     width:100%;
@@ -20,7 +21,22 @@
     left:0;
     background:rgba(0, 0, 0, 0.25);
 }
-.popup.newFid {
+
+.popup.newFeed {
     width:50%;
     height:400px;
+    border-radius: 5px;
+}
+
+#popupTitle {
+    border-bottom: 1px solid #8e8e8e;
+}
+
+#preview {
+    width: 100px;
+    height: 100px;
+}
+
+input {
+    background: white;
 }
