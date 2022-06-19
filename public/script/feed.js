@@ -1,16 +1,26 @@
 function showNewPostPopup() {
-    const getPopUp = document.getElementById("popupBackground");
+    const getPopUp = document.querySelector(".popupBackground");
     getPopUp.style.display = "block";
 }
 
 function HideNewPostPopup() {
-    const getPopUp = document.getElementById("popupBackground");
+    const getPopUp = document.querySelector(".popupBackground");
     getPopUp.style.display = "none";
 }
 
 function upload() {
     const input = document.getElementById("file_1");
     input.click();
+}
+
+function feedAddModal () {
+    const feedAdd = document.querySelector(".feedAddModal");
+    
+    if (feedAdd.style.display == "none") {
+        feedAdd.style.display="block";
+    } else {
+        feedAdd.style.display="none";
+    }
 }
 
 async function newPost() {
