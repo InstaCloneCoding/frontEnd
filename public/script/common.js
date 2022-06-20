@@ -50,6 +50,21 @@ function getData(url = null, header = null, data = null) {
     });
 }
 
+const el = document.getElementById("body");
+el.addEventListener("click", feedAddModal, false);
+
+function feedAddModal () {
+    const feedModal = document.querySelector(".feedAddModal");
+
+    if (feedModal.style.display == "none") {
+        feedModal.style.display = "block";
+    }
+    else {
+        feedModal.style.display = "none";
+    }
+}
+
+
 function goToMain() {
     window.location = "/";
 }

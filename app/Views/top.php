@@ -28,7 +28,7 @@
                 </div>  
                 <div>
                     <!-- 드랍다운 메뉴 필요 -->
-                    <span class="material-icons" onclick="test()">account_circle</span>
+                    <span class="material-icons">account_circle</span>
                     <div class="feedAddModal">
                         <div style="padding:8px 16px;">
                             <a href="/<?=  $_SESSION['user']['userId'] ?>" class="disFlex alignC">
