@@ -165,14 +165,16 @@ class AccountsController extends BaseController
         $post = $this->request->getJSON();
         if( empty($post) ) { exit; }
 
-        return Curl::curlPost(Define::setAPIServer()."/accounts/password/email", $post);
+        $data = Curl::curlPost(Define::setAPIServer()."/accounts/password/email", $post);
+        return $data;
     }
 
     public function authCode() {
         $post = $this->request->getJSON();
         if( empty($post) ) { exit; }
 
-        return Curl::curlPost(Define::setAPIServer()."/accounts/password/auth", $post);
+        $data = Curl::curlPost(Define::setAPIServer()."/accounts/password/auth", $post);
+        return $data;
     }
 
     /**
@@ -208,6 +210,7 @@ class AccountsController extends BaseController
             ]);
         }
 
-        return Curl::curlPost(Define::setAPIServer()."/accounts/password/reset", $post);
+        $result =  Curl::curlPost(Define::setAPIServer()."/accounts/password/reset", $post);
+        return $result;
     }
 }
