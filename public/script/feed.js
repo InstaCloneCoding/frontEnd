@@ -80,14 +80,19 @@ function upload() {
 	input.click();
 }
 
-function feedAddModal() {
-	const feedAdd = document.querySelector(".feedAddModal");
+function test () {
+    const testtest = document.querySelector(".feedAddModal");
+    testtest.style.display = block;
+}
 
-	if (feedAdd.style.display == "none") {
-		feedAdd.style.display = "block";
-	} else {
-		feedAdd.style.display = "none";
-	}
+function initMouseClickEvent(){
+    $(document).mouseup(function(e){
+        var sch_container = $(".feedAddModal");
+        if(sch_container.has(e.target).length === 0)
+            sch_container.hide();
+    
+    });
+ 
 }
 
 async function newPost() {
