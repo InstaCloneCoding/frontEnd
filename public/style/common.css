@@ -122,16 +122,22 @@ input {
     padding: 30px;
 }
 
-/* padding-left */
-.pl10 {
-    padding-left:10px;
+/* padding-right */
+.pr10 {
+    padding-right:10px;
 }
+
 /* padding-bottom */
 .pb15 {
     padding-bottom:15px;
 }
 .pb30 {
     padding-bottom:30px;
+}
+
+/* padding-left */
+.pl10 {
+    padding-left:10px;
 }
 
 .position-r {
