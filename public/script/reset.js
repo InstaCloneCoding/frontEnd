@@ -132,6 +132,7 @@ function resetPassword() {
         .then(data => {
             hideLoading();
             if(data.code === 200) {
+                alert(data.states.msg);
                 window.location = '/';
             } else {
 
