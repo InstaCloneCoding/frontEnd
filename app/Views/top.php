@@ -16,7 +16,7 @@
                     </a>
                 </div>
                 <div>
-                    <a onclick="createNewPostPopup()"> 
+                    <a onclick="createNewPostPopup()">
                         <span class="material-icons">post_add</span>
                     </a>
                 </div>
@@ -28,8 +28,8 @@
                 </div>  
                 <div>
                     <!-- 드랍다운 메뉴 필요 -->
-                    <span class="material-icons">account_circle</span>
-                    <div class="feedAddModal">
+                    <span class="material-icons click">account_circle</span>
+                    <div class="modal feedAddModal">
                         <div style="padding:8px 16px;">
                             <a href="/<?=  $_SESSION['user']['userId'] ?>" class="disFlex alignC">
                                 <span class="material-icons">account_circle</span>

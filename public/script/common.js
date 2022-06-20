@@ -50,20 +50,60 @@ function getData(url = null, header = null, data = null) {
     });
 }
 
-const el = document.getElementById("body");
-el.addEventListener("click", feedAddModal, false);
 
-function feedAddModal () {
-    const feedModal = document.querySelector(".feedAddModal");
+const el = document.querySelector(".click");
+const el1 = document.getElementById("wrapBg");
+const el2 = document.querySelector(".click1");
 
-    if (feedModal.style.display == "none") {
-        feedModal.style.display = "block";
-    }
-    else {
-        feedModal.style.display = "none";
+el.addEventListener("click", openModal, false);
+el1.addEventListener("click", closeModal, false);
+el2.addEventListener("click", test, false);
+
+function openModal () {
+    const open = document.querySelector(".modal");
+    const open1 = document.querySelector(".wrapBg");
+
+    if (open.style.display == "none") {
+
+        open.style.display = "block";
+        open1.style.display = "block";
+
+    } else {
+
+        open.style.display = "none";
+
     }
 }
 
+function closeModal () {
+    const open = document.querySelector(".modal");
+    const open1 = document.querySelector(".wrapBg");
+    const open2 = document.querySelector(".testModal");
+
+    if (open1.style.display == "block") {
+        open.style.display = "none";
+        open1.style.display = "none";
+        open2.style.display = "none";
+    } else {
+
+    }
+}
+
+function test () {
+    const open = document.querySelector(".testModal");
+    const open1 = document.querySelector(".wrapBg");
+
+    if (open.style.display == "none") {
+
+        open.style.display = "block";
+        open1.style.display = "block";
+
+    } else {
+
+        open.style.display = "none";
+
+    }
+}
 
 function goToMain() {
     window.location = "/";

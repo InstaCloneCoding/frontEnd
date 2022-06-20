@@ -13,8 +13,27 @@
                                 <p style="font-size;14px;font-weight:600;"><?= $value->userId ?></p>
                             </div>
                         </div>
-                        <div class="disFlex alignC"><span class="material-icons">more_horiz</span></div>
-                    </div>
+                        <div class="disFlex alignC">
+                            <span class="material-icons click1">
+                            more_horiz
+                            </span>
+                            <div class="modal testModal">
+                                <div style="padding:8px 16px;">
+                                    <a href="/<?=  $_SESSION['user']['userId'] ?>" class="disFlex alignC">
+                                        <span class="material-icons">account_circle</span>
+                                        <span>프로필</span>
+                                    </a>
+                                </div>
+                                <div style="padding:8px 16px;">
+                                    <a href="#" class="disFlex alignC">
+                                        <span class="material-icons">bookmark_border</span>
+                                        <span>저장됨</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        </div>
                     <div class="contentImg"></div>
                     <div class="col-between"  style="padding:15px 15px 5px 15px;">
                         <div class="disFlex">
