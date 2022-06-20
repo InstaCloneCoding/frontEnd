@@ -26,7 +26,7 @@ class Curl
 
         $data = [
             "code" => $http_code,
-            "msg" => json_decode($response)
+            "states" => json_decode($response)
         ];
 
         return json_encode($data);

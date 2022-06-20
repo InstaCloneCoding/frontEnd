@@ -85,7 +85,7 @@ function confirmAuthCode() {
             if(data.code === 200) {
                 showResetPassword();
                 const userId = document.getElementById("userId");
-                userId.value = data.msg.userId;
+                userId.value = data.states.userId;
             } else {
 
             }
