@@ -16,12 +16,12 @@
                     </a>
                 </div>
                 <div>
-                    <a onclick="showNewPostPopup()"> 
+                    <a onclick="createNewPostPopup()"> 
                         <span class="material-icons">post_add</span>
                     </a>
                 </div>
                 <div>
-                     <!-- <a href="#"> 나침표 </a> -->
+                    <!-- <a href="#"> 나침표 </a> -->
                     <a href="#"> 
                         <span class="material-icons">favorite_border</span>
                     </a>
