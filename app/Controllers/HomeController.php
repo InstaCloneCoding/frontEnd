@@ -19,7 +19,7 @@ class HomeController extends BaseController
             $result = json_decode($fidResponse);
 
             $data = [
-                'feed' => $result->msg
+                'feed' => $result->states
             ];
             echo view("top");
             echo view("popup/content");
