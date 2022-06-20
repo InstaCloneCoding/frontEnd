@@ -59,6 +59,10 @@ input {
 }
 
 /* 정렬 */
+.col-between {
+    display:flex;
+    justify-content:space-between;
+}
 .alignC {
     align-items:center;
 }
@@ -118,12 +122,20 @@ input {
     padding: 30px;
 }
 
+/* padding-left */
+.pl10 {
+    padding-left:10px;
+}
 /* padding-bottom */
 .pb15 {
     padding-bottom:15px;
 }
 .pb30 {
     padding-bottom:30px;
+}
+
+.position-r {
+    position: relative;
 }
 
 /* overflow:hidden */
