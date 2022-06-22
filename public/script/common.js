@@ -24,7 +24,6 @@ function userIdCheck(userId) {
     return checkUserId.test(userId);
 }
 
-
 function headers(gbn) {
     if(gbn === 'x-www-form') {
         return {"Content-Type": "application/x-www-form-urlencoded"};
@@ -52,4 +51,57 @@ function getData(url = null, header = null, data = null) {
 
 function goToMain() {
     window.location = "/";
+}
+
+/* 소스 줄여야 함 */
+const el1 = document.querySelector(".click");
+const el2 = document.querySelector(".click1");
+const el3 = document.querySelector(".modalBg1");
+const el4 = document.querySelector(".modalBg2");
+
+el1.addEventListener("click", openModal1, false);
+el2.addEventListener("click", openModal2, false);
+el3.addEventListener("click", closeModal1, false);
+el4.addEventListener("click", closeModal2, false);
+
+// 상단 탑 모달창
+function openModal1 () {
+    const open1 = document.querySelector(".testModal1");
+    const bg1 = document.querySelector(".modalBg1");
+
+    if (open1.style.display == "none") {
+        open1.style.display = "block";
+        bg1.style.display = "block";
+    } 
+
+}
+// 피드 모달창
+function openModal2 () {
+    const open2 = document.querySelector(".testModal2");
+    const bg2 = document.querySelector(".modalBg2");
+
+    if (open2.style.display == "none") {
+        open2.style.display = "block";
+        bg2.style.display = "block";
+    } 
+}
+// 상단 탑 모달창 닫기
+function closeModal1 () {
+    const open1 = document.querySelector(".testModal1");
+    const bg1 = document.querySelector(".modalBg1");
+
+    if (open1.style.display == "block") {
+        open1.style.display = "none";
+        bg1.style.display = "none";
+    }  
+}
+// 피드 모달창 닫기
+function closeModal2 () {
+    const open2 = document.querySelector(".testModal2");
+    const bg2 = document.querySelector(".modalBg2");
+
+    if (open2.style.display == "block") {
+        open2.style.display = "none";
+        bg2.style.display = "none";
+    }
 }

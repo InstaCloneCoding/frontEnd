@@ -1,4 +1,11 @@
 /* --- */
+.feedContentCenter {
+    width:470px;
+    padding-right:30px;
+}
+.feedContentRight {
+    width:320px;
+}
 .feedContentWrap {
     border:1px solid #333;
     background:#fff;
@@ -6,9 +13,25 @@
     margin-bottom:30px;
 }
 .contentImg {
-    width:470px;height:470px;background:red;
+    width:100%;height:470px;background:red;
 }
 
-.feedAddModal {
-    display:none;position:absolute;width:230px;background:#fff;
+.modalContent {
+    position:absolute;
+    width:230px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background:#fff;
+    z-index:1001;
+}
+
+
+@media screen and (min-width:769px) {
+   .feedContentRight {display:block;}
+}
+
+@media screen and (max-width:768px) {
+    .feedContentCenter {padding-right:0;}
+    .feedContentRight {display:none;}
 }
