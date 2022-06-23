@@ -142,6 +142,9 @@ input {
 .pl10 {
     padding-left:10px;
 }
+.pl20 {
+    padding-left:20px;
+}
 
 .position-r {
     position: relative;
@@ -163,7 +166,6 @@ input {
 /* 공통박스 */
 .commonWrap {
     max-width:975px;
-    padding:0 10px;
     flex-direction:column;
 }
 .commonTxt {
@@ -222,6 +224,7 @@ input {
     /* 공통박스 */
     .commonWrap {
         margin:40px auto;
+        padding:0 20px;
     }
     .commonTxt {
         font-size:14px;
@@ -262,6 +265,7 @@ input {
     /* 공통박스 */
     .commonWrap {
         margin:20px auto;
+        padding:0 10px;
     }
     .commonTxt {
         font-size:12px;
