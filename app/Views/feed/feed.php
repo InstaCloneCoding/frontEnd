@@ -97,15 +97,53 @@
         </div>
         <!-- 피드 우측 -->
         <div class="feedContentRight">
-            <div>
+            <div style="position:fixed;width:320px;">
                 <div>
-                    <div style="width:54px;height:54px;background:red;border-radius:50%"></div>
-                    <p><?= $value->userId ?></p>
+                    <div>
+                        <div style="width:54px;height:54px;background:red;border-radius:50%"></div>
+                        <p><?= $value->userId ?></p>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div>소개도움말홍보 센터API채용 정보개인정보처리방침약관위치언어</div>
-                <div>© 2022 INSTAGRAM FROM META</div>
+                <div style="padding:20px 0 30px;">
+                    <div class="col-between alignC" style="padding-bottom:10px;">
+                        <span style="font-size:14px;font-weight:600">회원님을 위한 추천</span>
+                        <span style="font-size:12px;font-weight:400;color:rgb(38, 38, 38);">모두보기</span>
+                    </div>
+
+                    <div class="col-between alignC" style="padding:10px 0 5px;">
+                        <div class="disFlex alignC">
+                            <div class="" style="width:32px;height:32px;background:red;border-radius:50%"></div>
+                            <div class="pl10">
+                                <p style="font-size;14px;font-weight:600;"><?= $value->userId ?></p>
+                            </div>
+                        </div>
+                        <div style="font-size:12px;color:blue;">팔로우</div>
+                    </div>
+
+                    <div class="col-between alignC" style="padding:10px 0 5px;">
+                        <div class="disFlex alignC">
+                            <div class="" style="width:32px;height:32px;background:red;border-radius:50%"></div>
+                            <div class="pl10">
+                                <p style="font-size;14px;font-weight:600;"><?= $value->userId ?></p>
+                            </div>
+                        </div>
+                        <div style="font-size:12px;color:blue;">팔로우</div>
+                    </div>
+                </div>
+                <div style="font-size:14px;color:rgb(199, 199, 199);font-weight:400;">
+                    <div>
+                        소개
+                        도움말
+                        홍보
+                        센터API
+                        채용정보
+                        개인정보처리방침
+                        약관
+                        위치
+                        언어
+                    </div>
+                    <div>© 2022 INSTAGRAM FROM META</div>
+                </div>
             </div>
         </div>
         <!-- // 피드 우측 -->

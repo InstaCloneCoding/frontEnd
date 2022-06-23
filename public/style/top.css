@@ -5,27 +5,49 @@
 }
 /* --- */
 .topInner {
-    max-width:935px;
+    max-width:975px;
     margin:0 auto;
+}
+
+.topSearch {
+    width:268px;
+}
+
+
+@media screen and (min-width:769px) {
+    .topSearch {
+        display:block;
+    }
 }
 
 /* media screen min-width:481px */
 @media  screen and (min-width:481px) {
     .topInner {
         height:60px;
-        padding:0 30px;
+        padding:0 20px;
     }
     .topInner img {
         width:110px;
         height:30px;
     }
+  
+}
+
+@media screen and (max-width:768px) {
+    .topSearch {
+        display:none;
+    }
+}
+
+@media screen and (max-width:640px) {
+
 }
 
 /* media screen max-width:480px */
 @media  screen and (max-width:480px) {
     .topInner {
         height:50px;
-        padding:0 20px;
+        padding:0 10px;
     }
     .topInner img {
         width:100px;

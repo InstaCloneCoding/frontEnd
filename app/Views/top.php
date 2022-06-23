@@ -4,32 +4,26 @@
             <img src="/images/header-logo.png" alt="load img failed">
         </a>
         <?php if ( $_SESSION['user'] ) { ?>
-            <div>
-                <label>
-                    <input type="text" name="searching" placeholder="돋보기 (검색)" value=""/>
+            <div class="topSearch">
+                <label style="position:relative;">
+                    <input type="text" name="searching" placeholder="돋보기 (검색)" value="" />
+                    <span class="material-icons" style="position: absolute;right: 0%;top: 65%;transform: translate(-65%, -50%);">search</span>
                 </label>
             </div>
             <div class="disFlex">
                 <div>
-                    <a href="/"> 
+                    <a href="/" class="pl20"> 
                         <span class="material-icons">home</span>
                     </a>
-                </div>
-                <div>
-                    <a onclick="createNewPostPopup()">
+                    <a onclick="createNewPostPopup()" class="pl20">
                         <span class="material-icons">post_add</span>
                     </a>
-                </div>
-                <div>
-                    <!-- <a href="#"> 나침표 </a> -->
-                    <a href="#"> 
+                     <!-- <a href="#"> 나침표 </a> -->
+                     <a href="#" class="pl20"> 
                         <span class="material-icons">favorite_border</span>
                     </a>
-                </div>  
-                <div>
-                    <!-- 드랍다운 메뉴 필요 -->
-                    <span class="material-icons click">account_circle</span>
-
+                    <span class="material-icons click pl20">account_circle</span>
+                    <!-- -->
                     <div class="modal testModal1" style="display:none;">
                         <div class="modalBg modalBg1"></div>
                         <div class="modalContent">
@@ -64,7 +58,7 @@
                             </div>
                         </div>
                     </div>
-                    
+                    <!-- // -->
                 </div>
             </div>
         <?php } ?>
