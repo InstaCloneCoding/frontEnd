@@ -10,12 +10,12 @@
                 <!-- 피드 전체 박스 -->
                 <div class="feedContentWrap">
                     <!-- 피드 상단 타이틀 -->
-                    <div class="col-between" style="padding:15px;">
+                    <div class="contentTop col-between">
                         <!-- 피드 상단 타이틀 좌측 프로필&프로필네임 -->
                         <div class="disFlex alignC">
-                            <div class="" style="width:32px;height:32px;background:red;border-radius:50%"></div>
-                            <div class="pl10">
-                                <p style="font-size;14px;font-weight:600;"><?= $value->userId ?></p>
+                            <div class="profImg"></div>
+                            <div class="profId pl10">
+                                <p><?= $value->userId ?></p>
                             </div>
                         </div>
                         <!-- // 피드 상단 타이틀 좌측 프로필&프로필네임 -->
@@ -26,19 +26,19 @@
                             <div class="modal testModal2" style="display:none;">
                                 <div class="modalBg modalBg2"></div>
                                 <div class="modalContent">
-                                    <div style="padding:8px 16px;">
+                                    <div class="modalList">
                                         <a href="/<?=  $_SESSION['user']['userId'] ?>" class="disFlex alignC">
                                             <span class="material-icons">account_circle</span>
                                             <span>프로필</span>
                                         </a>
                                     </div>
-                                    <div style="padding:8px 16px;">
+                                    <div class="modalList">
                                         <a href="#" class="disFlex alignC">
                                             <span class="material-icons">bookmark_border</span>
                                             <span>저장됨</span>
                                         </a>
                                     </div>
-                                    <div style="padding:8px 16px;">
+                                    <div class="modalList">
                                         <a href="#" class="disFlex alignC">
                                             <span class="material-icons">bookmark_border</span>
                                             <span>닫기</span>
@@ -63,29 +63,32 @@
                         <div><span class="material-icons">bookmark_border</span></div>
                     </div>
                     <!-- // 피드 하단 좋아요&댓글&보관함 -->
+
                     <!-- 좋아요 카운트 -->
-                    <div class="alignC" style="padding:0 15px;">
-                       <p style="font-size:14px;font-weight:600;color:#111;">좋아요 1,436개</p>
+                    <div class="likeCount alignC">
+                       <p>좋아요 1,436개</p>
                     </div>
                     <!-- // 좋아요 카운트 -->
+
                     <!-- 댓글 모두 보기&게시시간 -->
                     <div style="padding:10px 15px 15px 15px;font-size:14px;color:#111;"> 
+
                         <div class="disFlex">
                             <div style="font-weight:600;"><?= $value->userId ?></div>
-                            <div class="pl10"><?= $value->fidContent ?></div>
+                            <div class="oneTxtLine pl10" style="max-width:370px;"><?= $value->feedContent ?></div>
                         </div>
+
                         <div class="col-between" style="padding:10px 0 0;font-size:14px;color:rgb(142, 142, 142)">
                             <p>댓글 7개 모두 보기</p>
                             <p style="font-size:12px;">8시간 전</p>
                         </div>
+
                     </div>
                     <!-- // 댓글 모두 보기&게시시간 -->
                     <!-- 댓글달기&게시버튼 -->
-                    <div>
-                        <form class="position-r" style="border-top:1px solid #dfdfdf;">
-                            <textarea  placeholder="댓글 달기..." style="width:100%;resize:none;border:none;padding:0 15px;"></textarea>
-                            <button style="position:absolute;top:50%;right:10px;transform: translate(0, -50%);color:blue;background:none;border:none;">게시</button>
-                        </form>
+                    <div class="reppleWrap position-r">
+                        <textarea class="repple" placeholder="댓글 달기..."></textarea>
+                        <button class="postBtn">게시</button>
                     </div>
                     <!-- // 댓글달기&게시버튼 -->
                 </div>
@@ -97,24 +100,28 @@
         </div>
         <!-- 피드 우측 -->
         <div class="feedContentRight">
-            <div style="position:fixed;width:320px;">
+
+            <div class="" style="position:fixed;width:320px;">
+
                 <div>
-                    <div>
-                        <div style="width:54px;height:54px;background:red;border-radius:50%"></div>
-                        <p><?= $value->userId ?></p>
+                    <div class="profId disFlex alignC">
+                        <div class="profImg" style="width:54px;height:54px;"></div>
+                        <p class="pl20"><?= $value->userId ?></p>
                     </div>
                 </div>
+
                 <div style="padding:20px 0 30px;">
-                    <div class="col-between alignC" style="padding-bottom:10px;">
+
+                    <div class="col-between pb10 alignC">
                         <span style="font-size:14px;font-weight:600">회원님을 위한 추천</span>
                         <span style="font-size:12px;font-weight:400;color:rgb(38, 38, 38);">모두보기</span>
                     </div>
 
                     <div class="col-between alignC" style="padding:10px 0 5px;">
                         <div class="disFlex alignC">
-                            <div class="" style="width:32px;height:32px;background:red;border-radius:50%"></div>
-                            <div class="pl10">
-                                <p style="font-size;14px;font-weight:600;"><?= $value->userId ?></p>
+                            <div class="profImg"></div>
+                            <div class="profId pl10">
+                                <p><?= $value->userId ?></p>
                             </div>
                         </div>
                         <div style="font-size:12px;color:blue;">팔로우</div>
@@ -122,14 +129,16 @@
 
                     <div class="col-between alignC" style="padding:10px 0 5px;">
                         <div class="disFlex alignC">
-                            <div class="" style="width:32px;height:32px;background:red;border-radius:50%"></div>
-                            <div class="pl10">
-                                <p style="font-size;14px;font-weight:600;"><?= $value->userId ?></p>
+                        <div class="profImg"></div>
+                            <div class="profId pl10">
+                                <p><?= $value->userId ?></p>
                             </div>
                         </div>
                         <div style="font-size:12px;color:blue;">팔로우</div>
                     </div>
+
                 </div>
+
                 <div style="font-size:14px;color:rgb(199, 199, 199);font-weight:400;">
                     <div>
                         소개
@@ -144,6 +153,7 @@
                     </div>
                     <div>© 2022 INSTAGRAM FROM META</div>
                 </div>
+
             </div>
         </div>
         <!-- // 피드 우측 -->

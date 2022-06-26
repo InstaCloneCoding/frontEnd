@@ -9,11 +9,18 @@
 .feedContentWrap {
     border:1px solid #333;
     background:#fff;
-    border-radius:5px;
     margin-bottom:30px;
+}
+.contentTop {
+    padding:15px;
 }
 .contentImg {
     width:100%;height:470px;background:red;
+}
+
+.profId p {
+    font-size:14px;
+    font-weight:600;
 }
 
 .modalContent {
@@ -24,6 +31,39 @@
     transform: translate(-50%,-50%);
     background:#fff;
     z-index:1001;
+}
+
+.likeCount {
+    padding:0 15px;
+}
+.likeCount p {
+    font-size:14px;
+    font-weight:600;
+    color:#111;
+}
+
+.reppleWrap {
+    height:40px;
+    border-top:1px solid #dfdfdf;
+}
+
+.reppleWrap .repple {
+    width:100%;
+    padding:4.5px 42px 4.5px 15px;
+    resize:none;
+    border:none;
+}
+.reppleWrap .repple::placeholder {
+    padding:2px 0;
+}
+.reppleWrap .postBtn {
+    position:absolute;
+    top:50%;
+    right:10px;
+    transform: translate(0, -50%);
+    color:blue;
+    background:none;
+    border:none;
 }
 
 
