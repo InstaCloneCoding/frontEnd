@@ -164,3 +164,27 @@
 <script type="text/javascript" src="/script/common.js"> </script>
 <script type="text/javascript" src="/script/loading.js"> </script>
 <script type="text/javascript" src="/script/feed.js"> </script>
+<script>
+
+function editNewFeedHTML() {
+	return `<div>
+                <a onClick="deleteNewPostPopup()"> X </a>
+            </div>
+        
+            <div id="newFeed" class="popup newFeed">
+                <div id="popupTitle">
+                    <h3>새 게시물 만들기</h3>
+                </div>
+                <form method="post" id="newForm" name="newForm">
+                    <input id="fileInput" name="fileInput" type="file" accept="image/*" onchange="readImage(this)" style="display: none;"/>
+                    <img src="#" alt="no" style="width: 100px; height: 100px;">
+                    <input type="hidden" value="<?= $value->userId ?>" id="" name="test"> 
+                    <textarea id="newPostData" name="newPostData" placeholder="문구 입력.."></textarea>
+                </form>
+                    
+                <div class="btnBlue">
+                    <a onclick="newPost()">공유하기</a>
+                </div>
+            </div>`;
+}
+</script>
