@@ -46,30 +46,6 @@ function editNewPostPopup() {
 	section.innerHTML = editNewFeedHTML();
 }
 
-function editNewFeedHTML() {
-	return `<div>
-                <a onClick="deleteNewPostPopup()"> X </a>
-            </div>
-        
-            <div id="newFeed" class="popup newFeed">
-                <div id="popupTitle">
-                    <h3>새 게시물 만들기</h3>
-                </div>
-                
-                <input id="fileInput" type="file" accept="image/*" onchange="readImage(this)" style="display: none;"/>
-                <img id="fileImg" src="#" alt="no" style="width: 100px; height: 100px;">
-                
-                <div>
-                    <p>그림</p>
-                    <p>아이디</p>
-                </div>
-                <textarea placeholder="문구 입력.."></textarea>
-                <div class="btnBlue">
-                    <a onclick="newPost()">공유하기</a>
-                </div>
-            </div>`;
-}
-
 function deleteNewPostPopup() {
 	const getPopUp = document.getElementById("popupBackground");
 	getPopUp.remove();
@@ -80,10 +56,53 @@ function upload() {
 	input.click();
 }
 
+
 async function newPost() {
-	let body = {
-		user_id: "",
-		fid_content: "",
+    const newData = document.querySelector("#newForm");
+
+	let newBody = {
+        file: newData[0].value,
+		user_id: newData[1].value,
+		feed_content: newData[2].value
 	};
-	await postData("/", "json", body);
+	// await postData("/", "json", newBody)
+    postData("/", "json", newBody)
+    .then(data => {
+        console.log('dss');
+
+        if (data.code === 200) {
+          
+            alert('ddd');
+
+        } else {
+        
+            alert('ddddddd');
+            
+        }
+
+    })
+}
+
+function fLogin() {
+    const userData = document.querySelector("#form");
+
+    let userBody = {
+        userId : userData[0].value,
+        userPassword : userData[1].value
+    };
+
+    postData("/accounts/login", "json", userBody)
+        .then(data => {
+            console.log(data);
+            hideLoading();
+
+            if (data.code === 200) {
+                alert(data.msg);
+                window.location = '/';
+            } else {
+                loginErrorMsg.innerHTML = "<p class='errorMsg'>로그인이 유효하지 않습니다.</p>"
+                // alert(data.messages.msg);
+                
+            }
+        });
 }
