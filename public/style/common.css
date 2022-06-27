@@ -59,6 +59,10 @@ input {
 }
 
 /* 정렬 */
+.flexC {
+    display:flex;
+    align-items:center;
+}
 .col-between {
     display:flex;
     justify-content:space-between;
