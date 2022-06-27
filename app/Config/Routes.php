@@ -55,6 +55,9 @@ $routes->post('/accounts/password/email', 'AccountsController::sendEmail');
 $routes->post('/accounts/password/auth', 'AccountsController::authCode');
 $routes->post('/accounts/password/reset', 'AccountsController::resetPassword');
 
+// 피드
+$routes->post('/content', 'FeedController::content');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
