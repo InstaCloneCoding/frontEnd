@@ -9,6 +9,8 @@ function readImage(input) {
 		reader.onload = function (e) {
 			// 이미지가 로드됨\
 			document.getElementById("fileImg").setAttribute("src", e.target.result);
+			// input files set
+			document.getElementById("fileInput").files = input.files;
 		};
 		reader.readAsDataURL(input.files[0]);
 

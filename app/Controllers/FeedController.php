@@ -16,7 +16,8 @@ class FeedController extends BaseController
             $result = FileSave::saveFiles($files);
         }
 
-        $result = Curl::curlPost(Define::setAPIServer()."/content", $post);
-        return $result;
+        //$result = Curl::curlPost(Define::setAPIServer()."/content", $post);
+        $result = '';
+        return redirect()->to("/");
     }
 }
