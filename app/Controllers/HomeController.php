@@ -14,6 +14,7 @@ class HomeController extends BaseController
         echo view("header/header");
         if( empty($this->session->user) ) {
             echo view("main");
+            echo view("footer");
         } else {
             $fidResponse = Curl::curlGet(Define::setAPIServer()."/");
             $result = json_decode($fidResponse);
@@ -25,7 +26,6 @@ class HomeController extends BaseController
             echo view("popup/content");
             echo view("feed/feed", $data);
         }
-        echo view("footer");
     }
 
     public function myInstaGramPage($seg = null) {
