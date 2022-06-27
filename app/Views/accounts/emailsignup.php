@@ -1,5 +1,5 @@
 <!-- 회원가입 -->
-<section class="signUpWrap commonWrap disFlex justifyC m20">
+<section class="signUp commonWrap disFlex justifyC">
     <div class="innerWrap">
         <div class="inner inner01">
             <!-- 로그인로고이미지 -->
