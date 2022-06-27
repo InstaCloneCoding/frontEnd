@@ -29,6 +29,10 @@ function headers(gbn) {
         return {"Content-Type": "application/x-www-form-urlencoded"};
     } else if( gbn === 'json') {
         return {"Content-Type": "application/json"};
+    } else if( gbn === 'multipart') {
+        return {
+            "Content-Type": "multipart/form-data"
+        }
     }
 }
 
@@ -38,6 +42,15 @@ function postData(url = null, header = null,data = null) {
         method: "post",
         headers: headers(header),
         body: JSON.stringify(data)
+    }).then(response => response.json());
+}
+
+function postDataForm(url = null, header = null,data = null) {
+    displayLoading();
+    return fetch(url, {
+        method: "post",
+        headers: headers(header),
+        body: data
     }).then(response => response.json());
 }
 

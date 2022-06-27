@@ -166,7 +166,6 @@
 <script type="text/javascript" src="/script/feed.js"></script>
 <script type="text/javascript">
     function editNewFeedHTML() {
-        debugger;
         return `<div>
                 <a onClick="deleteNewPostPopup()"> X </a>
             </div>
@@ -175,8 +174,8 @@
                 <div id="popupTitle">
                     <h3>새 게시물 만들기</h3>
                 </div>
-                <form method="post" id="newForm" name="newForm">
-                    <input id="fileInput" name="fileInput" type="file" accept="image/*" onchange="readImage(this)" style="display: none;"/>
+                <form action="/content/" method="post" id="newForm" name="newForm" enctype="multipart/form-data">
+                    <input type="file" id="fileInput" name="fileInput" onchange="readImage(this)" style="display: none;"/>
                     <img id="fileImg" src="#" alt="no" style="width: 100px; height: 100px;">
                     <input type="hidden" id="userId" name="userId" value="<?php echo $value->userId; ?>">
                     <textarea id="newPostData" name="newPostData" placeholder="문구 입력.."></textarea>

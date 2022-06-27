@@ -8,10 +8,6 @@ function createNewPostPopup() {
 	console.log("exit");
 }
 
-function createImgTag() {
-	return `<img id="fileImg" src="#" alt="no" style="width: 100px; height: 100px">`;
-}
-
 function createNewFeedHTML() {
 	return `<div>
                 <a onClick="deleteNewPostPopup()"> X </a>
@@ -60,27 +56,34 @@ function upload() {
 async function newPost() {
     const newData = document.querySelector("#newForm");
 
-	let newBody = {
-        file: newData[0].value,
-		user_id: newData[1].value,
-		feed_content: newData[2].value
+	let data = {
+        file: newData[0].files[0],
+		//user_id: newData[1].value,
+		//feed_content: newData[2].value
 	};
-	// await postData("/", "json", newBody)
-    postData("/", "json", newBody)
+
+    const formData = new FormData();
+    formData.append('file', data.file);
+
+    debugger;
+
+    document.getElementById("newForm").submit();
+
+    /*postData("/content/", "json", formData)
     .then(data => {
         console.log('dss');
 
         if (data.code === 200) {
-          
+
             alert('ddd');
 
         } else {
-        
+
             alert('ddddddd');
-            
+
         }
 
-    })
+    })*/
 }
 
 function fLogin() {
