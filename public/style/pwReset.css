@@ -1,6 +1,6 @@
 
-/* .resetWrap .innerWrap .inner */
-.resetWrap > .innerWrap .inner {
+/* .reset .innerWrap .inner */
+.reset > .innerWrap .inner {
     max-width:460px;
     margin:0 auto;
     border:1px solid #d8d8d8;
@@ -13,36 +13,36 @@
     color:#262626;
 }
 /* --- */
-.resetWrap .loginLinkBtn:disabled {
+.reset .loginLinkBtn:disabled {
     background:#ddd;
     border:1px solid #ddd;
 }
 /* --- */
-.resetWrap .loginLinkBtn {
+.reset .loginLinkBtn {
     background:#0095f6;
     border:1px solid #0095f6;
     border-radius:5px;
     color:var(--white);
 }
 /* --- */
-.resetWrap .authBtn:disabled {
+.reset .authBtn:disabled {
     background:#ddd;
     border:1px solid #ddd;
 }
 /* --- */
-.resetWrap .authBtn {
+.reset .authBtn {
     background:#0095f6;
     border:1px solid #0095f6;
     border-radius:5px;
     color:var(--white);
 }
 /* --- */
-.resetWrap .resetPwBtn:disabled {
+.reset .resetPwBtn:disabled {
     background:#ddd;
     border:1px solid #ddd;
 }
 /* --- */
-.resetWrap .resetPwBtn {
+.reset .resetPwBtn {
     background:#0095f6;
     border:1px solid #0095f6;
     border-radius:5px;
@@ -52,7 +52,7 @@
 /* screen min-width:481px */
 @media screen and (min-width:481px) {
     /* --- */
-    .resetWrap > .innerWrap .inner01 {
+    .reset > .innerWrap .inner01 {
         padding:50px 30px;
     }
     /* --- */
@@ -75,11 +75,11 @@
 /* screen max-width:480px */
 @media screen and (max-width:480px) {
     /* --- */
-    .resetWrap > .innerWrap .inner {
+    .reset > .innerWrap .inner {
         background:none;
         border:none;
     }
-    .resetWrap > .innerWrap .inner01 {
+    .reset > .innerWrap .inner01 {
         padding:25px 20px 0;
     }
     /* --- */
