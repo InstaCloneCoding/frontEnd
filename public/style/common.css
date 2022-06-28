@@ -62,6 +62,8 @@ input {
 .flexC {
     display:flex;
     align-items:center;
+    justify-content:center;
+    text-align:center;
 }
 .col-between {
     display:flex;

@@ -170,9 +170,9 @@
                 <a onClick="deleteNewPostPopup()"> X </a>
             </div>
         
-            <div id="newFeed" class="popup newFeed">
-                <div id="popupTitle">
-                    <h3>새 게시물 만들기</h3>
+            <div id="editFeed" class="popup newFeed">
+                <div class="popupTitle">
+                    <h1>새 게시물 만들기</h1>
                 </div>
                 <form action="/content/" method="post" id="newForm" name="newForm" enctype="multipart/form-data">
                     <input type="file" id="fileInput" name="fileInput" onchange="readImage(this)" style="display: none;"/>
