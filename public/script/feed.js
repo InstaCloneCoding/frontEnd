@@ -14,7 +14,9 @@ function createImgTag() {
 
 function createNewFeedHTML() {
 	return `<div class="popClose">
-                <a onClick="deleteNewPostPopup()"> <span class="material-symbols-outlined" style="color:#fff;">close</span> </a>
+                <a onClick="deleteNewPostPopup()">
+                    <span class="material-symbols-outlined" style="color:#fff;">close</span>
+                </a>
             </div>
             <div id="newFeed" class="popup newFeed">
                 <div class="popupTitle">

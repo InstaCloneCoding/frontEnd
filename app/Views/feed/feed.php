@@ -167,24 +167,26 @@
 <script type="text/javascript">
     function editNewFeedHTML() {
         debugger;
-        return `<div>
-                <a onClick="deleteNewPostPopup()"> X </a>
-            </div>
-        
-            <div id="editFeed" class="popup newFeed">
-                <div class="popupTitle">
-                    <h1>새 게시물 만들기</h1>
+        return `<div class="popClose">
+                    <a onClick="deleteNewPostPopup()">
+                        <span class="material-symbols-outlined">close</span>
+                    </a>
                 </div>
-                <form method="post" id="newForm" name="newForm">
-                    <input id="fileInput" name="fileInput" type="file" accept="image/*" onchange="readImage(this)" style="display: none;"/>
-                    <img id="fileImg" src="#" alt="no" style="width: 100px; height: 100px;">
-                    <input type="hidden" id="userId" name="userId" value="<?php echo $value->userId; ?>">
-                    <textarea id="newPostData" name="newPostData" placeholder="문구 입력.."></textarea>
-                </form>
-                    
-                <div class="btnBlue">
-                    <a onclick="newPost()">공유하기</a>
-                </div>
-            </div>`;
+                <div id="editFeed" class="popup edifFeed">
+                    <div class="popupTitle">
+                        <h1>새 게시물 만들기</h1>
+                        <a onclick="newPost()" class="editBtn">공유하기</a>
+                    </div>
+                    <form method="post" id="newForm" name="newForm" class="disFlex">
+                        <input id="fileInput" name="fileInput" type="file" accept="image/*" onchange="readImage(this)" style="display: none;"/>
+                        <div>
+                            <img id="fileImg" src="#" alt="no" style="width:750px; height:750px;">
+                        </div>
+                        <div class="" style="width:340px;">
+                            <input type="hidden" id="userId" name="userId" value="<?php echo $value->userId; ?>">
+                            <textarea id="newPostData" name="newPostData" placeholder="문구 입력.." class="postTxtArea"></textarea>
+                        </div>
+                    </form>
+                </div>`;
     }
 </script>
