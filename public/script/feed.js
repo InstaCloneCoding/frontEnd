@@ -13,28 +13,24 @@ function createImgTag() {
 }
 
 function createNewFeedHTML() {
-	return `<div>
-                <a onClick="deleteNewPostPopup()"> X </a>
+	return `<div class="popClose">
+                <a onClick="deleteNewPostPopup()"> <span class="material-symbols-outlined" style="color:#fff;">close</span> </a>
             </div>
-
             <div id="newFeed" class="popup newFeed">
-                <div id="popupTitle">
-                    <h3>새 게시물 만들기</h3>
+                <div class="popupTitle">
+                    <h1>새 게시물 만들기</h1>
                 </div>
-
-                <div class="dragDropBox" id="dragDropArea"
-                    onDrop="dropHandler(event);" onDragOver="dragOverHandler(event);"
-                    style="height: 250px; width:250px;">
-
-                    사진을 여기에 끌어다 놓으세요
-
-                    <div class="btnBlue">
-                        <label for="fileInput">컴퓨터에서 선택</label>
-                        <input id="fileInput" type="file" accept="image/*" onchange="readImage(this)" style="display:none;"/>
+                <div class="flexC" style="flex-direction:column;padding:150px 0;">
+                    <img src="/images/new-feed-img.png" alt="">
+                    <div class="dragDropBox" id="dragDropArea" onDrop="dropHandler(event);" onDragOver="dragOverHandler(event);">
+                        <p>사진을 여기에 끌어다 놓으세요</p>
+                        <div class="btnWrap btnBlue">
+                            <label for="fileInput" class="textC">컴퓨터에서 선택</label>
+                            <input id="fileInput" type="file" accept="image/*" onchange="readImage(this)" style="display:none;"/>
+                        </div>
                     </div>
                 </div>
-        
-                <img id="fileImg" src="#" alt="no" style="width: 100px; height: 100px; display: none">
+                <img id="fileImg" src="#" alt="no" style="display:none;width:100px;height:100px;">
             </div>`;
 }
 

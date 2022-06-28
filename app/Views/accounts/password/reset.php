@@ -35,7 +35,7 @@
             </div>
             <!-- // 로그인 링크 보내기 -->
             <!-- 인증하기 -->
-            <div id="confirmAuthCode" class="authCode mb15" style="display:block">
+            <div id="confirmAuthCode" class="authCode mb15" style="display:none">
                 <div class="pb15">
                     <label>
                         <input type="password" name="authCode" id="authCode" value="" maxlength="6" placeholder="인증코드" onkeyup="authCodeCheck()" />
@@ -49,7 +49,7 @@
             </div>
             <!-- // 인증하기 -->
             <!-- 비밀번호 재설정 -->
-            <div id="resetPassword" class="resetPassword mb15" style="display:block">
+            <div id="resetPassword" class="resetPassword mb15" style="display:none">
                 <div class="pb15">
                     <label>
                         <input type="password" name="newPassword" id="newPassword" value="" placeholder="새로운 비밀번호" onkeyup="newPwCheck()" />
