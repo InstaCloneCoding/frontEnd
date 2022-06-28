@@ -173,6 +173,7 @@
             <div id="editFeed" class="popup newFeed">
                 <div class="popupTitle">
                     <h1>새 게시물 만들기</h1>
+                    <a onclick="newPost()" class="editBtn">공유하기</a>
                 </div>
                 <form action="/content/" method="post" id="newForm" name="newForm" enctype="multipart/form-data">
                     <input type="file" id="fileInput" name="fileInput" onchange="readImage(this)" style="display: none;"/>
@@ -180,10 +181,7 @@
                     <input type="hidden" id="userId" name="userId" value="<?php echo $value->userId; ?>">
                     <textarea id="newPostData" name="newPostData" placeholder="문구 입력.."></textarea>
                 </form>
-                    
-                <div class="btnBlue">
-                    <a onclick="newPost()">공유하기</a>
-                </div>
-            </div>`;
+            </div>
+            `;
     }
 </script>
