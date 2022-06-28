@@ -166,20 +166,27 @@
 <script type="text/javascript" src="/script/feed.js"></script>
 <script type="text/javascript">
     function editNewFeedHTML() {
-        return `<div>
-                <a onClick="deleteNewPostPopup()"> X </a>
-            </div>
+        return `
+            <div class="popClose">
+                <a onClick="deleteNewPostPopup()">
+                    <span class="material-symbols-outlined">close</span>
+                </a>
+            </div> 
         
-            <div id="editFeed" class="popup newFeed">
+            <div id="editFeed" class="popup editFeed">
                 <div class="popupTitle">
                     <h1>새 게시물 만들기</h1>
                     <a onclick="newPost()" class="editBtn">공유하기</a>
                 </div>
-                <form action="/content/" method="post" id="newForm" name="newForm" enctype="multipart/form-data">
+                <form action="/content/" method="post" id="newForm" name="newForm" enctype="multipart/form-data" class="disFlex">
                     <input type="file" id="fileInput" name="fileInput" onchange="readImage(this)" style="display: none;"/>
-                    <img id="fileImg" src="#" alt="no" style="width: 100px; height: 100px;">
-                    <input type="hidden" id="userId" name="userId" value="<?php echo $value->userId; ?>">
-                    <textarea id="newPostData" name="newPostData" placeholder="문구 입력.."></textarea>
+                    <div>
+                        <img id="fileImg" src="#" alt="no" style="width:750px; height:750px;">
+                    </div>
+                    <div class="" style="width:340px;">
+                        <input type="hidden" id="userId" name="userId" value="<?php echo $value->userId; ?>">
+                        <textarea id="newPostData" name="newPostData" placeholder="문구 입력.." class="postTxtArea"></textarea>
+                    </div>
                 </form>
             </div>
             `;
