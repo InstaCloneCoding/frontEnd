@@ -34,13 +34,13 @@
                                 </a>
                             </div>
                             <div style="padding:8px 16px;">
-                                <a href="#" class="disFlex alignC">
+                                <a href="/<?=  $_SESSION['user']['userId'] ?>/saved" class="disFlex alignC">
                                     <span class="material-icons">bookmark_border</span>
                                     <span>저장됨</span>
                                 </a>
                             </div>
                             <div style="padding:8px 16px;">
-                                <a href="#" class="disFlex alignC">
+                                <a href="/accounts/edit" class="disFlex alignC">
                                     <span class="material-icons">settings</span>
                                     <span>설정</span>
                                 </a>
