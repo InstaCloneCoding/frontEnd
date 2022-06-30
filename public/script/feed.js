@@ -63,8 +63,6 @@ async function newPost() {
     const formData = new FormData();
     formData.append('file', data.file);
 
-    debugger;
-
     document.getElementById("newForm").submit();
 
     /*postData("/content/", "json", formData)

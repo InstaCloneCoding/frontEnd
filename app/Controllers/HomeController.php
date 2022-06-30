@@ -50,4 +50,11 @@ class HomeController extends BaseController
         echo view("userPage/userPage", $data);
         echo view("footer");
     }
+
+    public function getCollection() {
+        echo view("header/header");
+        echo view("top");
+        echo view("popup/content");
+        echo view("/saved");
+    }
 }

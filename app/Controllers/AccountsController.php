@@ -213,4 +213,12 @@ class AccountsController extends BaseController
         $result =  Curl::curlPost(Define::setAPIServer()."/accounts/password/reset", $post);
         return $result;
     }
+
+    public function edit() {
+
+        echo view("header/header");
+        echo view("top");
+        echo view("popup/content");
+        echo view("accounts/edit");
+    }
 }

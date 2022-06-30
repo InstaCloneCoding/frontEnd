@@ -106,7 +106,7 @@
                 <div>
                     <div class="profId disFlex alignC">
                         <div class="profImg" style="width:54px;height:54px;"></div>
-                        <p class="pl20"><?= $value->userId ?></p>
+                        <p class="pl20"><?= $_SESSION['user']['userId'] ?></p>
                     </div>
                 </div>
 
@@ -121,7 +121,7 @@
                         <div class="disFlex alignC">
                             <div class="profImg"></div>
                             <div class="profId pl10">
-                                <p><?= $value->userId ?></p>
+                                <p><?= 'test1' ?></p>
                             </div>
                         </div>
                         <div style="font-size:12px;color:blue;">팔로우</div>
@@ -131,7 +131,7 @@
                         <div class="disFlex alignC">
                             <div class="profImg"></div>
                             <div class="profId pl10">
-                                <p><?= $value->userId ?></p>
+                                <p><?='test2' ?></p>
                             </div>
                         </div>
                         <div style="font-size:12px;color:blue;">팔로우</div>
