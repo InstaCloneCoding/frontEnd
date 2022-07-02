@@ -15,14 +15,16 @@
                     <a href="/" class="pl20"> 
                         <span class="material-icons">home</span>
                     </a>
-                    <a onclick="createNewPostPopup()" class="pl20">
+                    <a href="#" onclick="createNewPostPopup()" class="pl20 pointer">
                         <span class="material-icons">post_add</span>
                     </a>
                      <!-- <a href="#"> 나침표 </a> -->
                      <a href="#" class="pl20"> 
                         <span class="material-icons">favorite_border</span>
                     </a>
-                    <span class="material-icons click pl20">account_circle</span>
+                    <a href="#">
+                        <span class="material-icons click pl20">account_circle</span>
+                    </a>
                     <!-- -->
                     <div class="modal testModal1" style="display:none;">
                         <div class="modalBg modalBg1"></div>
@@ -45,15 +47,10 @@
                                     <span>설정</span>
                                 </a>
                             </div>
-                            <div style="padding:8px 16px;">
-                                <a href="#" class="disFlex alignC"> 
-                                    <span class="material-icons">published_with_changes</span>
-                                    <span>계정전환</span>
-                                </a>
-                            </div>
                             <div class="disFlex" style="padding:8px 16px;">
-                                <a href="/accounts/logout" class="disFlex alignC"> 
-                                    로그아웃 
+                                <a href="/accounts/logout" class="disFlex alignC">
+                                    <span class="material-icons">settings</span> 
+                                    <span>로그아웃</span> 
                                 </a>
                             </div>
                         </div>
