@@ -16,7 +16,7 @@
                 <!-- ID / PW -->
                 <form method="post" id="form" name="form">
                     <label for="userId">
-                        <input type="text" id="userId" name="userId" placeholder="이메일" value="" onkeyup="emailCheckInput()" />
+                        <input type="text" id="userId" name="userId" placeholder="이메일" value="" />
                     </label>
                     <div class="msg" id="idMsg"></div>
                     <label for="userPassword">
