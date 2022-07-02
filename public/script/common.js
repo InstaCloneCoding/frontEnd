@@ -118,3 +118,5 @@ function closeModal2 () {
         bg2.style.display = "none";
     }
 }
+
+
