@@ -31,12 +31,11 @@ class FeedController extends BaseController
         $sendData->userId = $post['userId'];
         $sendData->feedContent = $post['newPostData'];
 
-        $isSendData = Curl::curlPost(Define::setAPIServer()."/content/data", $sendData);
-
+        $getData = Curl::curlPost(Define::setAPIServer()."/content/data", $sendData);
+        $getDataArr = json_decode($getData);
+        $sendFile->boardIdx = $getDataArr->states->idx;
 
         $isSendFile = Curl::curlPost(Define::setAPIServer()."/content/sendFile", $sendFile);
-
-
 
         return redirect()->to("/");
     }
