@@ -6,7 +6,41 @@
     text-align:center;
     background:#fff;
 }
+.profileEditLeft {
+    flex-grow:1;
+}
+.profileEditLeft .profileImg {
+    width:150px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.profileEditLeft .profileImg img {
+    width:150px;
+    height:150px;
+}
+.profileEditRight {
+    display:flex;
+    flex-direction:column;
+    flex-grow:2;
+}
+.profileEditRight .rightTop {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    margin-bottom:20px;
+}
+.profileEditRight .rightTop > p {
+    font-size:28px;
+}
 
+.profileEditBtn {
+    height:30px;
+    margin-left:20px;
+    border-radius:5px;
+    background:#fff;
+    border:1px solid #dfdfdf;
+    color:#212121;
+}
 
 @media screen and (min-width:769px) {
    
