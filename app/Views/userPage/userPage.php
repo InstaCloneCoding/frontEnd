@@ -1,40 +1,41 @@
-<section class="userPage commonWrap disFlex justifyC">
+<section class="userPage commonWrap" id="userPage">
     <div id="loading"></div>
-    <div class="disFlex">
-        <div style="flex-grow:1">
-            <div style="width:150px;margin-left:auto;margin-right:auto;">
-                <img src="/images/test.jpg" style="width:150px;height:150px;">
+    <div class="disFlex mb40">
+        <div class="profileEditLeft">
+            <div class="profileImg">
+                <img src="/images/test.jpg" alt="">
             </div>
         </div>
-        <div class="disFlex" style="flex-grow:2;flex-direction:column">
-            <div class="flexC mb20">
-                <div style="font-size:28px;">nagoseeya</div>
-                <div style=""><button type="button">프로필 편집</button></div>
-                <div style="">설정</div>
+        <div class="profileEditRight">
+            <div class="rightTop">
+                <p>nagoseeya</p>
+                <button type="button" class="profileEditBtn">프로필 편집</button>
+                <span class="material-icons ml15">settings</span>   
             </div>
-            <div>
-                <ul style="display:flex;flex-direction:row;">
-                    <li style="margin-right:40px;">
-                        <div>
-                            게시물
-                            <span style="font-weight:600;">111</span>
-                        </div>
+            <div class="rightCenter mb20">
+                <ul class="disFlex">
+                    <li class="mr40">
+                        <div>게시물<span class="pl5 fs600">111</span></div>
                     </li>
-                    <li style="margin-right:40px;">
-                        <div>
-                            게시물
-                            <span style="font-weight:600;">111</span>
-                        </div>
+                    <li class="mr40">
+                        <div>팔로워<span class="pl5 fs600">111</span></div>
                     </li>
-                    <li style="margin-right:40px;">
-                        <div>
-                            게시물
-                            <span style="font-weight:600;">111</span>
-                        </div>
+                    <li class="mr40">
+                        <div>팔로우<span class="pl5 fs600">111</span></div>
                     </li>
                 </ul>
             </div>
+            <div class="rightBottom">
+                <div class="mb20 fs600">이름</div>
+                <div class="">소개</div>
+            </div>
         </div>
+    </div>
+    <div class="tabMenu">
+        <ul>
+            <li class="active"><span class="material-symbols-outlined">grid_view</span>게시물</li>
+            <li><span class="material-icons">bookmark_border</span> 저장됨</li>
+        </ul>
     </div>
 </section> 
 <script type="text/javascript" src="/script/feed.js"></script>

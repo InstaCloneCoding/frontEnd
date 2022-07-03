@@ -17,12 +17,10 @@
 .contentImg {
     width:100%;height:470px;background:red;
 }
-
 .profId p {
     font-size:14px;
     font-weight:600;
 }
-
 .modalContent {
     position:absolute;
     width:230px;
@@ -32,7 +30,6 @@
     background:#fff;
     z-index:1001;
 }
-
 .likeCount {
     padding:0 15px;
 }
@@ -41,12 +38,10 @@
     font-weight:600;
     color:#111;
 }
-
 .reppleWrap {
     height:40px;
     border-top:1px solid #dfdfdf;
 }
-
 .reppleWrap .repple {
     width:100%;
     padding:4.5px 42px 4.5px 15px;
@@ -65,7 +60,6 @@
     background:none;
     border:none;
 }
-
 
 @media screen and (min-width:769px) {
    .feedContentRight {display:block;}

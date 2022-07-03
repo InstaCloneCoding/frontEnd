@@ -15,14 +15,14 @@
                 <!-- // 로그인 로고 -->
                 <!-- ID / PW -->
                 <form method="post" id="form" name="form">
-                    <label for="userId" id="tt">
+                    <label for="userId">
                         <input type="text" id="userId" name="userId" placeholder="이메일" value="" onkeyup="emailCheckInput()" />
                     </label>
                     <div class="msg msg1" id="idMsg"></div>
                     <label for="userPassword">
-                        <input type="password" id="userPassword" class="mt10" name="userPassword" placeholder="비밀번호" value="" onkeyup="hello()" />
+                        <input type="password" id="userPassword" class="mt10" name="userPassword" placeholder="비밀번호" value="" onkeyup="pwCheckInput()" />
                     </label>  
-                    <div class="msg msg2" id="test"></div>
+                    <div class="msg msg2" id="pwMsg"></div>
                 </form>
                 <!-- // ID / PW -->
                 <div>
