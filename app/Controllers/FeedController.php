@@ -24,7 +24,7 @@ class FeedController extends BaseController
         $sendFile = new \stdClass();
         $sendFile->filePath = $file['fileInput']->getClientName();
         $sendFile->fileSize = $files['fileInput']->getSize();
-        $sendFile->fileMimeType = $files['fileInput']->getMimeType();
+        // $sendFile->fileMimeType = $files['fileInput']->getMimeType(); 밈타입 에러
         $sendFile->fileName = $files['fileInput']->getName();
 
         $sendData = new \stdClass();
