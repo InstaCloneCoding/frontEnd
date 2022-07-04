@@ -15,7 +15,7 @@
                             <div class="disFlex alignC">
                                 <div class="profImg"></div>
                                 <div class="profId pl10">
-                                    <p><?= $value->userId ?></p>
+                                    <p><?= $value['user_id'] ?></p>
                                 </div>
                             </div>
                             <!-- // 피드 상단 타이틀 좌측 프로필&프로필네임 -->
@@ -51,9 +51,11 @@
                             <!-- // 피드 상단 타이틀 우측 아이콘 -->
                         </div>
                         <!-- // 피드 상단 타이틀 -->
+                        
                         <!-- 피드 이미지 슬라이드 공간 -->
-                        <div class="contentImg"></div>
+                        <img class="contentImg" src="/uploads/<?= $value['file_name'] ?>" alt="이미지없음.">
                         <!-- // 피드 이미지 슬라이드 공간 -->
+
                         <!-- 피드 하단 좋아요&댓글&보관함 -->
                         <div class="col-between" style="padding:15px 15px 5px 15px;">
                             <div class="disFlex">
@@ -74,8 +76,8 @@
                         <div style="padding:10px 15px 15px 15px;font-size:14px;color:#111;">
 
                             <div class="disFlex">
-                                <div style="font-weight:600;"><?= $value->userId ?></div>
-                                <div class="oneTxtLine pl10" style="max-width:370px;"><?= $value->feedContent ?></div>
+                                <div style="font-weight:600;"><?= $value['user_id'] ?></div>
+                                <div class="oneTxtLine pl10" style="max-width:370px;"><?= $value['feed_content'] ?></div>
                             </div>
 
                             <div class="col-between" style="padding:10px 0 0;font-size:14px;color:rgb(142, 142, 142)">
@@ -184,7 +186,7 @@
                         <img id="fileImg" src="#" alt="no" style="width:750px; height:750px;">
                     </div>
                     <div class="" style="width:340px;">
-                        <input type="hidden" id="userId" name="userId" value="<?php echo $value->userId; ?>">
+                        <input type="hidden" id="userId" name="userId" value="<?php echo $_SESSION['user']['userId']; ?>">
                         <textarea id="newPostData" name="newPostData" placeholder="문구 입력.." class="postTxtArea"></textarea>
                     </div>
                 </form>

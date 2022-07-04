@@ -4,9 +4,16 @@ namespace App\Controllers;
 
 use App\Libraries\curl\Curl;
 use App\Libraries\define\Define;
+use App\Models\FeedBoardModel;
 
 class HomeController extends BaseController
 {
+    public $db;
+
+    public function __construct() {
+        $this->db = \Config\Database::connect();
+    }
+
     public function index()
     {
         $data = [];
@@ -16,11 +23,18 @@ class HomeController extends BaseController
             echo view("main");
             echo view("footer");
         } else {
-            $fidResponse = Curl::curlGet(Define::setAPIServer()."/");
-            $result = json_decode($fidResponse);
+            //$fidResponse = Curl::curlGet(Define::setAPIServer()."/");
+            //$result = json_decode($fidResponse);
+
+            $builder = $this->db->table('FEED_BOARD as FB');
+            $result = $builder
+                ->join('FEED_UPLOAD_IMG as FUI', 'FUI.board_idx = FB.idx', 'LEFT')
+                ->get()
+                ->getResultArray();
 
             $data = [
-                'feed' => $result->states
+                //'feed' => $result->states
+                'feed' => $result
             ];
             echo view("top");
             echo view("popup/content");
