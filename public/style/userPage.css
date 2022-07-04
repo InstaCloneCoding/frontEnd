@@ -40,6 +40,23 @@
     background:#fff;
     border:1px solid #dfdfdf;
     color:#212121;
+    cursor:pointer;
+}
+
+.userBoardWrap {
+    display:flex;
+    flex-direction:row;
+    margin-bottom:30px;
+    text-align:center;
+}
+.userBoardWrap .board {
+    width:33.3%;
+    height:290px;
+    margin-right:30px;
+    background:red;
+}
+.userBoardWrap .board:nth-child(3n) {
+    margin-right:0;
 }
 
 @media screen and (min-width:769px) {

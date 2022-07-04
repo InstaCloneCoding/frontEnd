@@ -196,6 +196,9 @@ input {
 .fw400 {
     font-weight:400;
 }
+.fs600 {
+    font-weight:600;
+}
 .fwB {
     font-weight:bold;
 }
@@ -264,10 +267,7 @@ input {
     text-overflow:ellipsis;
 }
 
-.fs600 {
-    font-weight:600;
-}
-
+/* 탭 메뉴 */
 .tabMenu {
     border-top:1px solid rgb(219, 219, 219);
 }
@@ -284,6 +284,7 @@ input {
     font-size:12px;
     font-weight:600;
     color:rgb(142, 142, 142);
+    cursor:pointer;
 }
 .tabMenu ul > li.active {
     border-top:1px solid #212121;
@@ -297,6 +298,42 @@ input {
 .tabMenu ul > li.active span {
     font-weight:600;
     color:#212121;
+}
+.tabContent.content1 {
+    display:none;
+}
+.tabContent.content2 {
+    display:block;
+}
+
+/* 컨텐츠 없을 때 뜨는 텍스트 */
+.noneContentWrap {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    max-width:360px;
+    margin:60px auto 0;
+}
+.noneContentWrap .title {
+    height:32px;
+    margin:20px 0;
+    font-size:28px;
+    font-weight:300;
+}
+.noneContentWrap .txt {
+    font-size:14px;
+}
+
+.tabContent .contentTop .left {
+    font-size:12px;
+    color:rgb(142, 142, 142);
+}
+.tabContent .contentTop .right {
+    font-size:14px;
+    color:rgb(0, 149, 246);
+    cursor:pointer;
+
 }
 
 /* media screen min-width:481px */
