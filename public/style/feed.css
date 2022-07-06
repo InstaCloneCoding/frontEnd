@@ -1,57 +1,85 @@
 /* --- */
-.feedContentCenter {
-    width:470px;
-    padding-right:30px;
+.feedWrap {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
 }
-.feedContentRight {
-    width:320px;
+.feedWrapBox {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+.feedContentCenter {
+    max-width:470px;
+    padding-right:30px;
 }
 .feedContentWrap {
     border:1px solid #333;
     background:#fff;
-    margin-bottom:30px;
 }
-.contentTop {
-    padding:15px;
+.feedContentRight .wrap {
+    position:fixed;
+    width:320px;
 }
 .contentImg {
-    width:100%;height:470px;background:red;
+    width:100%;
+    background:red;
+}
+.profId {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
 }
 .profId p {
-    font-size:14px;
     font-weight:600;
 }
+.userRecommend .topBar {
+    align-items:center; 
+}
+.userRecommend .topBar span.txt1 {
+    font-weight:600;
+}
+.userRecommend .topBar span.txt2 {
+    font-weight:400;
+    color:rgb(38, 38, 38);
+}
+.userRecommend .content .follow {
+    color:var(--blue);
+}
+/* */
 .modalContent {
     position:absolute;
     width:230px;
+    max-width:100%;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
     background:#fff;
     z-index:1001;
 }
-.likeCount {
-    padding:0 15px;
-}
 .likeCount p {
-    font-size:14px;
     font-weight:600;
-    color:#111;
+    color:var(--black);
 }
-.reppleWrap {
-    height:40px;
+.reppleView {
+    color:var(--black);
+}
+.reppleView .feedContent {
+    max-width:370px;
+}
+.reppleView .repple {
+    color:rgb(142, 142, 142);
+}
+.repplePost {
+    position:relative;
     border-top:1px solid #dfdfdf;
 }
-.reppleWrap .repple {
+.repplePost .repple {
     width:100%;
-    padding:4.5px 42px 4.5px 15px;
     resize:none;
     border:none;
 }
-.reppleWrap .repple::placeholder {
-    padding:2px 0;
-}
-.reppleWrap .postBtn {
+.repplePost .postBtn {
     position:absolute;
     top:50%;
     right:10px;
@@ -62,10 +90,146 @@
 }
 
 @media screen and (min-width:769px) {
-   .feedContentRight {display:block;}
+    .feedContentWrap {
+        margin-bottom:30px;
+    }
+   .feedContentRight {
+        display:block;
+        width:320px;
+    }
+    .contentTop {
+        padding:15px;
+    }
+    .contentImg {
+        height:470px;
+    }
+    .profId p {
+        font-size:14px;
+    }
+    .userRecommend {
+        padding:20px 0 30px;
+    }
+    .userRecommend .topBar {
+        padding-bottom:10px;
+    }
+    .userRecommend .topBar span.txt1 {
+        font-size:14px;
+    }
+    .userRecommend .topBar span.txt2 {
+        font-size:12px;
+    }
+    .userRecommend .content {
+        padding:10px 0 5px;
+    }
+    .userRecommend .content .follow {
+        font-size:12px;
+        color:blue;
+    }
+    .likeCount {
+        padding:0 15px;
+    }
+    .likeCount p {
+        font-size:14px;
+    }
+    .feedBottomMenu {
+        padding:15px 15px 5px 15px;
+    }
+    
+    .reppleView {
+        padding:10px 15px 15px 15px;
+        font-size:14px;
+    }
+    .reppleView .feedContent {
+        padding-left:10px;
+    }
+    .reppleView .repple {
+        padding:10px 0 0;
+        font-size:14px;
+    }
+    .reppleView .repple .time {
+        font-size:12px;
+    }
+    .repplePost {
+        height:40px;
+    }
+    .repplePost .repple {
+        padding:4.5px 42px 4.5px 15px;
+    }
+    .repplePost .repple::placeholder {
+        padding:2px 0;
+    }
 }
 
 @media screen and (max-width:768px) {
-    .feedContentCenter {padding-right:0;}
-    .feedContentRight {display:none;}
+    .feedWrap {
+        margin:15px;
+    }
+    .feedWrapBox {
+        display:block;
+    }
+    .feedContentWrap {
+        margin-bottom:20px;
+    }
+    .feedContentCenter {
+        padding-right:0;
+    }
+    .feedContentRight {
+        display:none;
+    }
+    .contentTop {
+        padding:10px;
+    }
+    .contentImg {
+        height:370px;
+    }
+    .profId p {
+        font-size:12px;
+    }
+    .userRecommend {
+        padding:15px 0 25px;
+    }
+    .userRecommend .topBar {
+        padding-bottom:5px;
+    }
+    .userRecommend .topBar span.txt1 {
+        font-size:12px;
+    }
+    .userRecommend .topBar span.txt2 {
+        font-size:11px;
+    }
+    .userRecommend .content {
+        padding:5px 0 2px;
+    }
+    .userRecommend .content .follow {
+        font-size:11px;
+    }
+    .likeCount {
+        padding:0 10px;
+    }
+    .likeCount p {
+        font-size:12px;
+    }
+    .feedBottomMenu {
+        padding:10px 10px 5px 10px;
+    }
+    .reppleView {
+        padding:5px 10px 10px 10px;
+        font-size:12px;
+    }
+    .reppleView .feedContent {
+        padding-left:5px;
+    }
+   .reppleView .repple {
+        padding:5px 0 0;
+        font-size:12px;
+    }
+    .reppleView .repple .time {
+        font-size:11px;
+    }
+    .repplePost {
+        height:35px;
+    }
+    .repplePost .repple {
+        padding:3px 32px 1px 7.5px;
+    }
 }
