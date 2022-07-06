@@ -71,8 +71,8 @@
                         <!-- 댓글 모두 보기&게시시간 -->
                         <div class="reppleView">
                             <div class="disFlex">
-                                <div class="fw600"><?= $value->userId ?></div>
-                                <div class="feedContent oneTxtLine"><?= $value->feedContent ?></div>
+                                <div style="font-weight:600;"><?= $value['user_id'] ?></div>
+                                <div class="oneTxtLine pl10" style="max-width:370px;"><?= $value['feed_content'] ?></div>
                             </div>
                             <div class="repple col-between">
                                 <p>댓글 7개 모두 보기</p>
@@ -96,10 +96,14 @@
         <!-- 피드 우측 -->
         <div class="feedContentRight">
             <div class="wrap">
-                <div class="profId">
-                    <div class="profImg" style="width:54px;height:54px;"></div>
-                    <p class="pl20"><?= $value->userId ?></p>
-                </div>
+
+            <div class="" style="position:fixed;width:320px;">
+
+                <div>
+                    <div class="profId disFlex alignC">
+                        <div class="profImg" style="width:54px;height:54px;"></div>
+                        <p class="pl20"><?= $_SESSION['user']['userId'] ?></p>
+                    </div>
                 <div class="userRecommend">
                     <div class="topBar col-between">
                         <span class="txt1">회원님을 위한 추천</span>
