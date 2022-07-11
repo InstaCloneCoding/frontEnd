@@ -56,13 +56,21 @@ function goToMain() {
 /* 소스 줄여야 함 */
 const el1 = document.querySelector(".click");
 const el2 = document.querySelector(".click1");
-const el3 = document.querySelector(".modalBg1");
-const el4 = document.querySelector(".modalBg2");
+const el3 = document.querySelector(".click2");
+const el4 = document.querySelector(".click3");
+const el5 = document.querySelector(".modalBg1");
+const el6 = document.querySelector(".modalBg2");
+const el7 = document.querySelector(".modalBg3");
+const el8 = document.querySelector(".modalBg4");
 
 el1.addEventListener("click", openModal1, false);
 el2.addEventListener("click", openModal2, false);
-el3.addEventListener("click", closeModal1, false);
-el4.addEventListener("click", closeModal2, false);
+el3.addEventListener("click", openModal3, false);
+el4.addEventListener("click", openModal4, false);
+el5.addEventListener("click", closeModal1, false);
+el6.addEventListener("click", closeModal2, false);
+el7.addEventListener("click", closeModal3, false);
+el8.addEventListener("click", closeModal4, false);
 
 // 상단 탑 모달창
 function openModal1 () {
@@ -85,6 +93,27 @@ function openModal2 () {
         bg2.style.display = "block";
     } 
 }
+// 피드 모달창
+function openModal3 () {
+    const open3 = document.querySelector(".testModal3");
+    const bg3 = document.querySelector(".modalBg3");
+
+    if (open3.style.display == "none") {
+        open3.style.display = "block";
+        bg3.style.display = "block";
+    } 
+}
+// 피드 모달창
+function openModal4 () {
+    const open4 = document.querySelector(".testModal4");
+    const bg4 = document.querySelector(".modalBg4");
+
+    if (open4.style.display == "none") {
+        open4.style.display = "block";
+        bg4.style.display = "block";
+    } 
+}
+
 // 상단 탑 모달창 닫기
 function closeModal1 () {
     const open1 = document.querySelector(".testModal1");
@@ -103,6 +132,27 @@ function closeModal2 () {
     if (open2.style.display == "block") {
         open2.style.display = "none";
         bg2.style.display = "none";
+    }
+}
+// 피드 모달창 닫기
+function closeModal3 () {
+    const open3 = document.querySelector(".testModal3");
+    const bg3 = document.querySelector(".modalBg3");
+
+    if (open3.style.display == "block") {
+        open3.style.display = "none";
+        bg3.style.display = "none";
+    }
+}
+
+// 피드 모달창 닫기
+function closeModal4 () {
+    const open4 = document.querySelector(".testModal4");
+    const bg4 = document.querySelector(".modalBg4");
+
+    if (open4.style.display == "block") {
+        open4.style.display = "none";
+        bg4.style.display = "none";
     }
 }
 

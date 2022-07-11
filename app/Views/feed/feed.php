@@ -75,7 +75,7 @@
                                 <div class="feedContent oneTxtLine"><?= $value->feedContent ?></div>
                             </div>
                             <div class="repple col-between">
-                                <p>댓글 7개 모두 보기</p>
+                                <p class="click3">댓글 7개 모두 보기</p>
                                 <p class="time">8시간 전</p>
                             </div>
                         </div>
@@ -103,7 +103,7 @@
                 <div class="userRecommend">
                     <div class="topBar col-between">
                         <span class="txt1">회원님을 위한 추천</span>
-                        <span class="txt2">모두보기</span>
+                        <span class="txt2 click2">모두보기</span>
                     </div>
                     <div class="content col-between alignC">
                         <div class="disFlex alignC">
@@ -143,6 +143,61 @@
         <!-- // 피드 우측 -->
     </div>
     <!-- // 피드 전체 -->
+    <div class="modal testModal3" style="display:none;">
+        <div class="modalBg modalBg3"></div>
+        <div class="modalContent">
+            <div style="padding:10px 20px;font-size:16px;font-weight:600;">추천</div>
+            <div class="modalList">
+                <div class="content col-between alignC">
+                    <div class="disFlex alignC">
+                        <div class="profImg"></div>
+                        <div class="profId pl10" style="display:block">
+                            <p><?= $value->userId ?></p>
+                            <p style="color:rgb(142, 142, 142);font-size:14px;font-weight:300;"><?= $value->userId ?></p>
+                        </div>
+                    </div>
+                    <div class="follow" style="font-size:12px;color:blue;">팔로우</div>
+                </div>
+            </div>
+            <div class="modalList">
+                <div class="content col-between alignC">
+                    <div class="disFlex alignC">
+                        <div class="profImg"></div>
+                        <div class="profId pl10" style="display:block">
+                            <p><?= $value->userId ?></p>
+                            <p style="color:rgb(142, 142, 142);font-size:14px;font-weight:300;"><?= $value->userId ?></p>
+                        </div>
+                    </div>
+                    <div class="follow" style="font-size:12px;color:blue;">팔로우</div>
+                </div>
+            </div>
+            <div class="modalList">
+                <div class="content col-between alignC">
+                    <div class="disFlex alignC">
+                        <div class="profImg"></div>
+                        <div class="profId pl10" style="display:block">
+                            <p><?= $value->userId ?></p>
+                            <p style="color:rgb(142, 142, 142);font-size:14px;font-weight:300;"><?= $value->userId ?></p>
+                        </div>
+                    </div>
+                    <div class="follow" style="font-size:12px;color:blue;">팔로우</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal testModal4" style="display:none;">
+        <div class="modalBg modalBg4"></div>
+        <div class="" style="position:absolute;width:1775px;height:850px;background:#fff;left:50%;top:50%;transform:translate(-50%, -50%);z-index:1000;">
+            <div style="display:flex;">
+                <div>
+                    <img id="fileImg" style="width:850px; height:850px;">
+                </div>
+                <div>
+                    dddddddd
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <script type="text/javascript" src="/script/common.js"></script>
