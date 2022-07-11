@@ -8,7 +8,7 @@
         </div>
         <div class="profileEditRight">
             <div class="rightTop">
-                <p>nagoseeya</p>
+                <p><?= $userService->getUserId(); ?></p>
                 <button type="button" class="profileEditBtn">프로필 편집</button>
                 <span class="material-icons ml15">settings</span>   
             </div>
@@ -18,15 +18,15 @@
                         <div>게시물<span class="pl5 fs600">111</span></div>
                     </li>
                     <li class="mr40">
-                        <div>팔로워<span class="pl5 fs600">111</span></div>
+                        <div>팔로워<span class="pl5 fs600"><?= $userService->getFollowerCnt(); ?></span></div>
                     </li>
                     <li class="mr40">
-                        <div>팔로우<span class="pl5 fs600">111</span></div>
+                        <div>팔로우<span class="pl5 fs600"><?= $userService->getFollowCnt(); ?></span></div>
                     </li>
                 </ul>
             </div>
             <div class="rightBottom">
-                <div class="mb20 fs600">이름</div>
+                <div class="mb20 fs600"><?= $userService->getOriginName(); ?></div>
                 <div class="">소개</div>
             </div>
         </div>

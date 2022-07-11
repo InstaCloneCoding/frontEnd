@@ -4,10 +4,14 @@ namespace App\Controllers;
 
 use App\Libraries\curl\Curl;
 use App\Libraries\define\Define;
+use App\Libraries\service\UserServiceImpl;
 use App\Models\FeedBoardModel;
+use CodeIgniter\API\ResponseTrait;
 
 class HomeController extends BaseController
 {
+    use ResponseTrait;
+
     public $db;
 
     public function __construct() {
@@ -42,10 +46,10 @@ class HomeController extends BaseController
         }
     }
 
-    public function myInstaGramPage($seg = null) {
+    public function myPage($seg = null) {
         if($seg === null) {
             echo "잘못된 요청입니다.";
-            return;
+            return $this->fail(["msg" => "잘못된 요청입니다."], 500, "");
         }
 
         $data = [
@@ -56,7 +60,12 @@ class HomeController extends BaseController
         $response = Curl::curlPost(Define::setAPIServer()."/".$seg, null);
         $jsonDecode = json_decode($response);
 
-        $data["profile"] = $jsonDecode;
+        $userService = new UserServiceImpl();
+        $userService->UserInformation($jsonDecode);
+
+        $data = [
+            "userService" => $userService
+        ];
 
         echo view("header/header");
         echo view("top");
