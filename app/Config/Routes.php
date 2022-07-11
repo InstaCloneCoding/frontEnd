@@ -36,7 +36,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'HomeController::index');
 
 // 내가 작성한 게시글과 간단한 프로필 정보
-$routes->get('/(:segment)', 'HomeController::myInstaGramPage/$1');
+$routes->get('/(:segment)', 'HomeController::myPage/$1');
 
 // 컬렉션 페이지
 $routes->get('/(:segment)/saved', 'HomeController::getCollection/$1');
