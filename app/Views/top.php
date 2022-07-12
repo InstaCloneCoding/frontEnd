@@ -54,13 +54,13 @@
                                     <span>프로필</span>
                                 </a>
                             </div>
-                            <div style="padding:8px 16px;">
+                            <div class="modalList">
                                 <a href="/<?=  $_SESSION['user']['userId'] ?>/saved" class="disFlex alignC">
                                     <span class="material-icons">bookmark_border</span>
                                     <span>저장됨</span>
                                 </a>
                             </div>
-                            <div style="padding:8px 16px;">
+                            <div class="modalList">
                                 <a href="/accounts/edit" class="disFlex alignC">
                                     <span class="material-icons">settings</span>
                                     <span>설정</span>
