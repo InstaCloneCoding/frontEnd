@@ -21,10 +21,10 @@
                             <!-- // 피드 상단 타이틀 좌측 프로필&프로필네임 -->
                             <!-- 피드 상단 타이틀 우측 아이콘 -->
                             <div class="disFlex alignC">
-                                <span class="material-icons click1"> more_horiz</span>
+                                <span class="material-icons" onclick="modalClick(2)"> more_horiz</span>
                                 <!-- 피드 상단 타이틀 우측 아이콘 모달창 -->
-                                <div class="modal testModal2" style="display:none;">
-                                    <div class="modalBg modalBg2"></div>
+                                <div class="modal feedModal1" style="display:none;">
+                                    <div class="modalBg" onclick="this.parentNode.style.display = 'none'"></div>
                                     <div class="modalContent">
                                         <div class="modalList">
                                             <a href="/<?= $_SESSION['user']['userId'] ?>" class="disFlex alignC">
@@ -33,13 +33,13 @@
                                             </a>
                                         </div>
                                         <div class="modalList">
-                                            <a href="#" class="disFlex alignC">
+                                            <a href="/<?= $_SESSION['user']['userId'] ?>" class="disFlex alignC">
                                                 <span class="material-icons">bookmark_border</span>
                                                 <span>저장됨</span>
                                             </a>
                                         </div>
                                         <div class="modalList">
-                                            <a href="#" class="disFlex alignC">
+                                            <a href="#" onclick="this.parentNode.parentNode.parentNode.style.display = 'none'" class="disFlex alignC">
                                                 <span class="material-icons">bookmark_border</span>
                                                 <span>닫기</span>
                                             </a>
@@ -58,7 +58,7 @@
                         <div class="feedBottomMenu col-between">
                             <div class="disFlex">
                                 <div><span class="material-icons">favorite_border</span></div>
-                                <div class="pl10"><span class="material-icons">textsms</span></div>
+                                <div class="pl10" onclick="modalClick(4)"><span class="material-icons">textsms</span></div>
                             </div>
                             <div><span class="material-icons">bookmark_border</span></div>
                         </div>
@@ -75,7 +75,7 @@
                                 <div class="feedContent oneTxtLine"><?= $value->feedContent ?></div>
                             </div>
                             <div class="repple col-between">
-                                <p class="click3">댓글 7개 모두 보기</p>
+                                <p onclick="modalClick(4)">댓글 7개 모두 보기</p>
                                 <p class="time">8시간 전</p>
                             </div>
                         </div>
@@ -103,7 +103,7 @@
                 <div class="userRecommend">
                     <div class="topBar col-between">
                         <span class="txt1">회원님을 위한 추천</span>
-                        <span class="txt2 click2">모두보기</span>
+                        <span class="txt2" onclick="modalClick(3)">모두보기</span>
                     </div>
                     <div class="content col-between alignC">
                         <div class="disFlex alignC">
@@ -143,8 +143,8 @@
         <!-- // 피드 우측 -->
     </div>
     <!-- // 피드 전체 -->
-    <div class="modal testModal3" style="display:none;">
-        <div class="modalBg modalBg3"></div>
+    <div class="modal feedModal2" style="display:none;">
+        <div class="modalBg" onclick="this.parentNode.style.display = 'none'"></div>
         <div class="modalContent">
             <div style="padding:10px 20px;font-size:16px;font-weight:600;">추천</div>
             <div class="modalList">
@@ -185,8 +185,8 @@
             </div>
         </div>
     </div>
-    <div class="modal testModal4" style="display:none;">
-        <div class="modalBg modalBg4"></div>
+    <div class="modal feedModal3" style="display:none;">
+        <div class="modalBg" onclick="this.parentNode.style.display = 'none'"></div>
         <div class="" style="position:absolute;width:1775px;height:850px;background:#fff;left:50%;top:50%;transform:translate(-50%, -50%);z-index:1000;">
             <div style="display:flex;">
                 <div>

@@ -18,36 +18,55 @@
                     <a href="#" onclick="createNewPostPopup()" class="pl20 pointer">
                         <span class="material-icons">post_add</span>
                     </a>
-                     <!-- <a href="#"> 나침표 </a> -->
-                     <a href="#" class="pl20"> 
-                        <span class="material-icons">favorite_border</span>
+                    <a href="#" class="pl20"> 
+                        <span class="material-icons" onclick="modalClick(5)">favorite_border</span>
                     </a>
+
+                     <!-- top헤더 프로필 모달창 -->
+                     <div class="modal topModal2" style="display:none;">
+                        <div class="modalBg" onclick="this.parentNode.style.display = 'none'"></div>
+                        <div class="modalContent" style="width:500px;min-height:360px;">
+                                <div class="modalList"></div>
+                                <div class="modalList"></div>
+                                <div class="modalList"></div>
+                            <script>
+                                for (var i=0; i < 3; i++)
+                                {
+                                    document.querySelectorAll(".modalList")[i].innerHTML = "<div class='col-between alignC'><div class='profImg'></div><div class='profId pl10' style='display:block'><p><?= $value->userId ?>님이 회원님을 팔로우하기 시작했습니다.</p></div><div class='follow' style='font-size:12px;color:blue;'>팔로우</div></div>"
+                                }
+                            </script>
+
+                        </div>
+                    </div>
+                    <!-- // top헤더 프로필 모달창 -->
+
                     <a href="#">
-                        <span class="material-icons click pl20">account_circle</span>
+                        <span class="material-icons pl20" onclick="modalClick(1)">account_circle</span>
                     </a>
-                    <!-- -->
-                    <div class="modal testModal1" style="display:none;">
-                        <div class="modalBg modalBg1"></div>
+
+                    <!-- top헤더 프로필 모달창 -->
+                    <div class="modal topModal1" style="display:none;">
+                        <div class="modalBg" onclick="this.parentNode.style.display = 'none'"></div>
                         <div class="modalContent">
-                            <div style="padding:8px 16px;">
+                            <div class="modalList">
                                 <a href="/<?=  $_SESSION['user']['userId'] ?>" class="disFlex alignC">
                                     <span class="material-icons">account_circle</span>
                                     <span>프로필</span>
                                 </a>
                             </div>
-                            <div style="padding:8px 16px;">
+                            <div class="modalList">
                                 <a href="#" class="disFlex alignC">
                                     <span class="material-icons">bookmark_border</span>
                                     <span>저장됨</span>
                                 </a>
                             </div>
-                            <div style="padding:8px 16px;">
+                            <div class="modalList">
                                 <a href="#" class="disFlex alignC">
                                     <span class="material-icons">settings</span>
                                     <span>설정</span>
                                 </a>
                             </div>
-                            <div class="disFlex" style="padding:8px 16px;">
+                            <div class="modalList disFlex">
                                 <a href="/accounts/logout" class="disFlex alignC">
                                     <span class="material-icons">settings</span> 
                                     <span>로그아웃</span> 
@@ -55,7 +74,8 @@
                             </div>
                         </div>
                     </div>
-                    <!-- // -->
+                    <!-- // top헤더 프로필 모달창 -->
+
                 </div>
             </div>
         <?php } ?>

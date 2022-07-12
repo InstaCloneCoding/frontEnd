@@ -53,107 +53,28 @@ function goToMain() {
     window.location = "/";
 }
 
-/* 소스 줄여야 함 */
-const el1 = document.querySelector(".click");
-const el2 = document.querySelector(".click1");
-const el3 = document.querySelector(".click2");
-const el4 = document.querySelector(".click3");
-const el5 = document.querySelector(".modalBg1");
-const el6 = document.querySelector(".modalBg2");
-const el7 = document.querySelector(".modalBg3");
-const el8 = document.querySelector(".modalBg4");
+function modalClick(index) {
 
-el1.addEventListener("click", openModal1, false);
-el2.addEventListener("click", openModal2, false);
-el3.addEventListener("click", openModal3, false);
-el4.addEventListener("click", openModal4, false);
-el5.addEventListener("click", closeModal1, false);
-el6.addEventListener("click", closeModal2, false);
-el7.addEventListener("click", closeModal3, false);
-el8.addEventListener("click", closeModal4, false);
+    const topModal1 = document.querySelector(".topModal1"); // top헤더 프로필 모달
+    const topModal2 = document.querySelector(".topModal2"); // top헤더 프로필 모달
+    const feedModal1 = document.querySelector(".feedModal1"); // feed 게시물 상세 모달
+    const feedModal2 = document.querySelector(".feedModal2"); // feed 회원님을 위한 추천 모달
+    const feedModal3 = document.querySelector(".feedModal3"); // feed 게시물 댓글 모두 보기 모달
 
-// 상단 탑 모달창
-function openModal1 () {
-    const open1 = document.querySelector(".testModal1");
-    const bg1 = document.querySelector(".modalBg1");
-
-    if (open1.style.display == "none") {
-        open1.style.display = "block";
-        bg1.style.display = "block";
-    } 
-
-}
-// 피드 모달창
-function openModal2 () {
-    const open2 = document.querySelector(".testModal2");
-    const bg2 = document.querySelector(".modalBg2");
-
-    if (open2.style.display == "none") {
-        open2.style.display = "block";
-        bg2.style.display = "block";
-    } 
-}
-// 피드 모달창
-function openModal3 () {
-    const open3 = document.querySelector(".testModal3");
-    const bg3 = document.querySelector(".modalBg3");
-
-    if (open3.style.display == "none") {
-        open3.style.display = "block";
-        bg3.style.display = "block";
-    } 
-}
-// 피드 모달창
-function openModal4 () {
-    const open4 = document.querySelector(".testModal4");
-    const bg4 = document.querySelector(".modalBg4");
-
-    if (open4.style.display == "none") {
-        open4.style.display = "block";
-        bg4.style.display = "block";
-    } 
-}
-
-// 상단 탑 모달창 닫기
-function closeModal1 () {
-    const open1 = document.querySelector(".testModal1");
-    const bg1 = document.querySelector(".modalBg1");
-
-    if (open1.style.display == "block") {
-        open1.style.display = "none";
-        bg1.style.display = "none";
-    }  
-}
-// 피드 모달창 닫기
-function closeModal2 () {
-    const open2 = document.querySelector(".testModal2");
-    const bg2 = document.querySelector(".modalBg2");
-
-    if (open2.style.display == "block") {
-        open2.style.display = "none";
-        bg2.style.display = "none";
+    if (index == 1) {
+        topModal1.style.display = "block";
     }
-}
-// 피드 모달창 닫기
-function closeModal3 () {
-    const open3 = document.querySelector(".testModal3");
-    const bg3 = document.querySelector(".modalBg3");
-
-    if (open3.style.display == "block") {
-        open3.style.display = "none";
-        bg3.style.display = "none";
+    else if (index == 2) {
+        feedModal1.style.display = "block";
     }
-}
-
-// 피드 모달창 닫기
-function closeModal4 () {
-    const open4 = document.querySelector(".testModal4");
-    const bg4 = document.querySelector(".modalBg4");
-
-    if (open4.style.display == "block") {
-        open4.style.display = "none";
-        bg4.style.display = "none";
+    else if (index == 3) {
+        feedModal2.style.display = "block";
     }
+    else if (index == 4) {
+        feedModal3.style.display = "block";
+    }
+    else if (index == 5) {
+        topModal2.style.display = "block";
+    }
+
 }
-
-
