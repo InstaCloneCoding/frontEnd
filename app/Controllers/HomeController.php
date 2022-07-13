@@ -6,6 +6,7 @@ use App\Libraries\curl\Curl;
 use App\Libraries\define\Define;
 use App\Libraries\service\UserServiceImpl;
 use App\Models\FeedBoardModel;
+use App\Models\FeedCommentModel;
 use App\Models\FeedUploadImgModel;
 use App\Models\LikeBoardModel;
 use CodeIgniter\API\ResponseTrait;
@@ -31,6 +32,7 @@ class HomeController extends BaseController
             $feedModel = model(FeedBoardModel::class, false);
             $feedUploadModel = model(FeedUploadImgModel::class, false);
             $likeBoardModel = model(LikeBoardModel::class, false);
+            $feedCommentModel = model(FeedCommentModel::class, false);
 
             $feed = $feedModel
                 ->select("FB.idx as fb_idx, FB.user_id as fb_user_id, FB.feed_content as fb_feed_content")
@@ -38,11 +40,23 @@ class HomeController extends BaseController
                 ->join("FEED_UPLOAD_IMG as FUI", "FUI.board_idx = FB.idx", "LEFT")
                 ->findAll();
 
-            // 댓글 모음
+            // 댓글 개수
             for($i = 0; $i < count($feed); $i++) {
                 $like = $likeBoardModel->where('board_idx', $feed[$i]['fb_idx'])
                     ->countAllResults();
                 $feed[$i]['like_cnt'] = $like;
+            }
+
+            // 피드 댓글과 댓글 개수 표시
+            for($i = 0; $i < count($feed); $i++) {
+                $comment = $feedCommentModel
+                    ->where('board_idx', $feed[$i]['fb_idx'])
+                    ->findAll();
+                $commentCnt = $feedCommentModel
+                    ->where('board_idx', $feed[$i]['fb_idx'])
+                    ->countAllResults();
+                $feed[$i]['comment'] = $comment;
+                $feed[$i]['commentCnt'] = $commentCnt;
             }
 
             $data = [

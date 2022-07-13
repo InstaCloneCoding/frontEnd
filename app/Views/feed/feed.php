@@ -77,7 +77,7 @@
                                 <div class="feedContent oneTxtLine"><?php //$value->feedContent ?></div>
                             </div>
                             <div class="repple col-between">
-                                <p onclick="modalClick(4)">댓글 7개 모두 보기</p>
+                                <p onclick="modalClick(4)">댓글 <?= $value['commentCnt']?>개 모두 보기</p>
                                 <p class="time">8시간 전</p>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
             <div class="wrap">
                 <div class="profId">
                     <div class="profImg" style="width:54px;height:54px;"></div>
-                    <p class="pl20"><?php //$value->userId ?></p>
+                    <p class="pl20"><?= $_SESSION['user']['userId'] ?></p>
                 </div>
                 <div class="userRecommend">
                     <div class="topBar col-between">
