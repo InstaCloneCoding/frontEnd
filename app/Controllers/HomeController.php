@@ -6,6 +6,8 @@ use App\Libraries\curl\Curl;
 use App\Libraries\define\Define;
 use App\Libraries\service\UserServiceImpl;
 use App\Models\FeedBoardModel;
+use App\Models\FeedUploadImgModel;
+use App\Models\LikeBoardModel;
 use CodeIgniter\API\ResponseTrait;
 
 class HomeController extends BaseController
@@ -14,13 +16,10 @@ class HomeController extends BaseController
 
     public $db;
 
-    public function __construct() {
-        $this->db = \Config\Database::connect();
-    }
+    public function __construct() { }
 
     public function index()
     {
-        $data = [];
         // 세번 호출됨.
         echo view("header/header");
         if( empty($this->session->user) ) {
@@ -29,17 +28,28 @@ class HomeController extends BaseController
         } else {
             //$fidResponse = Curl::curlGet(Define::setAPIServer()."/");
             //$result = json_decode($fidResponse);
+            $feedModel = model(FeedBoardModel::class, false);
+            $feedUploadModel = model(FeedUploadImgModel::class, false);
+            $likeBoardModel = model(LikeBoardModel::class, false);
 
-            $builder = $this->db->table('FEED_BOARD as FB');
-            $result = $builder
-                ->join('FEED_UPLOAD_IMG as FUI', 'FUI.board_idx = FB.idx', 'LEFT')
-                ->get()
-                ->getResultArray();
+            $feed = $feedModel
+                ->select("FB.idx as fb_idx, FB.user_id as fb_user_id, FB.feed_content as fb_feed_content")
+                ->select("FUI.idx as fui_idx, FUI.board_idx as fui_board_idx, FUI.file_name as fui_file_name")
+                ->join("FEED_UPLOAD_IMG as FUI", "FUI.board_idx = FB.idx", "LEFT")
+                ->findAll();
+
+            // 댓글 모음
+            for($i = 0; $i < count($feed); $i++) {
+                $like = $likeBoardModel->where('board_idx', $feed[$i]['fb_idx'])
+                    ->countAllResults();
+                $feed[$i]['like_cnt'] = $like;
+            }
 
             $data = [
                 //'feed' => $result->states
-                'feed' => $result
+                'feed' => $feed
             ];
+
             echo view("top");
             echo view("popup/content");
             echo view("feed/feed", $data);

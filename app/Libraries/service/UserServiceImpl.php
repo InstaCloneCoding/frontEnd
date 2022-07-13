@@ -48,7 +48,7 @@ class UserServiceImpl implements UserService
         $this->originName   = !empty($info->states->originName) ? $info->states->originName  : "";
         $this->email        = !empty($info->states->email)      ? $info->states->email       : "";
         $this->phone        = !empty($info->states->phone)      ? $info->states->phone       : "";
-        $this->followerCnt  = !empty($info->states->followerCnt)? $this->states->followerCnt : 0;
-        $this->followCnt    = !empty($info->states->followCnt)  ? $this->states->followCnt   : 0;
+        $this->followerCnt  = !empty($info->states->followerCnt)? $info->states->followerCnt : 0;
+        $this->followCnt    = !empty($info->states->followCnt)  ? $info->states->followCnt   : 0;
     }
 }
