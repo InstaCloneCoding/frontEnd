@@ -236,6 +236,7 @@
                         </div>
 
                     </div>
+                    
                     <div>
                     <?php $i = 0; ?>
                     <?php for($i = 0; $i < count($feed); $i++) {
@@ -244,7 +245,7 @@
                         <?php }
                     } ?>
                 </div>
-                
+
                 </div>
 
             </div>
