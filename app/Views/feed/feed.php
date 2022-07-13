@@ -189,10 +189,10 @@
     </div>
     <div class="modal feedModal3" style="display:none;">
         <div class="modalBg" onclick="this.parentNode.style.display = 'none'"></div>
-        <div class="" style="position:absolute;width:1775px;height:850px;background:#fff;left:50%;top:50%;transform:translate(-50%, -50%);z-index:1000;">
+        <div class="" style="position:absolute;width:1200px;height:700px;background:#fff;left:50%;top:50%;transform:translate(-50%, -50%);z-index:1000;">
             <div style="display:flex;">
-                <div>
-                    <img id="fileImg" style="width:850px; height:850px;">
+                <div style="width:700px;">
+                    <img id="fileImg" src="/images/test_feed_img.png" style="width:700px; height:700px;">
                 </div>
                 <div>
                     <?php $i = 0; ?>
@@ -202,6 +202,7 @@
                         <?php }
                     } ?>
                 </div>
+
             </div>
         </div>
     </div>
