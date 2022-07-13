@@ -236,7 +236,15 @@
                         </div>
 
                     </div>
-
+                    <div>
+                    <?php $i = 0; ?>
+                    <?php for($i = 0; $i < count($feed); $i++) {
+                        for ($j = 0; $j < count($feed[$i]['comment']);$j++ ) { ?>
+                            <?= $feed[$i]['comment'][$j]['comment_text'] ?> <br>
+                        <?php }
+                    } ?>
+                </div>
+                
                 </div>
 
             </div>
