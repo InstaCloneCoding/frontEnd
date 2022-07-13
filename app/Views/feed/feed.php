@@ -15,7 +15,7 @@
                             <div class="disFlex alignC">
                                 <div class="profImg"></div>
                                 <div class="profId pl10">
-                                    <p><?= $value['user_id'] ?></p>
+                                    <p><?= $value['fb_user_id'] ?></p>
                                 </div>
                             </div>
                             <!-- // 피드 상단 타이틀 좌측 프로필&프로필네임 -->
@@ -33,7 +33,7 @@
                                             </a>
                                         </div>
                                         <div class="modalList">
-                                            <a href="/<?= $_SESSION['user']['userId'] ?>" class="disFlex alignC">
+                                            <a href="/<?= $_SESSION['user']['userId'] ?>/saved" class="disFlex alignC">
                                                 <span class="material-icons">bookmark_border</span>
                                                 <span>저장됨</span>
                                             </a>
@@ -53,7 +53,7 @@
                         <!-- // 피드 상단 타이틀 -->
                         
                         <!-- 피드 이미지 슬라이드 공간 -->
-                        <img class="contentImg" src="/uploads/<?= $value['file_name'] ?>" alt="이미지없음.">
+                        <img class="contentImg" src="/uploads/<?= $value['fui_file_name'] ?>" alt="이미지없음.">
                         <!-- // 피드 이미지 슬라이드 공간 -->
 
                         <!-- 피드 하단 좋아요&댓글&보관함 -->
@@ -67,17 +67,17 @@
                         <!-- // 피드 하단 좋아요&댓글&보관함 -->
                         <!-- 좋아요 카운트 -->
                         <div class="likeCount alignC">
-                            <p>좋아요 1,436개</p>
+                            <p>좋아요 <?= $value['like_cnt']?>개</p>
                         </div>
                         <!-- // 좋아요 카운트 -->
                         <!-- 댓글 모두 보기&게시시간 -->
                         <div class="reppleView">
                             <div class="disFlex">
-                                <div class="fw600"><?= $value->userId ?></div>
-                                <div class="feedContent oneTxtLine"><?= $value->feedContent ?></div>
+                                <div class="fw600"><?php //$value->userId ?></div>
+                                <div class="feedContent oneTxtLine"><?php //$value->feedContent ?></div>
                             </div>
                             <div class="repple col-between">
-                                <p onclick="modalClick(4)">댓글 7개 모두 보기</p>
+                                <p onclick="modalClick(4)">댓글 <?= $value['commentCnt']?>개 모두 보기</p>
                                 <p class="time">8시간 전</p>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
             <div class="wrap">
                 <div class="profId">
                     <div class="profImg" style="width:54px;height:54px;"></div>
-                    <p class="pl20"><?= $value->userId ?></p>
+                    <p class="pl20"><?= $_SESSION['user']['userId'] ?></p>
                 </div>
                 <div class="userRecommend">
                     <div class="topBar col-between">
@@ -154,8 +154,8 @@
                     <div class="disFlex alignC">
                         <div class="profImg"></div>
                         <div class="profId pl10" style="display:block">
-                            <p><?= $value->userId ?></p>
-                            <p style="color:rgb(142, 142, 142);font-size:14px;font-weight:300;"><?= $value->userId ?></p>
+                            <p><?php //$value->userId ?></p>
+                            <p style="color:rgb(142, 142, 142);font-size:14px;font-weight:300;"><?php // $value->userId ?></p>
                         </div>
                     </div>
                     <div class="follow" style="font-size:12px;color:blue;">팔로우</div>
@@ -166,8 +166,8 @@
                     <div class="disFlex alignC">
                         <div class="profImg"></div>
                         <div class="profId pl10" style="display:block">
-                            <p><?= $value->userId ?></p>
-                            <p style="color:rgb(142, 142, 142);font-size:14px;font-weight:300;"><?= $value->userId ?></p>
+                            <p><?php //$value->userId ?></p>
+                            <p style="color:rgb(142, 142, 142);font-size:14px;font-weight:300;"><?php // $value->userId ?></p>
                         </div>
                     </div>
                     <div class="follow" style="font-size:12px;color:blue;">팔로우</div>
@@ -178,8 +178,8 @@
                     <div class="disFlex alignC">
                         <div class="profImg"></div>
                         <div class="profId pl10" style="display:block">
-                            <p><?= $value->userId ?></p>
-                            <p style="color:rgb(142, 142, 142);font-size:14px;font-weight:300;"><?= $value->userId ?></p>
+                            <p><?php // $value->userId ?></p>
+                            <p style="color:rgb(142, 142, 142);font-size:14px;font-weight:300;"><?php // $value->userId ?></p>
                         </div>
                     </div>
                     <div class="follow" style="font-size:12px;color:blue;">팔로우</div>
@@ -195,7 +195,12 @@
                     <img id="fileImg" style="width:850px; height:850px;">
                 </div>
                 <div>
-                    dddddddd
+                    <?php $i = 0; ?>
+                    <?php for($i = 0; $i < count($feed); $i++) {
+                        for ($j = 0; $j < count($feed[$i]['comment']);$j++ ) { ?>
+                            <?= $feed[$i]['comment'][$j]['comment_text'] ?> <br>
+                        <?php }
+                    } ?>
                 </div>
             </div>
         </div>

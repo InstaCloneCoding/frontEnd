@@ -4,9 +4,9 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class FeedBoardModel extends Model
+class FeedCommentModel extends Model
 {
-    protected $table = 'FEED_BOARD as FB';
+    protected $table = 'FEED_COMMENT as FC';
     protected $primaryKey = 'idx';
 
     protected $useAutoIncrement = true;
@@ -17,7 +17,8 @@ class FeedBoardModel extends Model
     protected $allowedFields = [
         'idx',
         'user_id',
-        'feed_content'
+        'board_idx',
+        'comment_idx'
     ];
 
     protected $useTimestamps = false;

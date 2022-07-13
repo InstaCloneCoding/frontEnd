@@ -32,7 +32,17 @@
                             <script>
                                 for (var i=0; i < 3; i++)
                                 {
-                                    document.querySelectorAll(".modalList")[i].innerHTML = "<div class='col-between alignC'><div class='profImg'></div><div class='profId pl10' style='display:block'><p><?= $value->userId ?>님이 회원님을 팔로우하기 시작했습니다.</p></div><div class='follow' style='font-size:12px;color:blue;'>팔로우</div></div>"
+                                     document.querySelectorAll(".modalList")[i].innerHTML =
+                                         `<div class='col-between alignC'>
+                                         <div class='profImg'>
+                                         </div>
+                                         <div class='profId pl10' style='display:block'>
+                                         <p>???님이 회원님을 팔로우하기 시작했습니다.</p>
+                                     </div>
+                                     <div class='follow' style='font-size:12px;color:blue;'>
+                                         팔로우
+                                     </div>
+                                     </div>`;
                                 }
                             </script>
 
