@@ -187,14 +187,58 @@
     </div>
     <div class="modal feedModal3" style="display:none;">
         <div class="modalBg" onclick="this.parentNode.style.display = 'none'"></div>
-        <div class="" style="position:absolute;width:1775px;height:850px;background:#fff;left:50%;top:50%;transform:translate(-50%, -50%);z-index:1000;">
+        <div class="" style="position:absolute;width:1200px;height:700px;background:#fff;left:50%;top:50%;transform:translate(-50%, -50%);z-index:1000;">
             <div style="display:flex;">
-                <div>
-                    <img id="fileImg" style="width:850px; height:850px;">
+                <div style="width:700px;">
+                    <img id="fileImg" src="/images/test_feed_img.png" style="width:700px; height:700px;">
                 </div>
-                <div>
-                    dddddddd
+
+                <div style="width:500px;">
+
+                    <div style="height:60px;border-bottom:1px solid #efefef">
+                        <div class="col-between alignC" style="padding:15px;">
+                            <div class="disFlex alignC">
+                                <div class="profImg"></div>
+                                <div class="profId pl10" style="display:block">
+                                    <p><?= $value->userId ?><span style="padding-left:10px;color:#262626;font-size:14px;font-weight:600;">팔로잉</span></p>
+                                </div>
+                            </div>
+                            <div><span class="material-icons" onclick="modalClick(2)">more_horiz</span></div>
+                        </div>
+                    </div>
+
+                    <div style="padding:15px;">
+                        <div><p style='font-size:14px;'>‘Sydney’ Epik High was Here‘Sydney’ Epik High was Here‘Sydney’ Epik High was Here</p></div>
+                        <div style="margin-top:20px;color:#888;font-size:12px;font-weight:400;">2시간전</div>
+                    </div>
+                    <div style="padding:15px;">
+                        <div class="col-between alignC">
+                            <div class="disFlex alignC">
+                                <div style="display:flex;align-items:center;">
+                                    <div class="profImg"></div>
+                                    <div style="padding-left:10px;font-size:14px;"><?= $value->userId ?></div>
+                                </div>
+                                <div class="profId pl10" style="display:block">
+                                    <p style="word-break:break-all;">
+                                        
+                                        <span style="font-weight:300;">dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div style="padding-left:5px;">
+                                <span class="material-icons" style="font-size:12px;">favorite_border</span>
+                            </div>
+                        </div>
+                        <div class="disFlex" style="padding-top:10px;font-size:12px;">
+                            <span>1시간전</span>&nbsp;&nbsp;
+                            <span>좋아요 ?개</span>&nbsp;&nbsp;
+                            <span>답글 달기</span>&nbsp;&nbsp;
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
         </div>
     </div>
