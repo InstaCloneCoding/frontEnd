@@ -200,7 +200,7 @@
                             <div class="disFlex alignC">
                                 <div class="profImg"></div>
                                 <div class="profId pl10" style="display:block">
-                                    <p><?= $value->userId ?><span style="padding-left:10px;color:#262626;font-size:14px;font-weight:600;">팔로잉</span></p>
+                                    <p><?php //$value->userId ?><span style="padding-left:10px;color:#262626;font-size:14px;font-weight:600;">팔로잉</span></p>
                                 </div>
                             </div>
                             <div><span class="material-icons" onclick="modalClick(2)">more_horiz</span></div>
@@ -216,7 +216,7 @@
                             <div class="disFlex alignC">
                                 <div style="display:flex;align-items:center;">
                                     <div class="profImg"></div>
-                                    <div style="padding-left:10px;font-size:14px;"><?= $value->userId ?></div>
+                                    <div style="padding-left:10px;font-size:14px;"><?php //$value->userId ?></div>
                                 </div>
                                 <div class="profId pl10" style="display:block">
                                     <p style="word-break:break-all;">
