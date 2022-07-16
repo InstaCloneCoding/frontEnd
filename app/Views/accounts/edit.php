@@ -1,15 +1,6 @@
 
 <script type="text/javascript" src="/script/common.js"></script>
-<style>
-    .wrap {height:825px;background:#fff;border:1px solid #d8d8d8}
-    .left {display:inline-block;width:235px;height:100%;border-right:1px solid #d8d8d8;}
-    .right {padding:30px;}
-
-    .settingLeftMenu li {padding:0px 30px;height:50px;line-height:50px;}
-    .settingLeftMenu li a {font-size:16px;color:#222;}
-</style>
 <?php { ?>
-
 <section class="commonWrap disFlex justifyC">
     <div class="innerWrap">
         <div class="wrap disFlex">
