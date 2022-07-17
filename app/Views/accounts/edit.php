@@ -1,6 +1,6 @@
 
 <script type="text/javascript" src="/script/common.js"></script>
-<?php { ?>
+<!-- <?php { ?> -->
     <section class="commonWrap disFlex justifyC">
     <div class="innerWrap">
         <div class="wrap disFlex">
@@ -48,4 +48,4 @@
         </div>
     </div>
     </section>
-<?php } ?>
+<!-- <?php } ?> -->
