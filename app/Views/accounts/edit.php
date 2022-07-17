@@ -15,7 +15,7 @@
                     <div class="disFlex mb20">
                         <div class="profImg"></div>
                         <div class="profId pl10" style="flex-direction:column;align-items:flex-start;">
-                            <p>dddd<?= $value['fb_user_id'] ?></p>
+                            <p><?php //$value['fb_user_id'] ?></p>
                             <p>프로필 사진 바꾸기</p>
                         </div>
                     </div>
