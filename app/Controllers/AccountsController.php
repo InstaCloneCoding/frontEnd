@@ -215,10 +215,22 @@ class AccountsController extends BaseController
     }
 
     public function edit() {
+        
+
+        $userId = [
+            "userId" => $_SESSION['user']['userId']
+        ];
+
+        $response = Curl::curlPost(Define::setAPIServer()."/".$userId["userId"], null);
+        $resArr = json_decode($response);
+        $data = [
+            "user" => $resArr
+        ];
+
 
         echo view("header/header");
         echo view("top");
         echo view("popup/content");
-        echo view("accounts/edit");
+        echo view("accounts/edit", $data);
     }
 }
