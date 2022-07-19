@@ -42,7 +42,7 @@ class UserServiceImpl implements UserService
         return $this->followerCnt;
     }
 
-    public function UserInformation( StdClass|array $info) {
+    public function UserInformation($info) {
 
         $this->userId       = !empty($info->states->userId)     ? $info->states->userId      : "";
         $this->originName   = !empty($info->states->originName) ? $info->states->originName  : "";
