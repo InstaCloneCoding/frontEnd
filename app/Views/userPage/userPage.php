@@ -2,9 +2,7 @@
     <div id="loading"></div>
     <div class="disFlex mb40">
         <div class="profileEditLeft">
-            <div class="profileImg">
-                <img src="/images/test.jpg" alt="">
-            </div>
+            <div class="profileImg"><img src="/images/test.jpg" alt=""></div>
         </div>
         <div class="profileEditRight">
             <div class="rightTop">
@@ -14,15 +12,9 @@
             </div>
             <div class="rightCenter mb20">
                 <ul class="disFlex">
-                    <li class="mr40">
-                        <div>게시물<span class="pl5 fs600">111</span></div>
-                    </li>
-                    <li class="mr40">
-                        <div>팔로워<span class="pl5 fs600"><?= $userService->getFollowerCnt(); ?></span></div>
-                    </li>
-                    <li class="mr40">
-                        <div>팔로우<span class="pl5 fs600"><?= $userService->getFollowCnt(); ?></span></div>
-                    </li>
+                    <li class="mr40"><div>게시물<span class="pl5 fs600">111</span></div></li>
+                    <li class="mr40"><div>팔로워<span class="pl5 fs600"><?= $userService->getFollowerCnt(); ?></span></div></li>
+                    <li class="mr40"><div>팔로우<span class="pl5 fs600"><?= $userService->getFollowCnt(); ?></span></div></li>
                 </ul>
             </div>
             <div class="rightBottom">
@@ -77,6 +69,6 @@
         </div>
     </div>
     <!-- // 저장됨 -->
-
+    
 </section> 
 <script type="text/javascript" src="/script/feed.js"></script>

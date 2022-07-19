@@ -15,9 +15,6 @@
                 </select>
             </li>
         </ul>
-        <div class="copyright">
-            © 2022 Instagram from Meta
-        </div> 
+        <div class="copyright">© 2022 Instagram from Meta</div> 
     </div>
-
 </footer>

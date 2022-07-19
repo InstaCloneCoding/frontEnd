@@ -243,8 +243,10 @@ input {
     background:rgba(0,0,0,0.55);
     z-index:1000;
 }
-.modalList {
-    padding:10px 20px;
+.modalList a {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
 }
 /* profile img */
 .profImg {
@@ -315,6 +317,17 @@ input {
     cursor:pointer;
 }
 
+.appDownBtn {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+.appDownWrap p {
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
 /* media screen min-width:481px */
 @media screen and (min-width:481px) {
 
@@ -335,6 +348,9 @@ input {
     }
     .commonTxt {
         font-size:14px;
+    }
+    .modalList {
+        padding:10px 20px;
     }
 
     /* 앱 다운로드 */
@@ -423,6 +439,9 @@ input {
     }
     .commonTxt {
         font-size:12px;
+    }
+    .modalList {
+        padding:8px 15px;
     }
 
     /* 앱 다운로드 */

@@ -9,7 +9,8 @@
 }
 /* resetTxt */
 .resetTxt {
-    margin:10px 0;
+    text-align:center;
+    font-weight:bold;
     color:#262626;
 }
 /* --- */
@@ -19,9 +20,12 @@
 }
 /* --- */
 .reset .loginLinkBtn {
-    background:#0095f6;
+    width:100%;
+    margin-bottom:15px;
     border:1px solid #0095f6;
     border-radius:5px;
+    background:#0095f6;
+    font-weight:400;
     color:var(--white);
 }
 /* --- */
@@ -31,9 +35,11 @@
 }
 /* --- */
 .reset .authBtn {
-    background:#0095f6;
+    width:100%;
     border:1px solid #0095f6;
     border-radius:5px;
+    background:#0095f6;
+    font-weight:400;
     color:var(--white);
 }
 /* --- */
@@ -43,9 +49,12 @@
 }
 /* --- */
 .reset .resetPwBtn {
-    background:#0095f6;
+    width:100%;
     border:1px solid #0095f6;
     border-radius:5px;
+    background:#0095f6;
+    font-weight:400;
+    font-size:14px;
     color:var(--white);
 }
 
@@ -57,10 +66,15 @@
     }
     /* --- */
     .resetTxt {
+        margin:10px 0;
         font-size:16px;
     }
     /* --- */
     .loginLinkBtn {
+        margin-bottom:15px;
+        font-size:14px;
+    }
+    .resetPwBtn {
         font-size:14px;
     }
     /* --- */
@@ -84,11 +98,16 @@
     }
     /* --- */
       .resetTxt {
+        margin:5px 0;
         font-size:14px;
     }
     /* --- */
     .loginLinkBtn {
         height:30px;
+        margin-bottom:10px;
+        font-size:12px;
+    }
+    .resetPwBtn {
         font-size:12px;
     }
     /* --- */
