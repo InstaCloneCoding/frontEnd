@@ -14,7 +14,7 @@ class Define
         log_message("notice", "API 요청 생성자");
     }
 
-    public static function setAPIServer() : int|string {
+    public static function setAPIServer() {
 
         try {
             if (ENVIRONMENT == 'development') {
