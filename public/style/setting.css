@@ -1,6 +1,43 @@
-.wrap {height:825px;background:#fff;border:1px solid #d8d8d8}
-.left {display:inline-block;width:235px;height:100%;border-right:1px solid #d8d8d8;}
-.right {padding:30px;}
-
-.settingLeftMenu li {padding:0px 30px;height:50px;line-height:50px;}
-.settingLeftMenu li a {font-size:16px;color:#222;}
+.editSetting {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    height:825px;
+    border:1px solid #d8d8d8;
+    background:#fff;
+}
+.editSetting .left {
+    display:inline-block;
+    width:235px;
+    height:100%;
+    border-right:1px solid #d8d8d8;
+}
+.editSetting .right {
+    padding:30px;
+}
+.editSetting .right .rightMenu {
+    display:flex;
+    flex-direction:column;
+}
+.editSetting .right .rightMenu .list {
+    display:flex;
+    flex-direction:row;
+    margin-bottom:20px;
+}
+.editSetting .right .rightMenu .list .title {
+    width:200px;
+}
+.editSetting .right .rightMenu .list .profId {
+    flex-direction:column;
+    align-items:flex-start;
+    padding-left:10px;
+}
+.settingLeftMenu li {
+    height:50px;
+    line-height:50px;
+    padding:0px 30px;
+}
+.settingLeftMenu li a {
+    font-size:16px;
+    color:#222;
+}
