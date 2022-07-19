@@ -1,27 +1,18 @@
 <div class="top">
-    <div class="topInner col-between alignC">
-        <a href="/"> 
-            <img src="/images/header-logo.png" alt="load img failed">
-        </a>
+    <div class="topInner">
+        <a href="/"><img src="/images/header-logo.png" alt="load img failed"></a>
         <?php if ( $_SESSION['user'] ) { ?>
             <div class="topSearch">
-                <label style="position:relative;">
+                <label>
                     <input type="text" name="searching" placeholder="돋보기 (검색)" value="" />
-                    <span class="material-icons" style="position: absolute;right: 0%;top: 65%;transform: translate(-65%, -50%);">search</span>
+                    <span class="material-icons searchBtn">search</span>
                 </label>
             </div>
             <div class="disFlex">
                 <div>
-                    <a href="/" class="pl20"> 
-                        <span class="material-icons">home</span>
-                    </a>
-                    <a href="#" onclick="createNewPostPopup()" class="pl20 pointer">
-                        <span class="material-icons">post_add</span>
-                    </a>
-                    <a href="#" class="pl20"> 
-                        <span class="material-icons" onclick="modalClick(5)">favorite_border</span>
-                    </a>
-
+                    <a href="/" class="pl20"> <span class="material-icons">home</span></a>
+                    <a href="#" onclick="createNewPostPopup()" class="pl20 pointer"><span class="material-icons">post_add</span></a>
+                    <a href="#" class="pl20"> <span class="material-icons" onclick="modalClick(5)">favorite_border</span></a>
                      <!-- top헤더 프로필 모달창 -->
                      <div class="modal topModal2" style="display:none;">
                         <div class="modalBg" onclick="this.parentNode.style.display = 'none'"></div>
@@ -45,47 +36,37 @@
                                      </div>`;
                                 }
                             </script>
-
                         </div>
                     </div>
                     <!-- // top헤더 프로필 모달창 -->
-
-                    <a href="#">
-                        <span class="material-icons pl20" onclick="modalClick(1)">account_circle</span>
-                    </a>
-
+                    <a href="#"><span class="material-icons pl20" onclick="modalClick(1)">account_circle</span></a>
                     <!-- top헤더 프로필 모달창 -->
                     <div class="modal topModal1" style="display:none;">
                         <div class="modalBg" onclick="this.parentNode.style.display = 'none'"></div>
                         <div class="modalContent">
                             <div class="modalList">
-                                <a href="/<?=  $_SESSION['user']['userId'] ?>" class="disFlex alignC">
-                                    <span class="material-icons">account_circle</span>
-                                    <span>프로필</span>
+                                <a href="/<?=  $_SESSION['user']['userId'] ?>">
+                                    <span class="material-icons">account_circle</span><span>프로필</span>
                                 </a>
                             </div>
                             <div class="modalList">
-                                <a href="/<?=  $_SESSION['user']['userId'] ?>/saved" class="disFlex alignC">
-                                    <span class="material-icons">bookmark_border</span>
-                                    <span>저장됨</span>
+                                <a href="/<?=  $_SESSION['user']['userId'] ?>/saved">
+                                    <span class="material-icons">bookmark_border</span><span>저장됨</span>
                                 </a>
                             </div>
                             <div class="modalList">
-                                <a href="/accounts/edit" class="disFlex alignC">
-                                    <span class="material-icons">settings</span>
-                                    <span>설정</span>
+                                <a href="/accounts/edit">
+                                    <span class="material-icons">settings</span><span>설정</span>
                                 </a>
                             </div>
                             <div class="modalList disFlex">
-                                <a href="/accounts/logout" class="disFlex alignC">
-                                    <span class="material-icons">settings</span> 
-                                    <span>로그아웃</span> 
+                                <a href="/accounts/logout">
+                                    <span class="material-icons">settings</span> <span>로그아웃</span> 
                                 </a>
                             </div>
                         </div>
                     </div>
                     <!-- // top헤더 프로필 모달창 -->
-
                 </div>
             </div>
         <?php } ?>

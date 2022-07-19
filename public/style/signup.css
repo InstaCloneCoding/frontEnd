@@ -12,7 +12,7 @@
     color:var(--skyBlue);
 }
 /* --- */
-.signUp > .innerWrap .inner .signUpTxt02 {
+.signUp > .innerWrap .inner > .signUpTxt {
     line-height:16px;
     text-align:center;
 }
@@ -23,9 +23,10 @@
 }
 /* --- */
 .signUp .signUpBtn {
-    background:#0095f6;
+    width:100%;
     border:1px solid #0095f6;
     border-radius:5px;
+    background:#0095f6;
     color:var(--white);
 }
 
