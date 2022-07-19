@@ -24,7 +24,7 @@
                                 <span class="material-icons" onclick="modalClick(2)"> more_horiz</span>
                                 <!-- 피드 상단 타이틀 우측 아이콘 모달창 -->
                                 <div class="modal feedModal1" style="display:none;">
-                                    <div class="modalBg" onclick="this.parentNode.style.display = 'none'"></div>
+                                    <div class="modalBg" style="z-index:1001" onclick="this.parentNode.style.display = 'none'"></div>
                                     <div class="modalContent">
                                         <div class="modalList">
                                             <a href="/<?= $_SESSION['user']['userId'] ?>" class="disFlex alignC">

@@ -1,4 +1,4 @@
-<section class="reset commonWrap disFlex justifyC">
+<section class="reset commonWrap">
     <div class="innerWrap">
         <div class="inner inner01">
             <!-- img -->
